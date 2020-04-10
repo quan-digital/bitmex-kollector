@@ -21,6 +21,7 @@
 # API Explorer : https://www.bitmex.com/api/explorer/
 
 import websocket
+import logging
 import threading
 import traceback
 import urllib
@@ -40,6 +41,7 @@ class BitMEXWebsocket:
                  api_key=settings.API_KEY, api_secret=settings.API_SECRET):
         '''Connect to the websocket and initialize data.'''
         self.logger = logger.setup_logbook('ws')
+        #self.logger = logger.setup_logbook('ws', level=logging.DEBUG)
         self.error_logger = logger.setup_logbook('error')
         self.exec_logger = logger.setup_db('exec')
         self.logger.info("Initializing WebSocket...")
@@ -472,6 +474,7 @@ class BitMEXWebsocket:
 
     def __wait_for_symbol(self, symbol):
         '''On subscribe, this data will come down. Wait for it.'''
+        sleep(5)
         while not {'instrument', 'liquidation', 'announcement',
                     'chat', 'connected'} <= set(self.data):
             sleep(0.1)
@@ -520,7 +523,10 @@ class BitMEXWebsocket:
                     self.data[table] = message['data']
                     # Keys are communicated on partials to let you know how to uniquely identify
                     # an item. We use it for updates.
-                    self.keys[table] = message['keys']
+                    if message['table'] == 'connected': # 'connected' has no keys
+                        pass
+                    else:
+                        self.keys[table] = message['keys']
                 elif action == 'insert':
                     self.logger.debug('%s: inserting %s' % (table, message['data']))
                     self.data[table] += message['data']
