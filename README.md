@@ -5,11 +5,8 @@ The ultimate data aggregator using Bitmex's Websocket
 
 #### Public topics subscribed
 ```bash
-"announcement",        // Site announcements - TEST
 "chat",                // Trollbox chat - cummulative push
-"connected",           // Statistics of connected users/bots - TEST
 "instrument",          // Instrument updates including turnover and bid/ask - continuous push overwrite 
-"insurance",           // Daily Insurance Fund updates - continuous push overwrite 
 "liquidation",         // Liquidation orders as they are entered into the book - push refreshed after 20 seconds
 ```
 
@@ -24,6 +21,64 @@ The ultimate data aggregator using Bitmex's Websocket
 "wallet"       // Bitcoin address balance data, including total deposits & withdrawals - continuous push overwrite
 ```
 
+### Data
+
+For every .csv file, the first two entries are 'DD-MM-YYYY' and 'HH:MM:SS' timestamp components.
+Remaining columns are listed in order as follows.
+
+#### Chat
+
+- channelID
+
+```bash
+[
+  {
+    "id": 1,
+    "name": "English"
+  },
+  {
+    "id": 2,
+    "name": "中文"
+  },
+  {
+    "id": 3,
+    "name": "Русский"
+  },
+  {
+    "id": 4,
+    "name": "한국어"
+  },
+  {
+    "id": 5,
+    "name": "日本語"
+  },
+  {
+    "id": 6,
+    "name": "Español"
+  },
+  {
+    "id": 7,
+    "name": "Français"
+  }
+]
+```
+- fromBot
+
+- id
+
+- message
+
+- user
+
+
+### Future topics
+Left out due to low update frequency/importance
+
+```bash
+"announcement",        // Site announcements - TEST
+"connected",           // Statistics of connected users/bots - TEST
+"insurance",           // Daily Insurance Fund updates - continuous push overwrite 
+```
 
 #### Total public topics
 ```bash

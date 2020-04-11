@@ -40,9 +40,11 @@ class BitMEXWebsocket:
     def __init__(self, endpoint = settings.BASE_URL, symbol = settings.SYMBOL, \
                  api_key=settings.API_KEY, api_secret=settings.API_SECRET):
         '''Connect to the websocket and initialize data.'''
-        self.logger = logger.setup_logbook('ws')
-        #self.logger = logger.setup_logbook('ws', level=logging.DEBUG)
-        self.error_logger = logger.setup_logbook('error')
+        # self.logger = logger.setup_logbook('ws')
+        self.logger = logger.setup_logbook('ws', level=logging.DEBUG)
+
+        self.liq_logger = logger.setup_db('liquidation')
+        self.chat_logger = logger.setup_db('chat')
         self.exec_logger = logger.setup_db('exec')
         self.logger.info("Initializing WebSocket...")
         self.endpoint = endpoint
@@ -456,7 +458,7 @@ class BitMEXWebsocket:
         '''
 
         symbolSubs = ["instrument", "liquidation"]
-        genericSubs = ["announcement", "chat", "connected", "insurance"]
+        genericSubs = ["chat"]
 
         subscriptions = [sub + ':' + self.symbol for sub in symbolSubs]
         subscriptions += genericSubs
@@ -475,8 +477,7 @@ class BitMEXWebsocket:
     def __wait_for_symbol(self, symbol):
         '''On subscribe, this data will come down. Wait for it.'''
         sleep(5)
-        while not {'instrument', 'liquidation', 'announcement',
-                    'chat', 'connected'} <= set(self.data):
+        while not {'instrument', 'liquidation', 'chat'} <= set(self.data):
             sleep(0.1)
 
     def __send_command(self, command, args=None):
@@ -523,13 +524,16 @@ class BitMEXWebsocket:
                     self.data[table] = message['data']
                     # Keys are communicated on partials to let you know how to uniquely identify
                     # an item. We use it for updates.
-                    if message['table'] == 'connected': # 'connected' has no keys
-                        pass
-                    else:
-                        self.keys[table] = message['keys']
+                    self.keys[table] = message['keys']
                 elif action == 'insert':
                     self.logger.debug('%s: inserting %s' % (table, message['data']))
                     self.data[table] += message['data']
+
+                    # Store chat
+                    if table == 'chat':
+                        data = message['data'][0]
+                        self.chat_logger.info('%s, %s, %s, %s, %s' % (data['channelID'], data['fromBot'], 
+                        data['id'], str(data['message']).replace('\n', '').replace(',', '.'), data['user']))
 
                     # Limit the max length of the table to avoid excessive memory usage.
                     # Don't trim orders because we'll lose valuable state if we do.
@@ -543,7 +547,7 @@ class BitMEXWebsocket:
                         item = tools.find_by_keys(self.keys[table], self.data[table], updateData)
                         if not item:
                             continue  # No item found to update. Could happen before push
-
+                            
                         # Log executions
                         if table == 'order':
                             is_canceled = 'ordStatus' in updateData and updateData['ordStatus'] == 'Canceled'
@@ -614,7 +618,6 @@ class BitMEXWebsocket:
             self.logger.error("Error : %s" % error)
             raise websocket.WebSocketException(error)
 
-        
     def __reset(self):
         self.data = {}
         self.keys = {}
