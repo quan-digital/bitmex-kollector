@@ -44,9 +44,9 @@ class BitMEXWebsocket:
         # self.logger = logger.setup_logbook('ws')
         self.logger = logger.setup_logbook('ws', level=logging.DEBUG)
 
-        self.liq_logger = logger.setup_db('liquidation')
+        self.liquidation_logger = logger.setup_db('liquidation')
         self.chat_logger = logger.setup_db('chat')
-        self.exec_logger = logger.setup_db('exec')
+        self.execution_logger = logger.setup_db('execution')
         sys.excepthook = logger.log_exception
     
         self.logger.info("Initializing WebSocket...")
@@ -538,11 +538,11 @@ class BitMEXWebsocket:
                         self.chat_logger.info('%s, %s, %s, %s, %s' % (data['channelID'], data['fromBot'], 
                         data['id'], str(data['message']).replace('\n', '').replace(',', '.'), data['user']))
 
-                    # # Store liquidations
-                    # if table == 'liquidation':
-                    #     data = message['data'][0]
-                    #     self.chat_logger.info('%s, %s, %s, %s, %s' % (data['channelID'], data['fromBot'], 
-                    #     data['id'], str(data['message']).replace('\n', '').replace(',', '.'), data['user']))
+                    # Store liquidations
+                    if table == 'liquidation':
+                        data = message['data'][0]
+                        self.liquidation_logger.info('%s, %s, %s, %s, %s' % (data['orderID'], data['symbol'], 
+                        data['side'], data['price'], data['leavesQty']))
 
                     # Limit the max length of the table to avoid excessive memory usage.
                     # Don't trim orders because we'll lose valuable state if we do.
@@ -572,7 +572,7 @@ class BitMEXWebsocket:
                                              # here used to be tickLog but lets make it simple
                                               1, item['stopPx'] if item['stopPx'] else (item['price'] or 0)))
                                     
-                                    self.exec_logger.info("%s, %s, %s, %s, %s" %
+                                    self.execution_logger.info("%s, %s, %s, %s, %s" %
                                              (item['clOrdID'][9:13], item['side'], contExecuted, 
                                              item['symbol'], item['stopPx'] if item['stopPx'] else (item['price'] or 0)))
 

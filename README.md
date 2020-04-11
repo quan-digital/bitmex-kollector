@@ -3,6 +3,15 @@ The ultimate data aggregator using Bitmex's Websocket
 
 <img src="img/cover.jpg" align="center" />
 
+## Setup & usage
+
+- Setup your API key and secret on settings.py
+
+- Run create_dirs.py to make data directories
+
+- Run main.py
+
+
 #### Public topics subscribed
 ```bash
 "chat",                // Trollbox chat - cummulative push
@@ -70,6 +79,19 @@ Remaining columns are listed in order as follows.
 
 - user
 
+#### Liquidation
+
+```bash
+[
+  {
+    "orderID": "string",
+    "symbol": "string",
+    "side": "string",
+    "price": 0,
+    "leavesQty": 0
+  }
+]
+```
 
 ### Future topics
 Left out due to low update frequency/importance

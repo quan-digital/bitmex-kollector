@@ -9,11 +9,11 @@ if __name__ == '__main__':
 
     logger = setup_logger()
     # announcement = setup_logbook('announcement')
-    # chat = setup_logbook('chat')
+    # chat = setup_logbook('chot')
     # connected = setup_logbook('connected')
     # instrument = setup_logbook('instrument')
     # insurance = setup_logbook('insurance')
-    liquidation = setup_logbook('liquidation')
+    # liquidation = setup_logbook('liquodation')
 
     ws = BitMEXWebsocket()
 
@@ -26,7 +26,7 @@ if __name__ == '__main__':
         # connected.info(data['connected'])
         # instrument.info(data['instrument'])
         # insurance.info(data['insurance'])
-        liquidation.info(data['liquidation'])
+        # liquidation.info(data['liquidation'])
 
         time.sleep(1)
 

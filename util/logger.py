@@ -29,7 +29,7 @@ def setup_logbook(name, extension='.txt', level=logging.INFO):
        Available levels: DEBUG|INFO|WARN|ERROR"""
     formatter = logging.Formatter(fmt='%(asctime)s.%(msecs)03d (%(name)s) - %(message)s', datefmt='%d-%m-%y %H:%M:%S')
     date = datetime.today().strftime('%Y-%m-%d')
-    log_path = str(settings.DATA_DIR + name + '_' + date + extension)
+    log_path = str(settings.DATA_DIR + name + '/' + name +'_' + date + extension)
 
     handler = RotatingFileHandler(log_path, maxBytes=settings.MAX_FILE_SIZE, backupCount=1)
     handler.setFormatter(formatter)
@@ -44,7 +44,7 @@ def setup_db(name, extension='.csv'):
     """Setup writer that formats data to csv, supports multiple instances with no overlap."""
     formatter = logging.Formatter(fmt='%(asctime)s,%(message)s', datefmt='%d-%m-%y,%H:%M:%S')
     date = datetime.today().strftime('%Y-%m-%d')
-    db_path = str(settings.DATA_DIR + name + '_' + date + extension)
+    db_path = str(settings.DATA_DIR + name + '/' + name + '_' + date + extension)
 
     handler = RotatingFileHandler(db_path, maxBytes=settings.MAX_FILE_SIZE, backupCount=1)
     handler.setFormatter(formatter)
@@ -57,7 +57,7 @@ def setup_db(name, extension='.csv'):
 
 # Log unhandled exceptions to .txt
 date = datetime.today().strftime('%Y-%m-%d')
-log_path = settings.DATA_DIR + 'error_' + date + '.txt'
+log_path = settings.DATA_DIR + 'error/error_' + date + '.txt'
 
 error_logger = logging.getLogger('error')
 handler = logging.handlers.RotatingFileHandler(log_path, maxBytes=settings.MAX_FILE_SIZE, backupCount=1) # stream=sys.stdout
