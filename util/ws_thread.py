@@ -26,6 +26,7 @@ import threading
 import traceback
 import urllib
 import ssl
+import sys
 from time import sleep
 import math
 import json
@@ -46,6 +47,8 @@ class BitMEXWebsocket:
         self.liq_logger = logger.setup_db('liquidation')
         self.chat_logger = logger.setup_db('chat')
         self.exec_logger = logger.setup_db('exec')
+        sys.excepthook = logger.log_exception
+    
         self.logger.info("Initializing WebSocket...")
         self.endpoint = endpoint
         self.symbol = symbol
@@ -72,7 +75,7 @@ class BitMEXWebsocket:
         if api_key:
             self.__wait_for_account()
         self.logger.info('Got all market data. Starting.')
-
+    
     def init(self):
         '''Connect to the websocket and clear data.'''
         self.logger.debug("Initializing WebSocket...")
@@ -534,6 +537,12 @@ class BitMEXWebsocket:
                         data = message['data'][0]
                         self.chat_logger.info('%s, %s, %s, %s, %s' % (data['channelID'], data['fromBot'], 
                         data['id'], str(data['message']).replace('\n', '').replace(',', '.'), data['user']))
+
+                    # # Store liquidations
+                    # if table == 'liquidation':
+                    #     data = message['data'][0]
+                    #     self.chat_logger.info('%s, %s, %s, %s, %s' % (data['channelID'], data['fromBot'], 
+                    #     data['id'], str(data['message']).replace('\n', '').replace(',', '.'), data['user']))
 
                     # Limit the max length of the table to avoid excessive memory usage.
                     # Don't trim orders because we'll lose valuable state if we do.

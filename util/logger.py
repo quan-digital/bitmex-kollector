@@ -5,6 +5,7 @@
 
 from datetime import datetime
 import logging
+import sys
 from logging.handlers import RotatingFileHandler
 
 import util.settings as settings
@@ -22,7 +23,6 @@ def setup_logger():
     ch.setFormatter(formatter)
     logger.addHandler(ch)
     return logger
-
 
 def setup_logbook(name, extension='.txt', level=logging.INFO):
     """Setup logger that writes to file, supports multiple instances with no overlap.
@@ -54,3 +54,23 @@ def setup_db(name, extension='.csv'):
     logger.addHandler(handler)
 
     return logger
+
+# Log unhandled exceptions to .txt
+date = datetime.today().strftime('%Y-%m-%d')
+log_path = settings.DATA_DIR + 'error_' + date + '.txt'
+
+error_logger = logging.getLogger('error')
+handler = logging.handlers.RotatingFileHandler(log_path, maxBytes=settings.MAX_FILE_SIZE, backupCount=1) # stream=sys.stdout
+error_logger.addHandler(handler)
+
+def log_exception(exc_type, exc_value, exc_traceback):
+    if issubclass(exc_type, KeyboardInterrupt):
+        sys.__excepthook__(exc_type, exc_value, exc_traceback)
+        return
+    error_logger.info('-----------------------------------------------------------------')
+    error_logger.info(str(datetime.now()))
+    error_logger.error("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
+    error_logger.info('-----------------------------------------------------------------')
+    error_logger.info('')
+
+# then set sys.excepthook = logger.log_exception on main file

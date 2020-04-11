@@ -21,7 +21,7 @@ The ultimate data aggregator using Bitmex's Websocket
 "wallet"       // Bitcoin address balance data, including total deposits & withdrawals - continuous push overwrite
 ```
 
-### Data
+## Data
 
 For every .csv file, the first two entries are 'DD-MM-YYYY' and 'HH:MM:SS' timestamp components.
 Remaining columns are listed in order as follows.
