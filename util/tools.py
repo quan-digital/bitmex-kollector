@@ -3,6 +3,7 @@
 # - Tools -
 # * Quan.digital *
 
+import os 
 import math
 from decimal import Decimal
 
@@ -30,4 +31,17 @@ def find_by_keys(keys, table, matchData):
     for item in table:
         if all(item[k] == matchData[k] for k in keys):
             return item
-    
+ 
+def create_dirs():
+    '''Creates data directories'''
+    try:
+        os.mkdir('data')
+        os.mkdir('data/ws')
+        os.mkdir('data/error')
+        os.mkdir('data/execution')
+        os.mkdir('data/liquidation')
+        os.mkdir('data/chat')
+        os.mkdir('data/transact')
+
+    except FileExistsError:
+        print("Directories already exist")

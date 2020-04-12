@@ -14,6 +14,7 @@ if __name__ == '__main__':
     # instrument = setup_logbook('instrument')
     # insurance = setup_logbook('insurance')
     # liquidation = setup_logbook('liquodation')
+    # affiliate = setup_logbook('affiliate', soloDir=False)
 
     ws = BitMEXWebsocket()
 
@@ -27,6 +28,7 @@ if __name__ == '__main__':
         # instrument.info(data['instrument'])
         # insurance.info(data['insurance'])
         # liquidation.info(data['liquidation'])
+        # affiliate.info(data['affiliate'])
 
         time.sleep(1)
 

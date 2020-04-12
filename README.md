@@ -21,13 +21,11 @@ The ultimate data aggregator using Bitmex's Websocket
 
 #### Private topics subscribed
 ```bash
-"affiliate",   // Affiliate status, such as total referred users & payout % - TEST
 "execution",   // Individual executions; can be multiple per order - push refreshed
 "order",       // Live updates on your orders - continuous push overwrite
 "margin",      // Updates on your current account balance and margin requirements - continuous push overwrite
 "position",    // Updates on your positions - continuous push overwrite
-"transact",    // Deposit/Withdrawal updates - TEST
-"wallet"       // Bitcoin address balance data, including total deposits & withdrawals - continuous push overwrite
+"transact",    // Deposit/Withdrawal updates - cummulative push
 ```
 
 ## Data
@@ -82,7 +80,6 @@ Remaining columns are listed in order as follows.
 #### Liquidation
 
 ```bash
-[
   {
     "orderID": "string",
     "symbol": "string",
@@ -90,8 +87,26 @@ Remaining columns are listed in order as follows.
     "price": 0,
     "leavesQty": 0
   }
-]
 ```
+
+#### Transact
+```bash
+  {
+    "transactID": "string",
+    "account": 0,
+    "currency": "string",
+    "transactType": "string",
+    "amount": 0,
+    "fee": 0,
+    "transactStatus": "string",
+    "address": "string",
+    "text": "string",
+  }
+```
+
+data['transactID'], 
+                        data['account'], data['currency'], data['transactType'], data['amount'], data['fee'], 
+                        data['transactStatus'], data['address'], data['text']))
 
 ### Future topics
 Left out due to low update frequency/importance
@@ -131,14 +146,14 @@ Left out due to low update frequency/importance
 
 #### Total private topics
 ```bash
-"affiliate",   // Affiliate status, such as total referred users & payout %
+"affiliate",   // Affiliate status, such as total referred users & payout % - push refreshed
 "execution",   // Individual executions; can be multiple per order
 "order",       // Live updates on your orders
 "margin",      // Updates on your current account balance and margin requirements
 "position",    // Updates on your positions
 "privateNotifications", // Individual notifications - currently not used
 "transact",    // Deposit/Withdrawal updates
-"wallet"       // Bitcoin address balance data, including total deposits & withdrawals
+"wallet"       // Bitcoin address balance data, including total deposits & withdrawals - continuous push overwrite
 ```
 
 

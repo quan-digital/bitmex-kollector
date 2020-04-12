@@ -41,10 +41,12 @@ class BitMEXWebsocket:
     def __init__(self, endpoint = settings.BASE_URL, symbol = settings.SYMBOL, \
                  api_key=settings.API_KEY, api_secret=settings.API_SECRET):
         '''Connect to the websocket and initialize data.'''
+        tools.create_dirs()
         # self.logger = logger.setup_logbook('ws')
         self.logger = logger.setup_logbook('ws', level=logging.DEBUG)
-
+        logger.setup_error_logger()
         self.liquidation_logger = logger.setup_db('liquidation')
+        self.transact_logger = logger.setup_db('transact')
         self.chat_logger = logger.setup_db('chat')
         self.execution_logger = logger.setup_db('execution')
         sys.excepthook = logger.log_exception
@@ -71,9 +73,10 @@ class BitMEXWebsocket:
         self.logger.info('Connected to WS.')
 
         # Connected. Wait for partials
-        self.__wait_for_symbol(symbol)
-        if api_key:
-            self.__wait_for_account()
+        # self.__wait_for_symbol(symbol)
+        # if api_key:
+        #     self.__wait_for_account()
+        sleep(5)
         self.logger.info('Got all market data. Starting.')
     
     def init(self):
@@ -107,7 +110,7 @@ class BitMEXWebsocket:
 
     def error(self, err):
         self._error = err
-        self.error_logger.error(err)
+        logger.log_error(err)
 
     def __del__(self):
         self.exit()
@@ -460,8 +463,17 @@ class BitMEXWebsocket:
         Most subscription topics are scoped by the symbol we're listening to.
         '''
 
+        # Public subs
         symbolSubs = ["instrument", "liquidation"]
         genericSubs = ["chat"]
+
+        # Private subs
+        symbolSubsPriv = ["order"]
+        genericSubsPriv = ["transact"]
+
+        # Merge both subs types
+        symbolSubs += symbolSubsPriv
+        genericSubs += genericSubsPriv
 
         subscriptions = [sub + ':' + self.symbol for sub in symbolSubs]
         subscriptions += genericSubs
@@ -543,6 +555,13 @@ class BitMEXWebsocket:
                         data = message['data'][0]
                         self.liquidation_logger.info('%s, %s, %s, %s, %s' % (data['orderID'], data['symbol'], 
                         data['side'], data['price'], data['leavesQty']))
+
+                    # Store transactions
+                    if table == 'transact':
+                        data = message['data'][0]
+                        self.transact_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s' % (data['transactID'], 
+                        data['account'], data['currency'], data['transactType'], data['amount'], data['fee'], 
+                        data['transactStatus'], data['address'], data['text']))
 
                     # Limit the max length of the table to avoid excessive memory usage.
                     # Don't trim orders because we'll lose valuable state if we do.
