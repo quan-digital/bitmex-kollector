@@ -5,6 +5,7 @@ import logging
 from util.logger import setup_logger, setup_db
 from util.ws_thread import BitMEXWebsocket
 from util.tools import create_dirs
+import util.settings as settings
 
 if __name__ == '__main__':
 
@@ -14,16 +15,18 @@ if __name__ == '__main__':
     ws = BitMEXWebsocket()
 
     instrument_logger = setup_db('instrument')
-    user_logger = setup_db('user')
+    margin_logger = setup_db('margin')
+    position_logger = setup_db('position')
 
     while(ws.ws.sock.connected):
 
         data = ws.get_data()
         instrument = ws.get_instrument_data()
 
+        # Log instrument data every second
         instrument_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
 %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
-%s, %s, %s," % (instrument['symbol'],
+%s, %s, %s" % (instrument['symbol'],
                     instrument['state'],
                     instrument['fundingRate'],
                     instrument['indicativeFundingRate'],
@@ -55,8 +58,23 @@ if __name__ == '__main__':
                     instrument['markPrice'],
                     instrument['indicativeSettlePrice']))
         
-        user_logger.info(data['order'])
-        user_logger.info(data['margin'])
-        user_logger.info(data['position'])
-            
-        time.sleep(1)
+        # Log margin data on changes
+        if ws._UPDATE_MARGIN:
+            margin = ws.get_margin_data()
+            margin_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % (
+            margin['account'],
+            margin['currency'],
+            margin['amount'],
+            margin['realisedPnl'],
+            margin['unrealisedPnl'],
+            margin['indicativeTax'],
+            margin['unrealisedProfit'],
+            margin['walletBalance'],
+            margin['marginBalance'],
+            margin['marginLeverage'],
+            margin['marginUsedPcnt'],
+            margin['availableMargin'],
+            margin['withdrawableMargin']))
+            ws._UPDATE_MARGIN = False
+
+        time.sleep(settings.LOOP_INTERVAL)

@@ -6,6 +6,7 @@
 import os 
 import math
 from decimal import Decimal
+import util.settings as settings
 
 def XBt_to_XBT(XBt):
     """Satoshi to XBT converter"""
@@ -35,15 +36,16 @@ def find_by_keys(keys, table, matchData):
 def create_dirs():
     '''Creates data directories'''
     try:
-        os.mkdir('data')
-        os.mkdir('data/ws')
-        os.mkdir('data/error')
-        os.mkdir('data/liquidation')
-        os.mkdir('data/chat')
-        os.mkdir('data/transact')
-        os.mkdir('data/execution')
-        os.mkdir('data/instrument')
-        os.mkdir('data/user')
+        os.mkdir(settings.DATA_DIR.replace('/', ''))
+        os.mkdir(settings.DATA_DIR + '_ws')
+        os.mkdir(settings.DATA_DIR + '_error')
+        os.mkdir(settings.DATA_DIR + 'liquidation')
+        os.mkdir(settings.DATA_DIR + 'chat')
+        os.mkdir(settings.DATA_DIR + 'transact')
+        os.mkdir(settings.DATA_DIR + 'execution')
+        os.mkdir(settings.DATA_DIR + 'instrument')
+        os.mkdir(settings.DATA_DIR + 'margin')
+        os.mkdir(settings.DATA_DIR + 'position')
 
     except FileExistsError:
         print("Directories already exist")

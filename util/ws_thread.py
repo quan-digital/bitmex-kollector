@@ -41,7 +41,7 @@ class BitMEXWebsocket:
     def __init__(self, endpoint = settings.BASE_URL, symbol = settings.SYMBOL, \
                  api_key=settings.API_KEY, api_secret=settings.API_SECRET):
         '''Connect to the websocket and initialize data.'''
-        self.logger = logger.setup_logbook('ws')
+        self.logger = logger.setup_logbook('_ws', level = logging.DEBUG)
         logger.setup_error_logger()
         self.liquidation_logger = logger.setup_db('liquidation')
         self.transact_logger = logger.setup_db('transact')
@@ -63,6 +63,9 @@ class BitMEXWebsocket:
         self.data = {}
         self.keys = {}
         self.exited = False
+
+        self._UPDATE_MARGIN = False
+        self._UPDATE_POSITION = False
 
         # Subscribe to all pertinent endpoints
         wsURL = self.__get_url()
@@ -165,6 +168,24 @@ class BitMEXWebsocket:
                     markPrice = instrument['markPrice'],
                     indicativeSettlePrice = instrument['indicativeSettlePrice'])
 
+    def get_margin_data(self):
+        '''Return all relevant margin data'''
+        margin = self.data['margin'][0]
+        return dict(account =  margin['account'],
+        currency = margin['currency'],
+        amount = margin['amount'],
+        realisedPnl = margin['realisedPnl'],
+        unrealisedPnl = margin['unrealisedPnl'],
+        indicativeTax = margin['indicativeTax'],
+        unrealisedProfit = margin['unrealisedProfit'],
+        walletBalance = margin['walletBalance'],
+        marginBalance = margin['marginBalance'],
+        marginLeverage = margin['marginLeverage'],
+        marginUsedPcnt = margin['marginUsedPcnt'],
+        availableMargin = margin['availableMargin'],
+        withdrawableMargin = margin['withdrawableMargin']
+        )
+
     #
     # Private data functions
     #
@@ -231,9 +252,8 @@ class BitMEXWebsocket:
         genericSubs = ["chat"]
 
         # Private subs
-        #symbolSubsPriv = ["order", "execution", "margin", "position"]
-        symbolSubsPriv = ["execution"]
-        genericSubsPriv = ["transact"]
+        symbolSubsPriv = ["order", "execution", "position"]
+        genericSubsPriv = ["transact", "margin"]
 
         # Merge both subs types
         symbolSubs += symbolSubsPriv
@@ -342,6 +362,15 @@ class BitMEXWebsocket:
 
                 elif action == 'update':
                     self.logger.debug('%s: updating %s' % (table, message['data']))
+
+                    # Set margin update signal to True
+                    if table == 'margin':
+                        self._UPDATE_MARGIN = True
+
+                    # Set margin update signal to True
+                    elif table == 'position':
+                        self._UPDATE_POSITION = True
+
                     # Locate the item in the collection and update it.
                     for updateData in message['data']:
                         item = tools.find_by_keys(self.keys[table], self.data[table], updateData)

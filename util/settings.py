@@ -14,7 +14,7 @@ DATA_DIR = 'data/'
 MAX_FILE_SIZE = 100000000 # 100MB
 
 # Time in seconds to wait after each loop
-LOOP_INTERVAL = 8
+LOOP_INTERVAL = 1
 
 #####################################################
 # Websocket
