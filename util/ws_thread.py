@@ -468,7 +468,8 @@ class BitMEXWebsocket:
         genericSubs = ["chat"]
 
         # Private subs
-        symbolSubsPriv = ["order"]
+        #symbolSubsPriv = ["order", "execution", "margin", "position"]
+        symbolSubsPriv = ["execution"]
         genericSubsPriv = ["transact"]
 
         # Merge both subs types
@@ -551,17 +552,25 @@ class BitMEXWebsocket:
                         data['id'], str(data['message']).replace('\n', '').replace(',', '.'), data['user']))
 
                     # Store liquidations
-                    if table == 'liquidation':
+                    elif table == 'liquidation':
                         data = message['data'][0]
                         self.liquidation_logger.info('%s, %s, %s, %s, %s' % (data['orderID'], data['symbol'], 
                         data['side'], data['price'], data['leavesQty']))
 
                     # Store transactions
-                    if table == 'transact':
+                    elif table == 'transact':
                         data = message['data'][0]
                         self.transact_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s' % (data['transactID'], 
                         data['account'], data['currency'], data['transactType'], data['amount'], data['fee'], 
                         data['transactStatus'], data['address'], data['text']))
+
+                    # Store executions
+                    elif table == 'execution':
+                        data = message['data'][0]
+                        self.execution_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % 
+                        (data['execID'], data['orderID'], data['clOrdID'], data['account'], data['symbol'], 
+                        data['side'], data['orderQty'], data['price'], data['execType'], data['ordType'],
+                        data['commission'], data['text']))
 
                     # Limit the max length of the table to avoid excessive memory usage.
                     # Don't trim orders because we'll lose valuable state if we do.
@@ -592,27 +601,8 @@ class BitMEXWebsocket:
                                               1, item['stopPx'] if item['stopPx'] else (item['price'] or 0)))
                                     
                                     self.execution_logger.info("%s, %s, %s, %s, %s" %
-                                             (item['clOrdID'][9:13], item['side'], contExecuted, 
+                                             (item['clOrdID'], item['side'], contExecuted, 
                                              item['symbol'], item['stopPx'] if item['stopPx'] else (item['price'] or 0)))
-
-
-                                    # Execution handling for email notification
-                                    
-                                    # High step case
-                                    if str(item['clOrdID'][9:12]) == ('Buy' or 'Sel'):
-                                        if int(item['clOrdID'][12]) > settings.SEND_EMAIL_GRADLE:
-                                            settings._HIGH_STEP_ORDER = True
-                                            self._ExecStatusHighStep = item
-
-                                    # Stop reached case
-                                    elif str(item['clOrdID'][9:12]) == 'Stm':
-                                        settings._REACHED_STOP = True
-                                        self._ExecStatusStop = item
-
-                                    # Target reached case
-                                    elif str(item['clOrdID'][9:12]) == 'Tgt':
-                                        settings._REACHED_TARGET = True
-                                        self._ExecStatusTarget = item
                                     
                         # Update this item.
                         item.update(updateData)

@@ -7,9 +7,10 @@ The ultimate data aggregator using Bitmex's Websocket
 
 - Setup your API key and secret on settings.py
 
-- Run create_dirs.py to make data directories
-
 - Run main.py
+
+TODO:
+log headers
 
 
 #### Public topics subscribed
@@ -90,6 +91,7 @@ Remaining columns are listed in order as follows.
 ```
 
 #### Transact
+
 ```bash
   {
     "transactID": "string",
@@ -104,9 +106,25 @@ Remaining columns are listed in order as follows.
   }
 ```
 
-data['transactID'], 
-                        data['account'], data['currency'], data['transactType'], data['amount'], data['fee'], 
-                        data['transactStatus'], data['address'], data['text']))
+### Execution 
+
+```bash
+  {
+    "execID": "string",
+    "orderID": "string",
+    "clOrdID": "string",
+    "account": 0,
+    "symbol": "string",
+    "side": "string",
+    "orderQty": 0,
+    "price": 0,
+    "execType": "string",
+    "ordType": "string",
+    "commission": 0,
+    "text": "string"
+  }
+```
+
 
 ### Future topics
 Left out due to low update frequency/importance

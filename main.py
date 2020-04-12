@@ -8,6 +8,9 @@ from util.ws_thread import BitMEXWebsocket
 if __name__ == '__main__':
 
     logger = setup_logger()
+
+    ws = BitMEXWebsocket()
+
     # announcement = setup_logbook('announcement')
     # chat = setup_logbook('chot')
     # connected = setup_logbook('connected')
@@ -15,8 +18,7 @@ if __name__ == '__main__':
     # insurance = setup_logbook('insurance')
     # liquidation = setup_logbook('liquodation')
     # affiliate = setup_logbook('affiliate', soloDir=False)
-
-    ws = BitMEXWebsocket()
+    # execution = setup_logbook('execution')
 
     while(ws.ws.sock.connected):
 
@@ -29,6 +31,7 @@ if __name__ == '__main__':
         # insurance.info(data['insurance'])
         # liquidation.info(data['liquidation'])
         # affiliate.info(data['affiliate'])
+        # execution.info(data['execution'])
 
         time.sleep(1)
 

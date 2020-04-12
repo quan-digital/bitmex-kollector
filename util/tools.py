@@ -38,10 +38,10 @@ def create_dirs():
         os.mkdir('data')
         os.mkdir('data/ws')
         os.mkdir('data/error')
-        os.mkdir('data/execution')
         os.mkdir('data/liquidation')
         os.mkdir('data/chat')
         os.mkdir('data/transact')
+        os.mkdir('data/execution')
 
     except FileExistsError:
         print("Directories already exist")
