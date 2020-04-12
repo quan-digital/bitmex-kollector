@@ -42,6 +42,8 @@ def create_dirs():
         os.mkdir('data/chat')
         os.mkdir('data/transact')
         os.mkdir('data/execution')
+        os.mkdir('data/instrument')
+        os.mkdir('data/user')
 
     except FileExistsError:
         print("Directories already exist")

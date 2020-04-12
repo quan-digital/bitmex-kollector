@@ -22,7 +22,7 @@ log headers
 
 #### Private topics subscribed
 ```bash
-"execution",   // Individual executions; can be multiple per order - push refreshed
+"execution",   // Individual executions; can be multiple per order - cummulative push
 "order",       // Live updates on your orders - continuous push overwrite
 "margin",      // Updates on your current account balance and margin requirements - continuous push overwrite
 "position",    // Updates on your positions - continuous push overwrite
@@ -125,6 +125,43 @@ Remaining columns are listed in order as follows.
   }
 ```
 
+### Instrument
+
+```bash
+  {
+    "symbol": "string",
+    "state": "string",
+    "fundingRate": 0,
+    "indicativeFundingRate": 0,
+    "prevClosePrice": 0,
+    "totalVolume": 0,
+    "volume": 0,
+    "volume24h": 0,
+    "totalTurnover": 0,
+    "turnover": 0,
+    "turnover24h": 0,
+    "homeNotional24h": 0,
+    "foreignNotional24h": 0,
+    "prevPrice24h": 0,
+    "vwap": 0,
+    "highPrice": 0,
+    "lowPrice": 0,
+    "lastPrice": 0,
+    "lastPriceProtected": 0,
+    "lastTickDirection": "string",
+    "lastChangePcnt": 0,
+    "bidPrice": 0,
+    "midPrice": 0,
+    "askPrice": 0,
+    "impactBidPrice": 0,
+    "impactMidPrice": 0,
+    "impactAskPrice": 0,
+    "openInterest": 0,
+    "openValue": 0,
+    "markPrice": 0,
+    "indicativeSettlePrice": 0
+  }
+```
 
 ### Future topics
 Left out due to low update frequency/importance
