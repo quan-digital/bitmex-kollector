@@ -20,14 +20,9 @@ LOOP_INTERVAL = 1
 # Websocket
 #####################################################
 
-# # API pair
-# API_KEY = "7JEjfUfpt7T9gMno8NSw86Ld"
-# API_SECRET = "Qya14PDUSNc8w7gRG_XGrv_Gy0IczQeeKrumVxsPhF6JnFdr"
-
 # API pair
-API_KEY = "rolMDEfUQwwASTckmugBkeM5"
-API_SECRET = "anR6vCI74u10ggGAxAlCVN05ITrtC8bwiK4_s86vtXRARddP"
-
+API_KEY = "SeaqRPlqes8KtO37EjI_khFh"
+API_SECRET = "j10Hg4MhYiYFIwUVRHCskk8JH-TrDfu7uRF8-iX18o3QoV0j"
 
 # Don't grow a table larger than 200. Helps cap memory usage.
 MAX_TABLE_LEN = 200
@@ -39,6 +34,5 @@ WS_TIMEOUT = 5
 SYMBOL = "XBTUSD"
 
 # API endpoint URL
-# BASE_URL = "https://www.bitmex.com/api/v1/"
-BASE_URL = "https://testnet.bitmex.com/api/v1/"
-
+BASE_URL = "https://www.bitmex.com/api/v1/"
+# BASE_URL = "https://testnet.bitmex.com/api/v1/"

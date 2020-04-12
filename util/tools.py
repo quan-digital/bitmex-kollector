@@ -18,12 +18,6 @@ def to_nearest(num, tickSize = 1):
     tickDec = Decimal(str(tickSize))
     return float((Decimal(round(num / tickSize, 0)) * tickDec))
 
-def order_leaves_quantity(order):
-    """Empty order checker"""
-    if order['leavesQty'] is None:
-        return True
-    return order['leavesQty'] > 0
-
 def find_by_keys(keys, table, matchData):
     """Utility method for finding an item in the store when an update comes through on the websocket.
         On a data push, we have a "keys" array. These are the
@@ -48,4 +42,4 @@ def create_dirs():
         os.mkdir(settings.DATA_DIR + 'position')
 
     except FileExistsError:
-        print("Directories already exist")
+        print("Directories already exist.")

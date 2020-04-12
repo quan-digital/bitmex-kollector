@@ -41,13 +41,16 @@ class BitMEXWebsocket:
     def __init__(self, endpoint = settings.BASE_URL, symbol = settings.SYMBOL, \
                  api_key=settings.API_KEY, api_secret=settings.API_SECRET):
         '''Connect to the websocket and initialize data.'''
-        self.logger = logger.setup_logbook('_ws', level = logging.DEBUG)
+        
         logger.setup_error_logger()
+        sys.excepthook = logger.log_exception
+        self.logger = logger.setup_logbook('_ws', level=logging.DEBUG)
+
         self.liquidation_logger = logger.setup_db('liquidation')
         self.transact_logger = logger.setup_db('transact')
         self.chat_logger = logger.setup_db('chat')
         self.execution_logger = logger.setup_db('execution')
-        sys.excepthook = logger.log_exception
+        
     
         self.logger.info("Initializing WebSocket...")
         self.endpoint = endpoint
@@ -74,12 +77,11 @@ class BitMEXWebsocket:
         self.logger.info('Connected to WS.')
 
         # Connected. Wait for partials
-        # self.__wait_for_symbol(symbol)
-        # if api_key:
-        #     self.__wait_for_account()
-        sleep(5)
+        self.__wait_for_symbol(symbol)
+        if api_key:
+            self.__wait_for_account()
         self.logger.info('Got all market data. Starting.')
-    
+
     def init(self):
         '''Connect to the websocket and clear data.'''
         self.logger.debug("Initializing WebSocket...")
@@ -183,8 +185,40 @@ class BitMEXWebsocket:
         marginLeverage = margin['marginLeverage'],
         marginUsedPcnt = margin['marginUsedPcnt'],
         availableMargin = margin['availableMargin'],
-        withdrawableMargin = margin['withdrawableMargin']
-        )
+        withdrawableMargin = margin['withdrawableMargin'])
+
+    def get_position_data(self):
+        '''Return all relevant position data'''
+        position = self.data['position'][0]
+        return dict(account = position['account'],
+        symbol = position['symbol'],
+        commission = position['commission'],
+        leverage = position['leverage'],
+        crossMargin = position['crossMargin'],
+        rebalancedPnl = position['rebalancedPnl'],
+        openOrderBuyQty = position['openOrderBuyQty'],
+        openOrderBuyCost = position['openOrderBuyCost'],
+        openOrderSellQty = position['openOrderSellQty'],
+        openOrderSellCost = position['openOrderSellCost'],
+        execBuyQty = position['execBuyQty'],
+        execBuyCost = position['execBuyCost'],
+        execSellQty = position['execSellQty'],
+        execSellCost = position['execSellCost'],
+        currentQty = position['currentQty'],
+        currentCost = position['currentCost'],
+        isOpen = position['isOpen'],
+        markPrice = position['markPrice'],
+        markValue = position['markValue'],
+        homeNotional = position['homeNotional'],
+        foreignNotional = position['foreignNotional'],
+        posState = position['posState'],
+        realisedPnl = position['realisedPnl'],
+        unrealisedPnl = position['unrealisedPnl'],
+        avgCostPrice = position['avgCostPrice'],
+        avgEntryPrice = position['avgEntryPrice'],
+        breakEvenPrice = position['breakEvenPrice'],
+        liquidationPrice = position['liquidationPrice'],
+        bankruptPrice = position['bankruptPrice'])
 
     #
     # Private data functions
@@ -242,17 +276,15 @@ class BitMEXWebsocket:
             return []
 
     def __get_url(self):
-        '''
-        Generate a connection URL. We can define subscriptions right in the querystring.
-        Most subscription topics are scoped by the symbol we're listening to.
-        '''
+        '''Generate a connection URL. We can define subscriptions right in the querystring.
+        Most subscription topics are scoped by the symbol we're listening to.'''
 
         # Public subs
         symbolSubs = ["instrument", "liquidation"]
         genericSubs = ["chat"]
 
         # Private subs
-        symbolSubsPriv = ["order", "execution", "position"]
+        symbolSubsPriv = ["execution", "position"]
         genericSubsPriv = ["transact", "margin"]
 
         # Merge both subs types
@@ -269,14 +301,13 @@ class BitMEXWebsocket:
 
     def __wait_for_account(self):
         '''On subscribe, this data will come down. Wait for it.'''
-        # while not {'margin', 'position', 'order'} <= set(self.data):
-        #     sleep(0.1)
+        while not {"execution", "position", "transact", "margin"} <= set(self.data):
+            sleep(0.1)
         return
 
     def __wait_for_symbol(self, symbol):
         '''On subscribe, this data will come down. Wait for it.'''
-        sleep(5)
-        while not {'instrument', 'liquidation', 'chat'} <= set(self.data):
+        while not {"instrument", "liquidation", "chat"} <= set(self.data):
             sleep(0.1)
 
     def __send_command(self, command, args=None):
@@ -356,8 +387,7 @@ class BitMEXWebsocket:
                         data['commission'], data['text']))
 
                     # Limit the max length of the table to avoid excessive memory usage.
-                    # Don't trim orders because we'll lose valuable state if we do.
-                    if table not in ['order'] and len(self.data[table]) > settings.MAX_TABLE_LEN:
+                    if len(self.data[table]) > settings.MAX_TABLE_LEN:
                         self.data[table] = self.data[table][settings.MAX_TABLE_LEN // 2:]
 
                 elif action == 'update':
@@ -368,7 +398,7 @@ class BitMEXWebsocket:
                         self._UPDATE_MARGIN = True
 
                     # Set margin update signal to True
-                    elif table == 'position':
+                    if table == 'position':
                         self._UPDATE_POSITION = True
 
                     # Locate the item in the collection and update it.
@@ -377,32 +407,9 @@ class BitMEXWebsocket:
                         if not item:
                             continue  # No item found to update. Could happen before push
                             
-                        # Log executions
-                        if table == 'order':
-                            is_canceled = 'ordStatus' in updateData and updateData['ordStatus'] == 'Canceled'
-                            if 'cumQty' in updateData and not is_canceled:
-                                contExecuted = updateData['cumQty'] - item['cumQty']
-                                if contExecuted > 0:
-                                    instrument = self.get_instrument(item['symbol'])
-
-                                    # Here we log (item['price'] or 0) because when positions are market closed 
-                                    # through bitmex dashboard, neither price nor stopPx is returns, which can lead to errors
-                                    self.logger.info("Execution: %s %d Contracts of %s at %.*f" %
-                                             (item['side'], contExecuted, item['symbol'],
-                                             # here used to be tickLog but lets make it simple
-                                              1, item['stopPx'] if item['stopPx'] else (item['price'] or 0)))
-                                    
-                                    self.execution_logger.info("%s, %s, %s, %s, %s" %
-                                             (item['clOrdID'], item['side'], contExecuted, 
-                                             item['symbol'], item['stopPx'] if item['stopPx'] else (item['price'] or 0)))
-                                    
                         # Update this item.
                         item.update(updateData)
 
-                        # Remove cancelled / filled orders
-                        if table == 'order' and not tools.order_leaves_quantity(item):
-                            self.data[table].remove(item)
-                        
                 elif action == 'delete':
                     self.logger.debug('%s: deleting %s' % (table, message['data']))
                     # Locate the item in the collection and remove it.
@@ -441,10 +448,3 @@ class BitMEXWebsocket:
     def __on_close(self):
         '''Called on websocket close.'''
         self.logger.info('Websocket Closed')
-
-
-
-
-
-
-

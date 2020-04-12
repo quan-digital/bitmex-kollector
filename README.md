@@ -7,13 +7,13 @@ The ultimate data aggregator using Bitmex's Websocket
 
 - Setup your API key and secret on settings.py
 
-- Run main.py
+- pip3 install -U websocket-client
 
-TODO:
-log headers
+- Run main.py
 
 
 #### Public topics subscribed
+
 ```bash
 "chat",                // Trollbox chat - cummulative push
 "instrument",          // Instrument updates including turnover and bid/ask - continuous push overwrite 
@@ -21,9 +21,9 @@ log headers
 ```
 
 #### Private topics subscribed
+
 ```bash
 "execution",   // Individual executions; can be multiple per order - cummulative push
-"order",       // Live updates on your orders - continuous push overwrite
 "margin",      // Updates on your current account balance and margin requirements - continuous push overwrite
 "position",    // Updates on your positions - continuous push overwrite
 "transact",    // Deposit/Withdrawal updates - cummulative push
@@ -197,20 +197,46 @@ Margin data is updated on every change.
 
 ### Position
 
-{'account': 240020, 'symbol': 'XBTUSD', 'currency': 'XBt', 'underlying': 'XBT', 'quoteCurrency': 'USD', 'commission': 0.00075, 'initMarginReq': 0.01, 'maintMarginReq': 0.005, 'riskLimit': 20000000000, 'leverage': 100, 'crossMargin': True, 'deleveragePercentile': 1, 'rebalancedPnl': 64, 'prevRealisedPnl': -21, 'prevUnrealisedPnl': 0, 'prevClosePrice': 6863.05, 'openingTimestamp': '2020-04-12T19:00:00.000Z', 'openingQty': 0, 'openingCost': -17, 'openingComm': 60, 'openOrderBuyQty': 1, 'openOrderBuyCost': -14100, 'openOrderBuyPremium': 0, 'openOrderSellQty': 0, 'openOrderSellCost': 0, 'openOrderSellPremium': 0, 'execBuyQty': 2, 'execBuyCost': 28050, 'execSellQty': 1, 'execSellCost': 14026, 'execQty': 1, 'execCost': -14024, 'execComm': 30, 'currentTimestamp': '2020-04-12T19:35:30.382Z', 'currentQty': 1, 'currentCost': -14041, 'currentComm': 90, 'realisedCost': -16, 'unrealisedCost': -14025, 'grossOpenCost': 14100, 'grossOpenPremium': 0, 'grossExecCost': 14025, 'isOpen': True, 'markPrice': 7135.79, 'markValue': -14014, 'riskValue': 28114, 'homeNotional': 0.00014014, 'foreignNotional': -1, 'posState': '', 'posCost': -14025, 'posCost2': -14025, 'posCross': 0, 'posInit': 141, 'posComm': 11, 'posLoss': 0, 'posMargin': 152, 'posMaint': 129, 'posAllowance': 0, 'taxableMargin': 0, 'initMargin': 163, 'maintMargin': 163, 'sessionMargin': 0, 'targetExcessMargin': 0, 'varMargin': 0, 'realisedGrossPnl': 16, 'realisedTax': 0, 'realisedPnl': -74, 'unrealisedGrossPnl': 11, 'longBankrupt': 0, 'shortBankrupt': 0, 'taxBase': 0, 'indicativeTaxRate': None, 'indicativeTax': 0, 'unrealisedTax': 0, 'unrealisedPnl': 11, 'unrealisedPnlPcnt': 0.0008, 'unrealisedRoePcnt': 0.0784, 'simpleQty': None, 'simpleCost': None, 'simpleValue': None, 'simplePnl': None, 'simplePnlPcnt': None, 'avgCostPrice': 7130, 'avgEntryPrice': 7130, 'breakEvenPrice': 7135.5, 'marginCallPrice': 56.5, 'liquidationPrice': 56.5, 'bankruptPrice': 56.5, 'timestamp': '2020-04-12T19:35:30.382Z', 'lastPrice': 7135.79, 'lastValue': -14014}
+Position data is updated on every change.
 
-{'orderID': '58c29050-3acf-3c29-80d3-0ed7ea50002c', 'clOrdID': '', 'clOrdLinkID': '', 'account': 240020, 'symbol': 'XBTUSD', 'side': 'Buy', 'simpleOrderQty': None, 'orderQty': 1, 'price': 7092, 'displayQty': None, 'stopPx': None, 'pegOffsetValue': None, 'pegPriceType': '', 'currency': 'USD', 'settlCurrency': 'XBt', 'ordType': 'Limit', 'timeInForce': 'GoodTillCancel', 'execInst': '', 'contingencyType': '', 'exDestination': 'XBME', 'ordStatus': 'New', 'triggered': '', 'workingIndicator': True, 'ordRejReason': '', 'simpleLeavesQty': None, 'leavesQty': 1, 'simpleCumQty': None, 'cumQty': 0, 'avgPx': None, 'multiLegReportingType': 'SingleSecurity', 'text': 'Submission from testnet.bitmex.com', 'transactTime': '2020-04-12T19:34:58.115Z', 'timestamp': '2020-04-12T19:34:58.115Z'}
-
-
-[{'orderID': '58c29050-3acf-3c29-80d3-0ed7ea50002c', 'clOrdID': '', 'clOrdLinkID': '', 'account': 240020, 'symbol': 'XBTUSD', 'side': 'Buy', 'simpleOrderQty': None, 'orderQty': 1, 'price': 7092, 'displayQty': None, 'stopPx': None, 'pegOffsetValue': None, 'pegPriceType': '', 'currency': 'USD', 'settlCurrency': 'XBt', 'ordType': 'Limit', 'timeInForce': 'GoodTillCancel', 'execInst': '', 'contingencyType': '', 'exDestination': 'XBME', 'ordStatus': 'New', 'triggered': '', 'workingIndicator': True, 'ordRejReason': '', 'simpleLeavesQty': None, 'leavesQty': 1, 'simpleCumQty': None, 'cumQty': 0, 'avgPx': None, 'multiLegReportingType': 'SingleSecurity', 'text': 'Submission from testnet.bitmex.com', 'transactTime': '2020-04-12T19:34:58.115Z', 'timestamp': '2020-04-12T19:34:58.115Z'}, 
-
-{'orderID': 'b62bb56f-3e71-06af-6163-79686ab35c4c', 'clOrdID': '', 'clOrdLinkID': '', 'account': 240020, 'symbol': 'XBTUSD', 'side': 'Buy', 'simpleOrderQty': None, 'orderQty': 1, 'price': 7082, 'displayQty': None, 'stopPx': None, 'pegOffsetValue': None, 'pegPriceType': '', 'currency': 'USD', 'settlCurrency': 'XBt', 'ordType': 'Limit', 'timeInForce': 'GoodTillCancel', 'execInst': '', 'contingencyType': '', 'exDestination': 'XBME', 'ordStatus': 'New', 'triggered': '', 'workingIndicator': True, 'ordRejReason': '', 'simpleLeavesQty': None, 'leavesQty': 1, 'simpleCumQty': None, 'cumQty': 0, 'avgPx': None, 'multiLegReportingType': 'SingleSecurity', 'text': 'Submission from testnet.bitmex.com', 'transactTime': '2020-04-12T19:37:01.311Z', 'timestamp': '2020-04-12T19:37:01.311Z'}, 
-
-{'orderID': '4188f5b5-5f78-95ee-1cbd-c111cfe1bf5e', 'clOrdID': '', 'clOrdLinkID': '', 'account': 240020, 'symbol': 'XBTUSD', 'side': 'Buy', 'simpleOrderQty': None, 'orderQty': 1, 'price': 7052, 'displayQty': None, 'stopPx': None, 'pegOffsetValue': None, 'pegPriceType': '', 'currency': 'USD', 'settlCurrency': 'XBt', 'ordType': 'Limit', 'timeInForce': 'GoodTillCancel', 'execInst': '', 'contingencyType': '', 'exDestination': 'XBME', 'ordStatus': 'New', 'triggered': '', 'workingIndicator': True, 'ordRejReason': '', 'simpleLeavesQty': None, 'leavesQty': 1, 'simpleCumQty': None, 'cumQty': 0, 'avgPx': None, 'multiLegReportingType': 'SingleSecurity', 'text': 'Submission from testnet.bitmex.com', 'transactTime': '2020-04-12T19:37:05.828Z', 'timestamp': '2020-04-12T19:37:05.828Z'}]
+```bash
+  {
+    "account": 0,
+    "symbol": "string",
+    "commission": 0,
+    "leverage": 0,
+    "crossMargin": true,
+    "rebalancedPnl": 0,
+    "openOrderBuyQty": 0,
+    "openOrderBuyCost": 0,
+    "openOrderSellQty": 0,
+    "openOrderSellCost": 0,
+    "execBuyQty": 0,
+    "execBuyCost": 0,
+    "execSellQty": 0,
+    "execSellCost": 0,
+    "currentQty": 0,
+    "currentCost": 0,
+    "isOpen": true,
+    "markPrice": 0,
+    "markValue": 0,
+    "homeNotional": 0,
+    "foreignNotional": 0,
+    "posState": "string",
+    "realisedPnl": 0,
+    "unrealisedPnl": 0,
+    "avgCostPrice": 0,
+    "avgEntryPrice": 0,
+    "breakEvenPrice": 0,
+    "liquidationPrice": 0,
+    "bankruptPrice": 0,
+  }
+```
 
 
 ### Future topics
-Left out due to low update frequency/importance
+
+Left out due to low update frequency/importance. May never be necessary.
 
 ```bash
 "announcement",        // Site announcements - TEST
@@ -249,7 +275,7 @@ Left out due to low update frequency/importance
 ```bash
 "affiliate",   // Affiliate status, such as total referred users & payout % - push refreshed
 "execution",   // Individual executions; can be multiple per order
-"order",       // Live updates on your orders
+"order",       // Live updates on your orders - continuous push overwrite
 "margin",      // Updates on your current account balance and margin requirements
 "position",    // Updates on your positions
 "privateNotifications", // Individual notifications - currently not used

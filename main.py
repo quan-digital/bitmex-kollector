@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+
+# - Bitmex Kollector -
+#   * Quan.digital *
+
+# author: canokaue
+# date: 12/04/2020
+# kaue@engineer.com
+
+# The ultimate data collector for Bitmex
+
 import sys
 import time
 import logging
@@ -76,5 +87,42 @@ if __name__ == '__main__':
             margin['availableMargin'],
             margin['withdrawableMargin']))
             ws._UPDATE_MARGIN = False
+
+        # Log position data on changes
+        if ws._UPDATE_POSITION:
+            position = ws.get_position_data()
+            position_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
+%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % (
+            position['account'],
+            position['symbol'],
+            position['commission'],
+            position['leverage'],
+            position['crossMargin'],
+            position['rebalancedPnl'],
+            position['openOrderBuyQty'],
+            position['openOrderBuyCost'],
+            position['openOrderSellQty'],
+            position['openOrderSellCost'],
+            position['execBuyQty'],
+            position['execBuyCost'],
+            position['execSellQty'],
+            position['execSellCost'],
+            position['currentQty'],
+            position['currentCost'],
+            position['isOpen'],
+            position['markPrice'],
+            position['markValue'],
+            position['homeNotional'],
+            position['foreignNotional'],
+            position['posState'],
+            position['realisedPnl'],
+            position['unrealisedPnl'],
+            position['avgCostPrice'],
+            position['avgEntryPrice'],
+            position['breakEvenPrice'],
+            position['liquidationPrice'],
+            position['bankruptPrice']))
+            ws._UPDATE_POSITION = False
+
 
         time.sleep(settings.LOOP_INTERVAL)
