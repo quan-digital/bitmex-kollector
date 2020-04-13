@@ -1,5 +1,5 @@
 # Bitmex Kollector
-The ultimate data aggregator using Bitmex's Websocket
+The ultimate data aggregator using Bitmex's Websocket - FATALITY 💉💀🗡
 
 <img src="img/cover.jpg" align="center" />
 
@@ -96,7 +96,7 @@ Transact data is updated on arrival.
   }
 ```
 
-### Execution 
+#### Execution 
 
 Execution data is updated on arrival.
 
@@ -117,7 +117,7 @@ Execution data is updated on arrival.
   }
 ```
 
-### Instrument
+#### Instrument
 
 Instrument data is updated every settings.LOOP_INTERVAL seconds (default is 1 second).
 
@@ -157,7 +157,7 @@ Instrument data is updated every settings.LOOP_INTERVAL seconds (default is 1 se
   }
 ```
 
-### Margin
+#### Margin
 
 Margin data is updated on every change.
 
@@ -179,7 +179,7 @@ Margin data is updated on every change.
 }
 ```
 
-### Position
+#### Position
 
 Position data is updated on every change.
 
@@ -253,7 +253,7 @@ Connection: keep-alive
 {"error":"Rate limit exceeded, retry in 29 seconds."}
 ```
 
-#### Total public topics
+### Total public topics
 ```bash
 "announcement",        // Site announcements
 "chat",                // Trollbox chat
@@ -280,7 +280,7 @@ Connection: keep-alive
 ```
 
 
-#### Total private topics
+### Total private topics
 ```bash
 "affiliate",   // Affiliate status, such as total referred users & payout % - push refreshed
 "execution",   // Individual executions; can be multiple per order
