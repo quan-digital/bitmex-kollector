@@ -69,6 +69,10 @@ def setup_error_logger():
     handler = logging.handlers.RotatingFileHandler(log_path, maxBytes=settings.MAX_FILE_SIZE, backupCount=1) # stream=sys.stdout
     error_logger.addHandler(handler)
 
+def close_error_logger():
+    error_logger.removeHandler(error_logger.handlers[0])
+    return
+
 def log_exception(exc_type, exc_value, exc_traceback):
     '''Log unhandled exceptions'''
     if issubclass(exc_type, KeyboardInterrupt):

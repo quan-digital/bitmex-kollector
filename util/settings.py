@@ -3,6 +3,8 @@
 # - Settings -
 # * Quan.digital *
 
+import util.secret as secret
+
 #####################################################
 # Kollector Parameters
 #####################################################
@@ -10,6 +12,7 @@
 # Path to directory for daily data storage
 # 'data/' will be gitignored, so change directory on deploy
 DATA_DIR = 'data/'
+# DATA_DIR = 'kollection/'
 
 # Max file size in bytes
 MAX_FILE_SIZE = 100000000 # 100MB
@@ -18,7 +21,7 @@ MAX_FILE_SIZE = 100000000 # 100MB
 LOOP_INTERVAL = 1
 
 # Array of seconds when transition between days should occur
-TRANSITION_SECS = [50, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+TRANSITION_SECS = [56, 57, 58, 59]
 
 #####################################################
 # Websocket
@@ -27,14 +30,17 @@ TRANSITION_SECS = [50, 52, 53, 54, 55, 56, 57, 58, 59, 60]
 # API pair
 API_KEY = "SeaqRPlqes8KtO37EjI_khFh"
 API_SECRET = "j10Hg4MhYiYFIwUVRHCskk8JH-TrDfu7uRF8-iX18o3QoV0j"
+# Uncomment below to use API from secret.py for more privacy
+# API_KEY = secret.BITMEX_KEY
+# API_SECRET secret.BITMEX_SECRET
 
-# Don't grow a table larger than 200. Helps cap memory usage.
+# Don't grow a table larger than 200, helps cap memory usage
 MAX_TABLE_LEN = 200
 
 # Timeout for Websocket, in seconds
 WS_TIMEOUT = 5
 
-# Instrument to market make on BitMEX.
+# Instrument pair on BitMEX
 SYMBOL = "XBTUSD"
 
 # API endpoint URL

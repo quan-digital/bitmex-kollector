@@ -5,17 +5,17 @@ The ultimate data aggregator using Bitmex's Websocket
 
 ## Setup & usage
 
-- Setup your API key and secret on settings.py
+- Setup your API key and secret on settings.py (or copy secret.py.sample to secret.py for extra privacy)
 
-- pip3 install -U websocket-client
+- pip3 install -U websocket-client (or source kollector.env/bin/activate) 
 
 - Run main.py
 
-- Daily data will be stored in settings.DATA_DIR ('data/' by default)
+- Data will be stored in settings.DATA_DIR ('data/' by default, change for deploy)
 
 - Since AWS EC2 us-east-2 has an empirical uptime guarantee of 99.8922% ([source](https://cloudharmony.com/status)) and there are 2.628e+6 seconds in a month, we could deal with 2838 seconds of downtime in a month. 
 
-- With that in mind, from 23:59:50 to 23:50:59, kollection restarts.
+- With that in mind, from 23:59:5X to 23:50:59 (range defined in settings.TRANSITION_SECS), kollection restarts so files are renamed correctly and websocket runs smoothly.
 
 #### Public topics subscribed
 
@@ -238,7 +238,6 @@ Position data is updated on every change.
   }
 ```
 
-
 ### Future topics
 
 Left out due to low update frequency/importance. May never be necessary.
@@ -247,6 +246,32 @@ Left out due to low update frequency/importance. May never be necessary.
 "announcement",        // Site announcements - TEST
 "connected",           // Statistics of connected users/bots - TEST
 "insurance",           // Daily Insurance Fund updates - continuous push overwrite 
+```
+
+'Orders' are left out because ou bot already deals with orders via POST orders anyway, and generic order data is already fetched through the 'position' topic.
+
+### Websocket Rate Limits
+
+```bash
+Subscription: Consumes one token from your request limiter.
+Connection: 20 per hour, on a separate limiter.
+
+# Responses
+{"status":429,"error":"Rate limit exceeded, retry in 1 seconds.","meta":{"retryAfter":1},"request":{"op":"subscribe","args":"orderBook"}}
+
+HTTP/1.1 429 Too Many Requests
+Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+Pragma: no-cache
+X-RateLimit-Limit: 20
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1506983924
+Retry-After: 29
+Content-Type: application/json
+Content-Length: 55
+Date: Mon, 02 Oct 2017 21:43:49 GMT
+Connection: keep-alive
+
+{"error":"Rate limit exceeded, retry in 29 seconds."}
 ```
 
 #### Total public topics

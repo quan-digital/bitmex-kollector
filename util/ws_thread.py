@@ -4,7 +4,7 @@
 # * Quan.digital *
 
 # author: canokaue
-# date: 10/04/2020
+# date: 13/04/2020
 # kaue@engineer.com
 
 # Websocket based on stock Bitmex API connectors - https://github.com/BitMEX/api-connectors/tree/master/official-ws/python
@@ -44,14 +44,14 @@ class BitMEXWebsocket:
         
         logger.setup_error_logger()
         sys.excepthook = logger.log_exception
-        self.logger = logger.setup_logbook('_ws', level=logging.DEBUG)
+        self.logger = logger.setup_logbook('_ws')
+        #self.logger = logger.setup_logbook('_ws', level = logging.DEBUG)
 
         self.liquidation_logger = logger.setup_db('liquidation')
         self.transact_logger = logger.setup_db('transact')
         self.chat_logger = logger.setup_db('chat')
         self.execution_logger = logger.setup_db('execution')
         
-    
         self.logger.info("Initializing WebSocket...")
         self.endpoint = endpoint
         self.symbol = symbol
@@ -121,7 +121,16 @@ class BitMEXWebsocket:
     def exit(self):
         '''Call this to exit - will close websocket.'''
         self.exited = True
+        self.logger.info('Websocket closing...')
+        # Close logging files
+        self.logger.removeHandler(self.logger.handlers[0])
+        self.liquidation_logger.removeHandler(self.liquidation_logger.handlers[0])
+        self.transact_logger.removeHandler(self.transact_logger.handlers[0])
+        self.chat_logger.removeHandler(self.chat_logger.handlers[0])
+        self.execution_logger.removeHandler(self.execution_logger.handlers[0])
+        logger.close_error_logger()
         self.ws.close()
+        print('Websocket closed.')
 
     def reset(self):
         self.logger.warning('Websocket resetting...')
@@ -133,6 +142,7 @@ class BitMEXWebsocket:
     #
 
     def get_data(self):
+        '''Return entire data object, use for debugging'''
         return self.data
 
     def get_instrument_data(self):
@@ -169,6 +179,10 @@ class BitMEXWebsocket:
                     openValue = instrument['openValue'],
                     markPrice = instrument['markPrice'],
                     indicativeSettlePrice = instrument['indicativeSettlePrice'])
+
+    #
+    # Private data functions
+    #
 
     def get_margin_data(self):
         '''Return all relevant margin data'''
@@ -219,11 +233,6 @@ class BitMEXWebsocket:
         breakEvenPrice = position['breakEvenPrice'],
         liquidationPrice = position['liquidationPrice'],
         bankruptPrice = position['bankruptPrice'])
-
-    #
-    # Private data functions
-    #
-
 
     #
     # Core Methods
@@ -397,7 +406,7 @@ class BitMEXWebsocket:
                     if table == 'margin':
                         self._UPDATE_MARGIN = True
 
-                    # Set margin update signal to True
+                    # Set position update signal to True
                     if table == 'position':
                         self._UPDATE_POSITION = True
 
