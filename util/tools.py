@@ -40,6 +40,7 @@ def create_dirs():
         os.mkdir(settings.DATA_DIR + 'instrument')
         os.mkdir(settings.DATA_DIR + 'margin')
         os.mkdir(settings.DATA_DIR + 'position')
+        print("Directories created.")
 
     except FileExistsError:
         print("Directories already exist.")

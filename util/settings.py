@@ -7,7 +7,8 @@
 # Kollector Parameters
 #####################################################
 
-# Path to directory for data storage
+# Path to directory for daily data storage
+# 'data/' will be gitignored, so change directory on deploy
 DATA_DIR = 'data/'
 
 # Max file size in bytes
@@ -15,6 +16,9 @@ MAX_FILE_SIZE = 100000000 # 100MB
 
 # Time in seconds to wait after each loop
 LOOP_INTERVAL = 1
+
+# Array of seconds when transition between days should occur
+TRANSITION_SECS = [50, 52, 53, 54, 55, 56, 57, 58, 59, 60]
 
 #####################################################
 # Websocket

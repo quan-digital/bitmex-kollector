@@ -15,8 +15,7 @@ The ultimate data aggregator using Bitmex's Websocket
 
 - Since AWS EC2 us-east-2 has an empirical uptime guarantee of 99.8922% ([source](https://cloudharmony.com/status)) and there are 2.628e+6 seconds in a month, we could deal with 2838 seconds of downtime in a month. 
 
-- With that in mind, from 23:50 to 23:59, data from settings.DATA_DIR will be moved to the folder 'kollection/', being name according to the day of kollection.
-
+- With that in mind, from 23:59:50 to 23:50:59, kollection restarts.
 
 #### Public topics subscribed
 
@@ -141,7 +140,7 @@ Execution data is updated on arrival.
 
 ### Instrument
 
-Instrument data is updated every settings.LOOP_INTERVAL seconds (standard is 1 second).
+Instrument data is updated every settings.LOOP_INTERVAL seconds (default is 1 second).
 
 ```bash
   {

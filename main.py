@@ -12,13 +12,14 @@
 import sys
 import time
 import logging
+import datetime as dt
 
 from util.logger import setup_logger, setup_db
 from util.ws_thread import BitMEXWebsocket
 from util.tools import create_dirs
 import util.settings as settings
 
-if __name__ == '__main__':
+def run_loop():
 
     create_dirs()
     logger = setup_logger()
@@ -124,5 +125,19 @@ if __name__ == '__main__':
             position['bankruptPrice']))
             ws._UPDATE_POSITION = False
 
+        # If day changes, restart
+        now = dt.datetime.now()
+        if now.hour == 23 and now.minute == 59:
+            print('Last minute of the day, reset will take place shortly.')
+            if now.second in settings.TRANSITION_SECS:
+                ('Reseting...')
+                ws.exit()
+                logging.shutdown()
+                time.sleep(10)
+                run_loop()
 
         time.sleep(settings.LOOP_INTERVAL)
+
+
+if __name__ == '__main__':
+    run_loop()
