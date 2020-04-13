@@ -5,15 +5,15 @@ The ultimate data aggregator using Bitmex's Websocket
 
 ## Setup & usage
 
-- Setup your API key and secret on settings.py (or copy secret.py.sample to secret.py for extra privacy)
+- Setup your API key and secret on settings.py (or copy secret.py.sample to secret.py for extra privacy).
 
-- pip3 install -U websocket-client (or source kollector.env/bin/activate) 
+- pip3 install -U websocket-client (or source kollector.env/bin/activate).
 
-- Run main.py
+- Run main.py :)
 
-- Data will be stored in settings.DATA_DIR ('data/' by default, change for deploy)
+- Data will be stored in settings.DATA_DIR ('data/' by default, change for deploy).
 
-- Since AWS EC2 us-east-2 has an empirical uptime guarantee of 99.8922% ([source](https://cloudharmony.com/status)) and there are 2.628e+6 seconds in a month, we could deal with 2838 seconds of downtime in a month. 
+- Since AWS EC2 us-east-2 has an empirical uptime guarantee of 99.8922% ([source](https://cloudharmony.com/status)) and there are 2.628e+6 seconds in a month, we could deal with 2838 seconds of downtime in a month, with an average of 95 seconds of downtime a day, or four seconds of downtime per minute.
 
 - With that in mind, from 23:59:5X to 23:50:59 (range defined in settings.TRANSITION_SECS), kollection restarts so files are renamed correctly and websocket runs smoothly.
 
@@ -43,47 +43,26 @@ Remaining columns are listed in order as follows.
 
 Chat data is updated on arrival.
 
-- channelID
-
 ```bash
-[
-  {
-    "id": 1,
-    "name": "English"
-  },
-  {
-    "id": 2,
-    "name": "中文"
-  },
-  {
-    "id": 3,
-    "name": "Русский"
-  },
-  {
-    "id": 4,
-    "name": "한국어"
-  },
-  {
-    "id": 5,
-    "name": "日本語"
-  },
-  {
-    "id": 6,
-    "name": "Español"
-  },
-  {
-    "id": 7,
-    "name": "Français"
-  }
-]
+{
+  "channelID": 0,
+  "fromBot": false,
+  "id": 0,
+  "message": "string",
+  "user": "string"
+}
+
+# "channelID" as follows
+{
+1 : "English",
+2 : "中文",
+3 : "Русский",
+4 : "한국어",
+5 : "日本語",
+6 : "Español",
+7 : "Français"
+}
 ```
-- fromBot
-
-- id
-
-- message
-
-- user
 
 #### Liquidation
 
@@ -113,7 +92,7 @@ Transact data is updated on arrival.
     "fee": 0,
     "transactStatus": "string",
     "address": "string",
-    "text": "string",
+    "text": "string"
   }
 ```
 
@@ -234,7 +213,7 @@ Position data is updated on every change.
     "avgEntryPrice": 0,
     "breakEvenPrice": 0,
     "liquidationPrice": 0,
-    "bankruptPrice": 0,
+    "bankruptPrice": 0
   }
 ```
 
@@ -245,10 +224,10 @@ Left out due to low update frequency/importance. May never be necessary.
 ```bash
 "announcement",        // Site announcements - TEST
 "connected",           // Statistics of connected users/bots - TEST
-"insurance",           // Daily Insurance Fund updates - continuous push overwrite 
+"insurance"            // Daily Insurance Fund updates - continuous push overwrite 
 ```
 
-'Orders' are left out because ou bot already deals with orders via POST orders anyway, and generic order data is already fetched through the 'position' topic.
+'Orders' are left out because our bots already deals with orders via POST orders anyway, and generic order data is already fetched through the 'position' topic.
 
 ### Websocket Rate Limits
 
@@ -297,7 +276,7 @@ Connection: keep-alive
 "tradeBin1m",          // 1-minute trade bins
 "tradeBin5m",          // 5-minute trade bins
 "tradeBin1h",          // 1-hour trade bins
-"tradeBin1d",          // 1-day trade bins
+"tradeBin1d"          // 1-day trade bins
 ```
 
 
@@ -312,5 +291,3 @@ Connection: keep-alive
 "transact",    // Deposit/Withdrawal updates
 "wallet"       // Bitcoin address balance data, including total deposits & withdrawals - continuous push overwrite
 ```
-
-
