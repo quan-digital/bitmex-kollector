@@ -51,6 +51,8 @@ class BitMEXWebsocket:
         self.transact_logger = logger.setup_db('transact')
         self.chat_logger, chat_path = logger.setup_db('chat', getPath=True)
         self.execution_logger = logger.setup_db('execution')
+        self.quote_logger = logger.setup_db('quote')
+        self.trade_logger = logger.setup_db('trade')
 
         # If this is our first time initializing files, write headers
         if tools.is_file_empty(chat_path):
@@ -120,6 +122,9 @@ class BitMEXWebsocket:
         self.chat_logger.info('%s, %s, %s, %s, %s' % ('channelID','fromBot','id','message','user'))
         self.execution_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('execID','orderID',
             'clOrdID','account','symbol','side','orderQty','price','execType','ordType','commission','text'))
+        self.quote_logger.info('%s, %s, %s, %s, %s' % ('symbol','bidSize','bidPrice','askPrice','askSize'))
+        self.trade_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('symbol','open',
+            'high','low','close','trades','volume','vwap','lastSize','turnover','homeNotional','foreignNotional'))
         return
 
     #
@@ -304,7 +309,7 @@ class BitMEXWebsocket:
         Most subscription topics are scoped by the symbol we're listening to.'''
 
         # Public subs
-        symbolSubs = ["instrument", "liquidation"]
+        symbolSubs = ["instrument", "liquidation", "quoteBin1m", "tradeBin1m"]
         genericSubs = ["chat"]
 
         # Private subs
@@ -331,7 +336,7 @@ class BitMEXWebsocket:
 
     def __wait_for_symbol(self, symbol):
         '''On subscribe, this data will come down. Wait for it.'''
-        while not {"instrument", "liquidation", "chat"} <= set(self.data):
+        while not {"instrument", "liquidation", "chat", "quoteBin1m", "tradeBin1m"} <= set(self.data):
             sleep(0.1)
 
     def __send_command(self, command, args=None):
@@ -409,6 +414,20 @@ class BitMEXWebsocket:
                         (data['execID'], data['orderID'], data['clOrdID'], data['account'], data['symbol'], 
                         data['side'], data['orderQty'], data['price'], data['execType'], data['ordType'],
                         data['commission'], data['text']))
+
+                    # Store quote bins
+                    elif table == 'quoteBin1m':
+                        data = message['data'][0]
+                        self.quote_logger.info('%s, %s, %s, %s, %s' % (data['symbol'], data['bidSize'], 
+                        data['bidPrice'], data['askPrice'], data['askSize']))
+
+                    # Store trade bins
+                    elif table == 'tradeBin1m':
+                        data = message['data'][0]
+                        self.trade_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+                        (data['symbol'], data['open'], data['high'], data['low'], data['close'], data['trades'],
+                        data['volume'], data['vwap'], data['lastSize'], data['turnover'], data['homeNotional'], 
+                        data['foreignNotional']))
 
                     # Limit the max length of the table to avoid excessive memory usage.
                     if len(self.data[table]) > settings.MAX_TABLE_LEN:

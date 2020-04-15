@@ -25,6 +25,8 @@ The ultimate data aggregator using Bitmex's Websocket - FATALITY 💉💀🗡
 "chat",                // Trollbox chat - cummulative push
 "instrument",          // Instrument updates including turnover and bid/ask - continuous push overwrite 
 "liquidation",         // Liquidation orders as they are entered into the book - push refreshed after 20 seconds
+"quoteBin1m",          // 1-minute quote bins - cummulative push
+"tradeBin1m",          // 1-minute trade bins - cummulative push
 ```
 
 #### Private topics subscribed
@@ -158,6 +160,40 @@ Instrument data is updated every settings.LOOP_INTERVAL seconds (default is 1 se
     "indicativeSettlePrice": 0
   }
 ```
+### Trade
+
+Trade data is updated every minute.
+
+```bash
+{
+"symbol": "string",
+"open": 0,
+"high": 0,
+"low": 0,
+"close": 0,
+"trades": 0,
+"volume": 0,
+"vwap": 0,
+"lastSize": 0,
+"turnover": 0,
+"homeNotional": 0,
+"foreignNotional": 0
+}
+```
+
+### Quote
+
+Quote data is updated every minute.
+
+```bash
+{ 
+"symbol": "string", 
+"bidSize": 0, 
+"bidPrice": 0, 
+"askPrice": 0, 
+"askSize": 0
+}
+```
 
 #### Margin
 
@@ -219,17 +255,6 @@ Position data is updated on every change.
   }
 ```
 
-### Future topics
-
-Left out due to low update frequency/importance. May never be necessary.
-
-```bash
-"announcement",        // Site announcements - TEST
-"connected",           // Statistics of connected users/bots - TEST
-"insurance"            // Daily Insurance Fund updates - continuous push overwrite 
-```
-
-'Orders' are left out because our bots already deals with orders via POST orders anyway, and generic order data is already fetched through the 'position' topic.
 
 ### Websocket Rate Limits
 
@@ -278,7 +303,7 @@ Connection: keep-alive
 "tradeBin1m",          // 1-minute trade bins
 "tradeBin5m",          // 5-minute trade bins
 "tradeBin1h",          // 1-hour trade bins
-"tradeBin1d"          // 1-day trade bins
+"tradeBin1d"           // 1-day trade bins
 ```
 
 
@@ -292,4 +317,15 @@ Connection: keep-alive
 "privateNotifications", // Individual notifications - currently not used
 "transact",    // Deposit/Withdrawal updates
 "wallet"       // Bitcoin address balance data, including total deposits & withdrawals - continuous push overwrite
+```
+
+### Left out topics
+
+Left out due to low update frequency/importance. 
+
+```bash
+"announcement",        // Site announcements - low frequency & easily fetchable via rest
+"connected",           // Statistics of connected users/bots - apparently discontinued
+"insurance",           // Daily Insurance Fund updates - liquidation already gets it, continuous push overwrite 
+"orders"               // Live updates on your orders - our bots already deals with orders via POST orders anyway, and generic order data is already fetched through the 'position' topic, continuous push overwrite
 ```
