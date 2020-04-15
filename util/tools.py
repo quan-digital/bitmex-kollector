@@ -44,3 +44,7 @@ def create_dirs():
 
     except FileExistsError:
         print("Directories already exist.")
+
+def is_file_empty(file_path):
+    """ Check if file is empty by confirming if its size is 0 bytes"""
+    return os.path.exists(file_path) and os.stat(file_path).st_size == 0

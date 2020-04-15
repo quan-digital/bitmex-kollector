@@ -16,7 +16,7 @@ import datetime as dt
 
 from util.logger import setup_logger, setup_db
 from util.ws_thread import BitMEXWebsocket
-from util.tools import create_dirs
+import util.tools as tools
 import util.settings as settings
 import util.logger as logger
 
@@ -24,46 +24,53 @@ class Kollector:
 
     def run_loop(self):
         '''Setup loggers and store to .csv'''
-        create_dirs()
+        tools.create_dirs()
         self.logger = setup_logger()
 
         self.ws = BitMEXWebsocket()
 
-        self.instrument_logger = setup_db('instrument')
+        self.instrument_logger, instrument_path = setup_db('instrument', getPath=True)
         self.margin_logger = setup_db('margin')
         self.position_logger = setup_db('position')
 
-        while(self.ws.ws.sock.connected):
+        # If this is our first time initializing files, write headers
+        if tools.is_file_empty(instrument_path):
+            self.logger.info('Files empty, writing headers.')
+            self.write_headers()
 
-            # Log instrument data every second
-            self.log_instrument()
+        try:
+            while(self.ws.ws.sock.connected):
 
-            # Log margin data on changes
-            if self.ws._UPDATE_MARGIN:
-                self.log_margin()
-                self.ws._UPDATE_MARGIN = False
+                # Log instrument data every second
+                self.log_instrument()
 
-            # Log position data on changes
-            if self.ws._UPDATE_POSITION:
-                self.log_position()
-                self.ws._UPDATE_POSITION = False
+                # Log margin data on changes
+                if self.ws._UPDATE_MARGIN:
+                    self.log_margin()
+                    self.ws._UPDATE_MARGIN = False
 
-            # If day changes, restart
-            now = dt.datetime.now()
-            if now.hour == 23 and now.minute == 59:
-                print('Last minute of the day, restart will take place shortly.')
-                if now.second in settings.TRANSITION_SECS:
-                    logger.log_error('Restarting...')
-                    self.restart()
-            
-            if not(self.ws.ws.sock.connected):
-                logger.log_error('Connection to Websocket lost. Restarting...')
-                self.restart()
+                # Log position data on changes
+                if self.ws._UPDATE_POSITION:
+                    self.log_position()
+                    self.ws._UPDATE_POSITION = False
 
-            time.sleep(settings.LOOP_INTERVAL)
+                # If day changes, restart
+                now = dt.datetime.now()
+                if now.hour == 23 and now.minute == 59:
+                    print('Last minute of the day, restart will take place shortly.')
+                    if now.second in settings.TRANSITION_SECS:
+                        logger.log_error('Restarting...')
+                        self.restart()
+
+                time.sleep(settings.LOOP_INTERVAL)
+
+        except AttributeError:
+            logger.log_error('Connection to Websocket lost. Restarting...')
+            self.reset()
 
     def restart(self):
         '''Close Websocket, loggers, wait and restart'''
+        self.logger.info('Restarting...')
         self.ws.exit()
         # Close loggers
         self.logger.removeHandler(self.logger.handlers[0])
@@ -72,6 +79,16 @@ class Kollector:
         self.position_logger.removeHandler(self.position_logger.handlers[0])
         logging.shutdown()
         time.sleep(len(settings.TRANSITION_SECS) + 1)
+        self.run_loop()
+
+    def reset(self):
+        '''Close loggers and reset'''
+        self.logger.info('Resetting...')
+        self.logger.removeHandler(self.logger.handlers[0])
+        self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
+        self.margin_logger.removeHandler(self.margin_logger.handlers[0])
+        self.position_logger.removeHandler(self.position_logger.handlers[0])
+        logging.shutdown()
         self.run_loop()
 
     def log_instrument(self):
@@ -166,6 +183,27 @@ class Kollector:
         position['liquidationPrice'],
         position['bankruptPrice']))
         return
+
+    def write_headers(self):
+        '''Log csv headers'''
+        self.instrument_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
+%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
+%s, %s, %s" % ('symbol','state','fundingRate','indicativeFundingRate','prevClosePrice',
+'totalVolume','volume','volume24h','totalTurnover','turnover','turnover24h','homeNotional24h',
+'foreignNotional24h','prevPrice24h','vwap','highPrice','lowPrice','lastPrice','lastPriceProtected',
+'lastTickDirection','lastChangePcnt','bidPrice','midPrice','askPrice','impactBidPrice','impactMidPrice',
+'impactAskPrice','openInterest','openValue','markPrice','indicativeSettlePrice'))
+        self.margin_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % ('account','currency',
+        'amount','realisedPnl','unrealisedPnl','indicativeTax','unrealisedProfit','walletBalance','marginBalance',
+        'marginLeverage','marginUsedPcnt','availableMargin','withdrawableMargin'))
+        self.position_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
+%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % ('account','symbol','commission',
+        'leverage','crossMargin','rebalancedPnl','openOrderBuyQty','openOrderBuyCost','openOrderSellQty',
+        'openOrderSellCost','execBuyQty','execBuyCost','execSellQty','execSellCost','currentQty','currentCost',
+        'isOpen','markPrice','markValue','homeNotional','foreignNotional','posState','realisedPnl','unrealisedPnl',
+        'avgCostPrice','avgEntryPrice','breakEvenPrice','liquidationPrice','bankruptPrice'))
+        return
+
 
 if __name__ == '__main__':
     kollector = Kollector()

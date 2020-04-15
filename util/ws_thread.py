@@ -49,9 +49,14 @@ class BitMEXWebsocket:
 
         self.liquidation_logger = logger.setup_db('liquidation')
         self.transact_logger = logger.setup_db('transact')
-        self.chat_logger = logger.setup_db('chat')
+        self.chat_logger, chat_path = logger.setup_db('chat', getPath=True)
         self.execution_logger = logger.setup_db('execution')
-        
+
+        # If this is our first time initializing files, write headers
+        if tools.is_file_empty(chat_path):
+            self.logger.info('Files empty, writing headers.')
+            self.write_headers()
+
         self.logger.info("Initializing WebSocket...")
         self.endpoint = endpoint
         self.symbol = symbol
@@ -106,6 +111,16 @@ class BitMEXWebsocket:
         if self.api_key:
             self.__wait_for_account()
         self.logger.info('Got all market data. Starting.')
+
+    def write_headers(self):
+        '''Log csv headers'''
+        self.liquidation_logger.info('%s, %s, %s, %s, %s' % ('orderID', 'symbol','side','price','leavesQty'))
+        self.transact_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s' % ('transactID','account','currency',
+            'transactType','amount','fee','transactStatus','address','text'))
+        self.chat_logger.info('%s, %s, %s, %s, %s' % ('channelID','fromBot','id','message','user'))
+        self.execution_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('execID','orderID',
+            'clOrdID','account','symbol','side','orderQty','price','execType','ordType','commission','text'))
+        return
 
     #
     # Lifecycle methods

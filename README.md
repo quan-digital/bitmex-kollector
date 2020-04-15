@@ -17,6 +17,8 @@ The ultimate data aggregator using Bitmex's Websocket - FATALITY 💉💀🗡
 
 - With that in mind, from 23:59:5X to 23:50:59 (range defined in settings.TRANSITION_SECS), kollection restarts so files are renamed correctly and websocket runs smoothly.
 
+- Kollector will generate about 40MB of data a day, with more than half going towards 'instrument'. So estimate around 1.5GB of data a month, or 20GB a year.
+
 #### Public topics subscribed
 
 ```bash
