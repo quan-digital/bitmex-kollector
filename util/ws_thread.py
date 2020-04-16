@@ -254,6 +254,32 @@ class BitMEXWebsocket:
         liquidationPrice = position['liquidationPrice'],
         bankruptPrice = position['bankruptPrice'])
 
+
+    #
+    # Json functions
+    #
+
+    def dump_instrument(self):
+        '''Save instrument to json'''
+        instrument = self.get_instrument_data()
+        with open(settings.DATA_DIR + 'instrument.json', 'w') as handler:
+            json.dump(instrument,handler)
+        return
+
+    def dump_position(self):
+        '''Save position to json'''
+        position = self.get_position_data()
+        with open(settings.DATA_DIR + 'position.json', 'w') as handler:
+            json.dump(position,handler)
+        return
+
+    def dump_margin(self):
+        '''Save margin to json'''
+        margin = self.get_margin_data()
+        with open(settings.DATA_DIR + 'margin.json', 'w') as handler:
+            json.dump(margin,handler)
+        return
+
     #
     # Core Methods
     #
@@ -436,22 +462,27 @@ class BitMEXWebsocket:
                 elif action == 'update':
                     self.logger.debug('%s: updating %s' % (table, message['data']))
 
-                    # Set margin update signal to True
-                    if table == 'margin':
-                        self._UPDATE_MARGIN = True
-
-                    # Set position update signal to True
-                    if table == 'position':
-                        self._UPDATE_POSITION = True
-
                     # Locate the item in the collection and update it.
                     for updateData in message['data']:
                         item = tools.find_by_keys(self.keys[table], self.data[table], updateData)
                         if not item:
                             continue  # No item found to update. Could happen before push
-                            
+
                         # Update this item.
                         item.update(updateData)
+
+                    # Set margin update signal to True
+                    if table == 'margin':
+                        self.dump_margin()
+                        self._UPDATE_MARGIN = True
+
+                    # Set position update signal to True
+                    if table == 'position':
+                        self.dump_position()
+                        self._UPDATE_POSITION = True
+
+                    if table == 'instrument':
+                        self.dump_instrument()
 
                 elif action == 'delete':
                     self.logger.debug('%s: deleting %s' % (table, message['data']))
