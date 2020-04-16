@@ -23,6 +23,9 @@ LOOP_INTERVAL = 1
 # Array of seconds when transition between days should occur
 TRANSITION_SECS = [56, 57, 58, 59]
 
+# Mail to warn on errors
+MAIL_TO = "kauecano@gmail.com"
+
 #####################################################
 # Websocket
 #####################################################

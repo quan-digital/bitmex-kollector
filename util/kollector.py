@@ -209,15 +209,15 @@ class Kollecta:
 
     def __init__(self, storeMargin = False, storePosition = False):
         '''Initialize Websocket and setup required csv loggers'''
+        self.storeMargin = storeMargin
+        self.storePosition = storePosition
         tools.create_dirs()
         self.logger = setup_logger()
         self.ws = BitMEXWebsocket()
         log_path = False
         if storeMargin:
-            self.storeMargin = storeMargin
             self.margin_logger, log_path = setup_db('margin', getPath=True)
         if storePosition:
-            self.storePosition = storePosition
             self.position_logger, log_path = setup_db('position', getPath=True)
 
         # If this is our first time initializing files, write headers
