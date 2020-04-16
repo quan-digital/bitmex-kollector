@@ -1,0 +1,36 @@
+16-04-20 01:24:32.972 (_ws) - Files empty, writing headers.
+16-04-20 01:24:32.974 (_ws) - Initializing WebSocket...
+16-04-20 01:24:32.975 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+16-04-20 01:24:32.975 (_ws) - Authenticating with API Key.
+16-04-20 01:24:34.979 (_ws) - Connected to WS.
+16-04-20 01:24:35.289 (_ws) - Got all market data. Starting.
+16-04-20 01:24:51.114 (_ws) - Initializing WebSocket...
+16-04-20 01:24:51.115 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+16-04-20 01:24:51.115 (_ws) - Authenticating with API Key.
+16-04-20 01:24:53.122 (_ws) - Connected to WS.
+16-04-20 01:24:53.123 (_ws) - Got all market data. Starting.
+16-04-20 01:26:08.981 (_ws) - Initializing WebSocket...
+16-04-20 01:26:08.982 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+16-04-20 01:26:08.982 (_ws) - Authenticating with API Key.
+16-04-20 01:26:10.989 (_ws) - Connected to WS.
+16-04-20 01:26:12.745 (_ws) - Got all market data. Starting.
+16-04-20 01:26:49.650 (_ws) - Initializing WebSocket...
+16-04-20 01:26:49.650 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+16-04-20 01:26:49.651 (_ws) - Authenticating with API Key.
+16-04-20 01:26:51.657 (_ws) - Connected to WS.
+16-04-20 01:26:52.818 (_ws) - Got all market data. Starting.
+16-04-20 01:27:15.518 (_ws) - Initializing WebSocket...
+16-04-20 01:27:15.519 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+16-04-20 01:27:15.519 (_ws) - Authenticating with API Key.
+16-04-20 01:27:17.526 (_ws) - Connected to WS.
+16-04-20 01:27:17.735 (_ws) - Got all market data. Starting.
+16-04-20 01:27:33.181 (_ws) - Initializing WebSocket...
+16-04-20 01:27:33.181 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+16-04-20 01:27:33.182 (_ws) - Authenticating with API Key.
+16-04-20 01:27:35.191 (_ws) - Connected to WS.
+16-04-20 01:27:35.295 (_ws) - Got all market data. Starting.
+16-04-20 01:28:19.092 (_ws) - Initializing WebSocket...
+16-04-20 01:28:19.094 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+16-04-20 01:28:19.094 (_ws) - Authenticating with API Key.
+16-04-20 01:28:21.100 (_ws) - Connected to WS.
+16-04-20 01:28:22.848 (_ws) - Got all market data. Starting.

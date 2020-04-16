@@ -27,13 +27,27 @@ TRANSITION_SECS = [56, 57, 58, 59]
 # Websocket
 #####################################################
 
+# Write instrument, position and margin data to json in DATA_DIR root
+JSON_OUT = True
+
+# Public topic subs
+# available: ["instrument", "liquidation", "quoteBin1m", "tradeBin1m"]
+PUB_SYM_SUBS = ["instrument", "liquidation", "quoteBin1m", "tradeBin1m"]
+# available: ["chat"]
+PUB_GEN_SUBS = ["chat"]
+
+# Private topic subs - need API pair
+# available: ["execution", "position"]
+PRIV_SYM_SUBS = ["execution", "position"]
+# available: ["transact", "margin"]
+PRIV_GEN_SUBS = ["transact", "margin"]
+
 # API pair
 API_KEY = "JP7uC-IALzH453flus79MKHG" # Mainet Kraudin
 API_SECRET = "4Dw_7hwiDLpTuqMQ5PuCIyd8oJVHcfzlI83ipRQLRlVGeBjd"
 # Uncomment below to use API from secret.py for more privacy
 # API_KEY = secret.BITMEX_KEY
 # API_SECRET secret.BITMEX_SECRET
-
 
 # Don't grow a table larger than 200, helps cap memory usage
 MAX_TABLE_LEN = 200

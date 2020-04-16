@@ -29,19 +29,30 @@ def find_by_keys(keys, table, matchData):
  
 def create_dirs():
     '''Creates data directories'''
+    total_subs = settings.PUB_SYM_SUBS + settings.PRIV_SYM_SUBS + settings.PUB_GEN_SUBS + settings.PRIV_GEN_SUBS
+
     try:
         os.mkdir(settings.DATA_DIR.replace('/', ''))
         os.mkdir(settings.DATA_DIR + '_ws')
         os.mkdir(settings.DATA_DIR + '_error')
-        os.mkdir(settings.DATA_DIR + 'liquidation')
-        os.mkdir(settings.DATA_DIR + 'chat')
-        os.mkdir(settings.DATA_DIR + 'transact')
-        os.mkdir(settings.DATA_DIR + 'execution')
-        os.mkdir(settings.DATA_DIR + 'instrument')
-        os.mkdir(settings.DATA_DIR + 'margin')
-        os.mkdir(settings.DATA_DIR + 'position')
-        os.mkdir(settings.DATA_DIR + 'quote')
-        os.mkdir(settings.DATA_DIR + 'trade')
+        if 'execution' in total_subs:
+            os.mkdir(settings.DATA_DIR + 'execution')
+        if 'transact' in total_subs:
+            os.mkdir(settings.DATA_DIR + 'transact')
+        if 'liquidation' in total_subs:
+            os.mkdir(settings.DATA_DIR + 'liquidation')
+        if 'chat' in total_subs:
+            os.mkdir(settings.DATA_DIR + 'chat')
+        if 'quoteBin1m' in total_subs:
+            os.mkdir(settings.DATA_DIR + 'quote')
+        if 'tradeBin1m' in total_subs:
+            os.mkdir(settings.DATA_DIR + 'trade')
+        if 'instrument' in total_subs:
+            os.mkdir(settings.DATA_DIR + 'instrument')
+        if 'margin' in total_subs:
+            os.mkdir(settings.DATA_DIR + 'margin')
+        if 'position' in total_subs:
+            os.mkdir(settings.DATA_DIR + 'position')
         print("Directories created.")
 
     except FileExistsError:

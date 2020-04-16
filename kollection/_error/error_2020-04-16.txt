@@ -1,0 +1,72 @@
+-----------------------------------------------------------------
+2020-04-16 01:24:53.123740
+Uncaught exception
+Traceback (most recent call last):
+  File "main.py", line 4, in <module>
+    kollector = kollector.Kollecta()
+  File "/Users/canok/Documents/bitmex-collector/util/kollector.py", line 223, in __init__
+    if log_path:
+UnboundLocalError: local variable 'log_path' referenced before assignment
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+2020-04-16 01:26:12.746837
+Uncaught exception
+Traceback (most recent call last):
+  File "main.py", line 4, in <module>
+    kollector = kollector.Kollecta()
+  File "/Users/canok/Documents/bitmex-collector/util/kollector.py", line 223, in __init__
+    if log_path is not None:
+UnboundLocalError: local variable 'log_path' referenced before assignment
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+2020-04-16 01:26:52.819077
+Connection to Websocket lost. Restarting...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+2020-04-16 01:26:52.820570
+Uncaught exception
+Traceback (most recent call last):
+  File "/Users/canok/Documents/bitmex-collector/util/kollector.py", line 235, in run_loop
+    self.log_instrument()
+AttributeError: 'Kollecta' object has no attribute 'log_instrument'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 5, in <module>
+    kollector.run_loop()
+  File "/Users/canok/Documents/bitmex-collector/util/kollector.py", line 259, in run_loop
+    self.reset()
+  File "/Users/canok/Documents/bitmex-collector/util/kollector.py", line 278, in reset
+    self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
+AttributeError: 'Kollecta' object has no attribute 'instrument_logger'
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+2020-04-16 01:27:17.735643
+Connection to Websocket lost. Restarting...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+2020-04-16 01:27:17.736447
+Uncaught exception
+Traceback (most recent call last):
+  File "/Users/canok/Documents/bitmex-collector/util/kollector.py", line 235, in run_loop
+    self.log_instrument()
+AttributeError: 'Kollecta' object has no attribute 'log_instrument'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 5, in <module>
+    kollector.run_loop()
+  File "/Users/canok/Documents/bitmex-collector/util/kollector.py", line 259, in run_loop
+    self.reset()
+  File "/Users/canok/Documents/bitmex-collector/util/kollector.py", line 278, in reset
+    self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
+AttributeError: 'Kollecta' object has no attribute 'instrument_logger'
+-----------------------------------------------------------------
+

@@ -41,23 +41,37 @@ class BitMEXWebsocket:
     def __init__(self, endpoint = settings.BASE_URL, symbol = settings.SYMBOL, \
                  api_key=settings.API_KEY, api_secret=settings.API_SECRET):
         '''Connect to the websocket and initialize data.'''
-        
+
+        # Setup core loggers
         logger.setup_error_logger()
         sys.excepthook = logger.log_exception
         self.logger = logger.setup_logbook('_ws')
         #self.logger = logger.setup_logbook('_ws', level = logging.DEBUG)
 
-        self.liquidation_logger = logger.setup_db('liquidation')
-        self.transact_logger = logger.setup_db('transact')
-        self.chat_logger, chat_path = logger.setup_db('chat', getPath=True)
-        self.execution_logger = logger.setup_db('execution')
-        self.quote_logger = logger.setup_db('quote')
-        self.trade_logger = logger.setup_db('trade')
+        # Get subscriptions
+        self.symbol_subs = settings.PUB_SYM_SUBS + settings.PRIV_SYM_SUBS
+        self.generic_subs = settings.PUB_GEN_SUBS + settings.PRIV_GEN_SUBS
+        self.total_subs = self.symbol_subs + self.generic_subs
+
+        # Create loggers
+        if 'execution' in self.total_subs:
+            self.execution_logger, log_path = logger.setup_db('execution', getPath=True)
+        if 'transact' in self.total_subs:
+            self.transact_logger, log_path = logger.setup_db('transact', getPath=True)
+        if 'liquidation' in self.total_subs:
+            self.liquidation_logger, log_path = logger.setup_db('liquidation', getPath=True)
+        if 'chat' in self.total_subs:
+            self.chat_logger, log_path = logger.setup_db('chat', getPath=True)
+        if 'quoteBin1m' in self.total_subs:
+            self.quote_logger, log_path = logger.setup_db('quote', getPath=True)
+        if 'tradeBin1m' in self.total_subs:
+            self.trade_logger, log_path = logger.setup_db('trade', getPath=True)
 
         # If this is our first time initializing files, write headers
-        if tools.is_file_empty(chat_path):
-            self.logger.info('Files empty, writing headers.')
-            self.write_headers()
+        if log_path:
+            if tools.is_file_empty(log_path):
+                self.logger.info('Files empty, writing headers.')
+                self.write_headers()
 
         self.logger.info("Initializing WebSocket...")
         self.endpoint = endpoint
@@ -67,6 +81,8 @@ class BitMEXWebsocket:
             raise ValueError('api_secret is required if api_key is provided')
         if api_key is None and api_secret is not None:
             raise ValueError('api_key is required if api_secret is provided')
+        if (api_key is None or api_secret is None) and ('execution' in self.total_subs or 'transact' in self.total_subs):
+            raise ValueError('api_key is required for subscribed topics')
         self.api_key = api_key
         self.api_secret = api_secret
 
@@ -93,11 +109,6 @@ class BitMEXWebsocket:
         '''Connect to the websocket and clear data.'''
         self.logger.debug("Initializing WebSocket...")
 
-        if self.api_key is not None and self.api_secret is None:
-            raise ValueError('api_secret is required if api_key is provided')
-        if self.api_key is None and self.api_secret is not None:
-            raise ValueError('api_key is required if api_secret is provided')
-
         self.data = {}
         self.keys = {}
         self.exited = False
@@ -115,15 +126,21 @@ class BitMEXWebsocket:
         self.logger.info('Got all market data. Starting.')
 
     def write_headers(self):
-        '''Log csv headers'''
-        self.liquidation_logger.info('%s, %s, %s, %s, %s' % ('orderID', 'symbol','side','price','leavesQty'))
-        self.transact_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s' % ('transactID','account','currency',
-            'transactType','amount','fee','transactStatus','address','text'))
-        self.chat_logger.info('%s, %s, %s, %s, %s' % ('channelID','fromBot','id','message','user'))
-        self.execution_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('execID','orderID',
+        '''Log csv headers to subbed topics'''
+        if 'execution' in self.total_subs:
+            self.execution_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('execID','orderID',
             'clOrdID','account','symbol','side','orderQty','price','execType','ordType','commission','text'))
-        self.quote_logger.info('%s, %s, %s, %s, %s' % ('symbol','bidSize','bidPrice','askPrice','askSize'))
-        self.trade_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('symbol','open',
+        if 'transact' in self.total_subs:
+            self.transact_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s' % ('transactID','account','currency',
+            'transactType','amount','fee','transactStatus','address','text'))
+        if 'liquidation' in self.total_subs:
+            self.liquidation_logger.info('%s, %s, %s, %s, %s' % ('orderID', 'symbol','side','price','leavesQty'))
+        if 'chat' in self.total_subs:
+            self.chat_logger.info('%s, %s, %s, %s, %s' % ('channelID','fromBot','id','message','user'))
+        if 'quoteBin1m' in self.total_subs:
+            self.quote_logger.info('%s, %s, %s, %s, %s' % ('symbol','bidSize','bidPrice','askPrice','askSize'))
+        if 'tradeBin1m' in self.total_subs:
+            self.trade_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('symbol','open',
             'high','low','close','trades','volume','vwap','lastSize','turnover','homeNotional','foreignNotional'))
         return
 
@@ -142,14 +159,23 @@ class BitMEXWebsocket:
         '''Call this to exit - will close websocket.'''
         self.exited = True
         self.logger.info('Websocket closing...')
+        self.ws.close()
         # Close logging files
         self.logger.removeHandler(self.logger.handlers[0])
-        self.liquidation_logger.removeHandler(self.liquidation_logger.handlers[0])
-        self.transact_logger.removeHandler(self.transact_logger.handlers[0])
-        self.chat_logger.removeHandler(self.chat_logger.handlers[0])
-        self.execution_logger.removeHandler(self.execution_logger.handlers[0])
+        if 'execution' in self.total_subs:
+            self.execution_logger.removeHandler(self.execution_logger.handlers[0])
+        if 'transact' in self.total_subs:
+            self.transact_logger.removeHandler(self.transact_logger.handlers[0])
+        if 'liquidation' in self.total_subs:
+            self.liquidation_logger.removeHandler(self.liquidation_logger.handlers[0])
+        if 'chat' in self.total_subs:
+            self.chat_logger.removeHandler(self.chat_logger.handlers[0])
+        if 'quoteBin1m' in self.total_subs:
+            self.quote_logger.removeHandler(self.quote_logger.handlers[0])
+        if 'tradeBin1m' in self.total_subs:
+            self.trade_logger.removeHandler(self.trade_logger.handlers[0])
         logger.close_error_logger()
-        self.ws.close()
+        logging.shutdown()
         print('Websocket closed.')
 
     def reset(self):
@@ -334,17 +360,9 @@ class BitMEXWebsocket:
         '''Generate a connection URL. We can define subscriptions right in the querystring.
         Most subscription topics are scoped by the symbol we're listening to.'''
 
-        # Public subs
-        symbolSubs = ["instrument", "liquidation", "quoteBin1m", "tradeBin1m"]
-        genericSubs = ["chat"]
-
-        # Private subs
-        symbolSubsPriv = ["execution", "position"]
-        genericSubsPriv = ["transact", "margin"]
-
         # Merge both subs types
-        symbolSubs += symbolSubsPriv
-        genericSubs += genericSubsPriv
+        symbolSubs = self.symbol_subs
+        genericSubs = self.generic_subs
 
         subscriptions = [sub + ':' + self.symbol for sub in symbolSubs]
         subscriptions += genericSubs
@@ -356,13 +374,15 @@ class BitMEXWebsocket:
 
     def __wait_for_account(self):
         '''On subscribe, this data will come down. Wait for it.'''
-        while not {"execution", "position", "transact", "margin"} <= set(self.data):
+        account_subs = set(settings.PRIV_SYM_SUBS + settings.PRIV_GEN_SUBS)
+        while not account_subs <= set(self.data):
             sleep(0.1)
         return
 
     def __wait_for_symbol(self, symbol):
         '''On subscribe, this data will come down. Wait for it.'''
-        while not {"instrument", "liquidation", "chat", "quoteBin1m", "tradeBin1m"} <= set(self.data):
+        public_subs = set(settings.PUB_SYM_SUBS + settings.PUB_GEN_SUBS)
+        while not public_subs <= set(self.data):
             sleep(0.1)
 
     def __send_command(self, command, args=None):
@@ -473,16 +493,19 @@ class BitMEXWebsocket:
 
                     # Set margin update signal to True
                     if table == 'margin':
-                        self.dump_margin()
                         self._UPDATE_MARGIN = True
+                        if settings.JSON_OUT:
+                            self.dump_margin()
 
                     # Set position update signal to True
                     if table == 'position':
-                        self.dump_position()
                         self._UPDATE_POSITION = True
+                        if settings.JSON_OUT:
+                            self.dump_position()
 
                     if table == 'instrument':
-                        self.dump_instrument()
+                        if settings.JSON_OUT:
+                            self.dump_instrument()
 
                 elif action == 'delete':
                     self.logger.debug('%s: deleting %s' % (table, message['data']))
