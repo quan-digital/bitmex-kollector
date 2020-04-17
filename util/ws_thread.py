@@ -175,7 +175,7 @@ class BitMEXWebsocket:
         if 'tradeBin1m' in self.total_subs:
             self.trade_logger.removeHandler(self.trade_logger.handlers[0])
         logger.close_error_logger()
-        logging.shutdown()
+        #logging.shutdown()
         print('Websocket closed.')
 
     def reset(self):

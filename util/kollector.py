@@ -77,7 +77,7 @@ class Kollector:
         self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
-        logging.shutdown()
+        #logging.shutdown()
         time.sleep(len(settings.TRANSITION_SECS) + 1)
         self.run_loop()
 
@@ -88,7 +88,7 @@ class Kollector:
         self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
-        logging.shutdown()
+        #logging.shutdown()
         self.run_loop()
 
     def log_instrument(self):
@@ -264,7 +264,7 @@ class Kollecta:
         self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
-        logging.shutdown()
+        #logging.shutdown()
         time.sleep(len(settings.TRANSITION_SECS) + 1)
         self.run_loop()
 
@@ -275,7 +275,7 @@ class Kollecta:
         self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
-        logging.shutdown()
+        #logging.shutdown()
         self.run_loop()
 
     def log_margin(self):
