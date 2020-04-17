@@ -3,7 +3,7 @@
 # - Settings -
 # * Quan.digital *
 
-import util.secret as secret
+#import util.secret as secret
 
 #####################################################
 # Kollector Parameters
