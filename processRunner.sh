@@ -5,7 +5,7 @@ PID=`cat kollector.pid`
 
 if ! ps -p $PID > /dev/null
 then
-  rm pyno.pid
+  rm kollector.pid
   python3 util/mail.py
   python3 main.py & echo $! >>kollector.pid
 fi
