@@ -1,0 +1,12 @@
+25-04-20,00:00:00,account, symbol, commission, leverage, crossMargin, rebalancedPnl, openOrderBuyQty, openOrderBuyCost, openOrderSellQty, openOrderSellCost, execBuyQty,execBuyCost, execSellQty, execSellCost, currentQty, currentCost, isOpen, markPrice, markValue, homeNotional, foreignNotional, posState, realisedPnl, unrealisedPnl, avgCostPrice, avgEntryPrice, breakEvenPrice, liquidationPrice, bankruptPrice
+25-04-20,00:00:05,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,01:00:05,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,02:00:05,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,03:00:06,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,04:00:06,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,05:00:05,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,06:00:05,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,07:00:06,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,08:00:06,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,09:00:05,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None
+25-04-20,10:00:05,1350858, XBTUSD, 0.00075, 100, True, -21578, 0, 0, 0, 0, 0,0, 0, 0, 0, -7707, False, None, 0, 0, 0, , 21578, 0, None, None, None, None, None

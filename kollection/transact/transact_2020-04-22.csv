@@ -1,0 +1,4 @@
+22-04-20,00:00:01,transactID, account, currency, transactType, amount, fee, transactStatus, address, text
+22-04-20,00:00:01,transactID, account, currency, transactType, amount, fee, transactStatus, address, text
+23-04-20,12:00:12,c2396df7-e25b-03e0-7d92-cd1c4c0e739e, 1350858, XBt, RealisedPNL, 1950, 0, Completed, XBTUSD, 
+23-04-20,12:00:12,c2396df7-e25b-03e0-7d92-cd1c4c0e739e, 1350858, XBt, RealisedPNL, 1950, 0, Completed, XBTUSD, 

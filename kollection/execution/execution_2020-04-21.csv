@@ -1,1 +1,25 @@
 21-04-20,00:34:28,execID, orderID, clOrdID, account, symbol, side, orderQty, price, execType, ordType, commission, text
+21-04-20,04:00:07,4bf4e1a6-67f6-757e-486d-200c2d1a7640, 00000000-0000-0000-0000-000000000000, , 1350858, XBTUSD, , 456, 6868.02, Funding, Limit, 0.000486, Funding
+21-04-20,04:00:08,4bf4e1a6-67f6-757e-486d-200c2d1a7640, 00000000-0000-0000-0000-000000000000, , 1350858, XBTUSD, , 456, 6868.02, Funding, Limit, 0.000486, Funding
+21-04-20,04:00:08,4bf4e1a6-67f6-757e-486d-200c2d1a7640, 00000000-0000-0000-0000-000000000000, , 1350858, XBTUSD, , 456, 6868.02, Funding, Limit, 0.000486, Funding
+21-04-20,04:00:08,4bf4e1a6-67f6-757e-486d-200c2d1a7640, 00000000-0000-0000-0000-000000000000, , 1350858, XBTUSD, , 456, 6868.02, Funding, Limit, 0.000486, Funding
+21-04-20,04:00:08,4bf4e1a6-67f6-757e-486d-200c2d1a7640, 00000000-0000-0000-0000-000000000000, , 1350858, XBTUSD, , 456, 6868.02, Funding, Limit, 0.000486, Funding
+21-04-20,04:00:08,4bf4e1a6-67f6-757e-486d-200c2d1a7640, 00000000-0000-0000-0000-000000000000, , 1350858, XBTUSD, , 456, 6868.02, Funding, Limit, 0.000486, Funding
+21-04-20,11:04:26,ec01e697-cb4b-dec6-f731-bdc6013cb343, 6b190238-4a35-6034-1bea-f89a1299432d, , 1350858, XBTUSD, Buy, 456, 6828, New, Market, None, Position Close from www.bitmex.com
+21-04-20,11:04:26,ec01e697-cb4b-dec6-f731-bdc6013cb343, 6b190238-4a35-6034-1bea-f89a1299432d, , 1350858, XBTUSD, Buy, 456, 6828, New, Market, None, Position Close from www.bitmex.com
+21-04-20,11:04:26,ec01e697-cb4b-dec6-f731-bdc6013cb343, 6b190238-4a35-6034-1bea-f89a1299432d, , 1350858, XBTUSD, Buy, 456, 6828, New, Market, None, Position Close from www.bitmex.com
+21-04-20,11:04:26,ec01e697-cb4b-dec6-f731-bdc6013cb343, 6b190238-4a35-6034-1bea-f89a1299432d, , 1350858, XBTUSD, Buy, 456, 6828, New, Market, None, Position Close from www.bitmex.com
+21-04-20,11:04:26,ec01e697-cb4b-dec6-f731-bdc6013cb343, 6b190238-4a35-6034-1bea-f89a1299432d, , 1350858, XBTUSD, Buy, 456, 6828, New, Market, None, Position Close from www.bitmex.com
+21-04-20,11:04:26,ec01e697-cb4b-dec6-f731-bdc6013cb343, 6b190238-4a35-6034-1bea-f89a1299432d, , 1350858, XBTUSD, Buy, 456, 6828, New, Market, None, Position Close from www.bitmex.com
+21-04-20,11:04:29,3dba4f25-951e-6e14-b77f-2a5696fbc002, df4537d2-1513-1f3d-c1c7-4cf88d37a6b9, pyno_002_TgtB32XO2eRhT86v62KHtsiCDQ, 1350858, XBTUSD, Buy, 456, 6763.5, Canceled, Limit, None, Canceled: Canceled via API.
+TargetB
+21-04-20,11:04:29,3dba4f25-951e-6e14-b77f-2a5696fbc002, df4537d2-1513-1f3d-c1c7-4cf88d37a6b9, pyno_002_TgtB32XO2eRhT86v62KHtsiCDQ, 1350858, XBTUSD, Buy, 456, 6763.5, Canceled, Limit, None, Canceled: Canceled via API.
+TargetB
+21-04-20,11:04:29,3dba4f25-951e-6e14-b77f-2a5696fbc002, df4537d2-1513-1f3d-c1c7-4cf88d37a6b9, pyno_002_TgtB32XO2eRhT86v62KHtsiCDQ, 1350858, XBTUSD, Buy, 456, 6763.5, Canceled, Limit, None, Canceled: Canceled via API.
+TargetB
+21-04-20,11:04:29,3dba4f25-951e-6e14-b77f-2a5696fbc002, df4537d2-1513-1f3d-c1c7-4cf88d37a6b9, pyno_002_TgtB32XO2eRhT86v62KHtsiCDQ, 1350858, XBTUSD, Buy, 456, 6763.5, Canceled, Limit, None, Canceled: Canceled via API.
+TargetB
+21-04-20,11:04:29,3dba4f25-951e-6e14-b77f-2a5696fbc002, df4537d2-1513-1f3d-c1c7-4cf88d37a6b9, pyno_002_TgtB32XO2eRhT86v62KHtsiCDQ, 1350858, XBTUSD, Buy, 456, 6763.5, Canceled, Limit, None, Canceled: Canceled via API.
+TargetB
+21-04-20,11:04:29,3dba4f25-951e-6e14-b77f-2a5696fbc002, df4537d2-1513-1f3d-c1c7-4cf88d37a6b9, pyno_002_TgtB32XO2eRhT86v62KHtsiCDQ, 1350858, XBTUSD, Buy, 456, 6763.5, Canceled, Limit, None, Canceled: Canceled via API.
+TargetB
