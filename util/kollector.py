@@ -13,6 +13,7 @@ import sys
 import time
 import logging
 import datetime as dt
+import os
 
 from util.logger import setup_logger, setup_db
 from util.ws_thread import BitMEXWebsocket
@@ -55,12 +56,11 @@ class Kollector:
                     self.ws._UPDATE_POSITION = False
 
                 # If day changes, restart
-                now = dt.datetime.now()
-                if now.hour == 23 and now.minute == 59:
-                    print('Last minute of the day, restart will take place shortly.')
-                    if now.second in settings.TRANSITION_SECS:
-                        logger.log_error('Restarting...')
-                        self.restart()
+                date = dt.datetime.today().strftime('%Y-%m-%d')
+                path = str(settings.DATA_DIR + '_ws/ws_' + date + '.txt')
+                if not(os.path.exists(path)):
+                    logger.log_error('Restarting...')
+                    self.restart()
 
                 time.sleep(settings.LOOP_INTERVAL)
 
@@ -78,7 +78,7 @@ class Kollector:
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
         #logging.shutdown()
-        time.sleep(len(settings.TRANSITION_SECS) + 1)
+        time.sleep(1)
         self.run_loop()
 
     def reset(self):
@@ -242,12 +242,11 @@ class Kollecta:
                     self.ws._UPDATE_POSITION = False
 
                 # If day changes, restart
-                now = dt.datetime.now()
-                if now.hour == 23 and now.minute == 59:
-                    print('Last minute of the day, restart will take place shortly.')
-                    if now.second in settings.TRANSITION_SECS:
-                        logger.log_error('Restarting...')
-                        self.restart()
+                date = dt.datetime.today().strftime('%Y-%m-%d')
+                path = str(settings.DATA_DIR + '_ws/ws_' + date + '.txt')
+                if not(os.path.exists(path)):
+                    logger.log_error('Restarting...')
+                    self.restart()
 
                 time.sleep(settings.LOOP_INTERVAL)
 
@@ -265,7 +264,7 @@ class Kollecta:
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
         #logging.shutdown()
-        time.sleep(len(settings.TRANSITION_SECS) + 1)
+        time.sleep(1)
         self.run_loop()
 
     def reset(self):
