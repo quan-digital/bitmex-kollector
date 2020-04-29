@@ -1,0 +1,58 @@
+25-04-20 10:57:33.850 (_ws) - Files empty, writing headers.
+25-04-20 10:57:33.856 (_ws) - Initializing WebSocket...
+25-04-20 10:57:33.856 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+25-04-20 10:57:33.857 (_ws) - Authenticating with API Key.
+25-04-20 10:57:34.858 (_ws) - Connected to WS.
+25-04-20 10:57:35.160 (_ws) - Got all market data. Starting.
+25-04-20 10:57:50.094 (_ws) - Initializing WebSocket...
+25-04-20 10:57:50.096 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+25-04-20 10:57:50.096 (_ws) - Authenticating with API Key.
+25-04-20 10:57:51.098 (_ws) - Connected to WS.
+25-04-20 10:57:52.602 (_ws) - Got all market data. Starting.
+25-04-20 10:58:18.099 (_ws) - Initializing WebSocket...
+25-04-20 10:58:18.100 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+25-04-20 10:58:18.100 (_ws) - Authenticating with API Key.
+25-04-20 10:58:19.102 (_ws) - Connected to WS.
+25-04-20 10:58:20.105 (_ws) - Got all market data. Starting.
+25-04-20 10:59:01.275 (_ws) - Initializing WebSocket...
+25-04-20 10:59:01.276 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+25-04-20 10:59:01.276 (_ws) - Authenticating with API Key.
+25-04-20 10:59:02.278 (_ws) - Connected to WS.
+25-04-20 10:59:02.679 (_ws) - Got all market data. Starting.
+25-04-20 10:59:47.226 (_ws) - Initializing WebSocket...
+25-04-20 10:59:47.228 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+25-04-20 10:59:47.228 (_ws) - Authenticating with API Key.
+25-04-20 10:59:48.230 (_ws) - Connected to WS.
+25-04-20 10:59:48.230 (_ws) - Got all market data. Starting.
+25-04-20 11:00:06.871 (_ws) - Initializing WebSocket...
+25-04-20 11:00:06.886 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+25-04-20 11:00:06.886 (_ws) - Authenticating with API Key.
+25-04-20 11:00:07.888 (_ws) - Connected to WS.
+25-04-20 11:00:07.889 (_ws) - Got all market data. Starting.
+25-04-20 11:03:16.566 (_ws) - Initializing WebSocket...
+25-04-20 11:03:16.566 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+25-04-20 11:03:16.567 (_ws) - Authenticating with API Key.
+25-04-20 11:03:17.569 (_ws) - Connected to WS.
+25-04-20 11:03:17.669 (_ws) - Got all market data. Starting.
+25-04-20 13:37:58.339 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 515, in __on_message
+    self.data[table].remove(item)
+ValueError: list.remove(x): x not in list
+
+25-04-20 13:38:04.538 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 515, in __on_message
+    self.data[table].remove(item)
+ValueError: list.remove(x): x not in list
+
+25-04-20 13:38:23.522 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 515, in __on_message
+    self.data[table].remove(item)
+ValueError: list.remove(x): x not in list
+
+25-04-20 13:38:27.194 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 515, in __on_message
+    self.data[table].remove(item)
+ValueError: list.remove(x): x not in list
+
+26-04-20 00:00:00.770 (_ws) - Websocket closing...
+26-04-20 00:00:00.772 (_ws) - Websocket Closed
