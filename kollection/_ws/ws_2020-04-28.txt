@@ -1,7 +1,0 @@
-28-04-20 00:00:01.131 (_ws) - Files empty, writing headers.
-28-04-20 00:00:01.132 (_ws) - Initializing WebSocket...
-28-04-20 00:00:01.133 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
-28-04-20 00:00:01.133 (_ws) - Authenticating with API Key.
-28-04-20 00:00:02.134 (_ws) - Connected to WS.
-28-04-20 00:00:02.741 (_ws) - Got all market data. Starting.
-28-04-20 04:08:04.099 (_ws) - Websocket closing...
