@@ -287,6 +287,26 @@ class BitMEXWebsocket:
         bankruptPrice = position['bankruptPrice'],
         timestamp = position['timestamp'])
 
+    def get_status_data(self, message):
+        instrument = self.get_instrument_data()
+        margin = self.get_margin_data()
+        position = self.get_position_data()
+        status = dict(
+            status = message,
+            connected = self.ws.sock.connected,
+            market = instrument['state'],
+            lastPrice = instrument['lastPrice'],
+            markPrice = instrument['markPrice'],
+            balance = margin['amount'],
+            realisedPnl = margin['realisedPnl'],
+            unrealisedPnl = margin['unrealisedPnl'],
+            position = position['isOpen'],
+            contractNum = position['currentQty'],
+            contractCost = position['currentCost'],
+            openOrders = position['openOrderBuyQty'] + position['openOrderSellQty'],
+            timestamp = str(dt.datetime.now()))
+        return status
+
 
     #
     # Json functions
@@ -313,25 +333,9 @@ class BitMEXWebsocket:
             json.dump(margin,handler)
         return
 
-    def dump_status(self, status = 'Running'):
+    def dump_status(self, message = 'Running'):
         '''Save status to json'''
-        instrument = self.get_instrument_data()
-        margin = self.get_margin_data()
-        position = self.get_position_data()
-        status = dict(
-            status = status,
-            connected = self.ws.sock.connected,
-            market = instrument['state'],
-            lastPrice = instrument['lastPrice'],
-            markPrice = instrument['markPrice'],
-            balance = margin['amount'],
-            realisedPnl = margin['realisedPnl'],
-            unrealisedPnl = margin['unrealisedPnl'],
-            position = position['isOpen'],
-            contractNum = position['currentQty'],
-            contractCost = position['currentCost'],
-            openOrders = position['openOrderBuyQty'] + position['openOrderSellQty'],
-            timestamp = str(dt.datetime.now()))
+        status = self.get_status_data(message)
         with open(settings.DATA_DIR + 'status.json', 'w') as handler:
             json.dump(status,handler)
         return

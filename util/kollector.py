@@ -33,7 +33,7 @@ class Kollector:
         self.storePosition = storePosition
 
         self.logger = setup_logger()
-        log_path = False
+        self.status_logger, log_path = setup_db('status', getPath=True)
         if self.storeInstrument:
             self.instrument_logger, log_path = setup_db('instrument', getPath=True)
         if self.storeMargin:
@@ -42,19 +42,19 @@ class Kollector:
             self.position_logger, log_path = setup_db('position', getPath=True)
 
         # If this is our first time initializing files, write headers
-        if log_path:
-            if tools.is_file_empty(log_path):
-                self.logger.info('Files empty, writing headers.')
-                self.write_headers()
+        if tools.is_file_empty(log_path):
+            self.logger.info('Files empty, writing headers.')
+            self.write_headers()
 
         self.ws = BitMEXWebsocket()
 
     def run_loop(self):
         '''Setup loggers and store to .csv'''
         first_run = True # fist run connection check must be ignored
+        self.first_status()
         try:
             while(self.ws.ws.sock.connected):
-
+                
                 if self.storeInstrument:
                     # Log instrument data every loop
                     self.log_instrument()
@@ -70,6 +70,9 @@ class Kollector:
                     if self.ws._UPDATE_POSITION:
                         self.log_position()
                         self.ws._UPDATE_POSITION = False
+
+                # if not(first_run):
+                self.log_status()
 
                 # If day changes, restart
                 date = dt.datetime.today().strftime('%Y-%m-%d')
@@ -94,6 +97,7 @@ class Kollector:
         self.ws.exit()
         # Close loggers
         self.logger.removeHandler(self.logger.handlers[0])
+        self.status_logger.removeHandler(self.status_logger.handlers[0])
         self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
@@ -107,12 +111,33 @@ class Kollector:
         self.update_status()
         self.logger.info('Resetting...')
         self.logger.removeHandler(self.logger.handlers[0])
+        self.status_logger.removeHandler(self.status_logger.handlers[0])
         self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
         #logging.shutdown()
         self.__init__()
         self.run_loop()
+
+    def log_status(self):
+        '''Log status data directly from json'''
+        with open(settings.DATA_DIR + 'status.json', 'r') as handler:
+            status = json.load(handler)
+        self.status_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % (
+        status['status'],
+        status['connected'],
+        status['market'],
+        status['lastPrice'],
+        status['markPrice'],
+        status['balance'],
+        status['realisedPnl'],
+        status['unrealisedPnl'],
+        status['position'],
+        status['contractNum'],
+        status['contractCost'],
+        status['openOrders']))
+        return
+
 
     def log_instrument(self):
         '''Log instrument data'''
@@ -209,6 +234,16 @@ class Kollector:
 
     def write_headers(self):
         '''Log csv headers'''
+        # Status csv
+        self.status_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % ('status','connected',
+            'market','lastPrice','markPrice','balance','realisedPnl','unrealisedPnl','position',
+            'contractNum','contractCost','openOrders'))
+        # Status json
+        status = dict(status = 'Starting', connected = 0, market = 0, lastPrice = 0, markPrice = 0, balance = 0, realisedPnl = 0,
+        unrealisedPnl = 0, position = 0, contractNum = 0, contractCost = 0, openOrders = 0, timestamp = str(dt.datetime.now()))
+        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
+            json.dump(status,handler)
+        # Instrument csv
         if self.storeInstrument:
             self.instrument_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
 %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
@@ -217,10 +252,12 @@ class Kollector:
             'foreignNotional24h','prevPrice24h','vwap','highPrice','lowPrice','lastPrice','lastPriceProtected',
             'lastTickDirection','lastChangePcnt','bidPrice','midPrice','askPrice','impactBidPrice','impactMidPrice',
             'impactAskPrice','openInterest','openValue','markPrice','indicativeSettlePrice'))
+        # Margin csv
         if self.storeMargin:
             self.margin_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % ('account','currency',
             'amount','realisedPnl','unrealisedPnl','indicativeTax','unrealisedProfit','walletBalance','marginBalance',
             'marginLeverage','marginUsedPcnt','availableMargin','withdrawableMargin'))
+        # Position csv
         if self.storePosition:
             self.position_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
 %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % ('account','symbol','commission',
@@ -237,6 +274,13 @@ class Kollector:
         except:
             status = dict(timestamp = str(dt.datetime.now()))
         status['status'] = message
+        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
+            json.dump(status,handler)
+        return
+
+    def first_status(self):
+        status = dict(status = 'Starting', connected = 0, market = 0, lastPrice = 0, markPrice = 0, balance = 0, realisedPnl = 0,
+        unrealisedPnl = 0, position = 0, contractNum = 0, contractCost = 0, openOrders = 0, timestamp = str(dt.datetime.now()))
         with open(settings.DATA_DIR + 'status.json', 'w') as handler:
             json.dump(status,handler)
         return

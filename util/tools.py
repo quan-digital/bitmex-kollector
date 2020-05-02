@@ -35,6 +35,7 @@ def create_dirs():
         os.mkdir(settings.DATA_DIR.replace('/', ''))
         os.mkdir(settings.DATA_DIR + '_ws')
         os.mkdir(settings.DATA_DIR + '_error')
+        os.mkdir(settings.DATA_DIR + 'status')
         if 'execution' in total_subs:
             os.mkdir(settings.DATA_DIR + 'execution')
         if 'transact' in total_subs:
