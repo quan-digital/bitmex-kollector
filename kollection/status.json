@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"status": "Running", "connected": true, "market": "Open", "lastPrice": 8915.5, "markPrice": 8921.71, "balance": 4364006, "realisedPnl": 0, "unrealisedPnl": 0, "position": 0, "contractNum": 0, "contractCost": 0, "openOrders": 0, "timestamp": "2020-05-02 20:46:11.922453"}
+=======
+{"status": "Exception", "connected": true, "market": "Open", "lastPrice": 8920.5, "markPrice": 8922.72, "balance": 4364006, "realisedPnl": 0, "unrealisedPnl": 0, "position": 0, "contractNum": 0, "contractCost": 0, "openOrders": 0, "timestamp": "2020-05-02 19:25:22.248792"}
+>>>>>>> 01f26a345424aaccb86a75e9c3432075bff1d856
