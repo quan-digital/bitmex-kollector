@@ -162,7 +162,7 @@ class BitMEXWebsocket:
         self.exited = True
         self.logger.info('Websocket closing...')
         self.ws.close()
-        self.update_status('Exited')
+        # self.update_status('Exited')
         # Close logging files
         self.logger.removeHandler(self.logger.handlers[0])
         if 'execution' in self.total_subs:
@@ -375,8 +375,9 @@ class BitMEXWebsocket:
 
         if not conn_timeout:
             self.logger.error("Couldn't connect to WS! Exiting.")
-            self.exit()
-            raise websocket.WebSocketTimeoutException('Couldn\'t connect to WS! Exiting.')
+            # self.exit()
+            # raise websocket.WebSocketTimeoutException('Couldn\'t connect to WS! Exiting.')
+            self.reset()
 
     def __get_auth(self):
         '''Return auth headers. Will use API Keys if present in settings.'''
@@ -574,7 +575,8 @@ class BitMEXWebsocket:
 
         elif not self.exited:
             self.logger.error("Error : %s" % error)
-            raise websocket.WebSocketException(error)
+            # raise websocket.WebSocketException(error)
+            self.reset()
 
     def __reset(self):
         self.update_status('Resetting')

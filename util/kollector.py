@@ -26,14 +26,13 @@ class Kollector:
 
     def __init__(self, storeInstrument = True, storeMargin = True, storePosition = True):
         '''Create dirs, initialize Websocket and setup required csv loggers'''
+        tools.create_dirs()
         self.update_status('Starting')
         self.storeInstrument = storeInstrument
         self.storeMargin = storeMargin
         self.storePosition = storePosition
-        tools.create_dirs()
 
         self.logger = setup_logger()
-        self.ws = BitMEXWebsocket()
         log_path = False
         if self.storeInstrument:
             self.instrument_logger, log_path = setup_db('instrument', getPath=True)
@@ -48,8 +47,11 @@ class Kollector:
                 self.logger.info('Files empty, writing headers.')
                 self.write_headers()
 
+        self.ws = BitMEXWebsocket()
+
     def run_loop(self):
         '''Setup loggers and store to .csv'''
+        first_run = True # fist run connection check must be ignored
         try:
             while(self.ws.ws.sock.connected):
 
@@ -76,9 +78,10 @@ class Kollector:
                     logger.log_error('Restarting...')
                     self.restart()
 
-                if not(self.check_connection()):
+                if not(self.check_connection()) and not(first_run):
                     raise AttributeError()
                 time.sleep(settings.LOOP_INTERVAL)
+                first_run = False
 
         except AttributeError:
             logger.log_error('Connection to Websocket lost. Restarting...')
@@ -228,8 +231,11 @@ class Kollector:
         return
 
     def update_status(self, message = 'Restarting'):
-        with open(settings.DATA_DIR + 'status.json', 'r') as handler:
-            status = json.load(handler)
+        try:
+            with open(settings.DATA_DIR + 'status.json', 'r') as handler:
+                status = json.load(handler)
+        except:
+            status = dict(timestamp = str(dt.datetime.now()))
         status['status'] = message
         with open(settings.DATA_DIR + 'status.json', 'w') as handler:
             json.dump(status,handler)
@@ -240,8 +246,8 @@ class Kollector:
             status = json.load(handler)
         now = dt.datetime.now()
         elapsed = now - dt.datetime.strptime(status['timestamp'], '%Y-%m-%d %H:%M:%S.%f')
-        print(elapsed.total_seconds())
-        if elapsed.total_seconds() > settings.LOOP_INTERVAL:
+        # if elapsed.total_seconds() > settings.LOOP_INTERVAL:
+        if elapsed.total_seconds() > settings.LOOP_TIMEOUT:
             return False
         else:
             return True
