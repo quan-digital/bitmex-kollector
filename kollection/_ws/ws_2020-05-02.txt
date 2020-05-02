@@ -1,13 +1,123 @@
-02-05-20 00:00:01.765 (_ws) - Files empty, writing headers.
-02-05-20 00:00:01.766 (_ws) - Initializing WebSocket...
-02-05-20 00:00:01.766 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
-02-05-20 00:00:01.767 (_ws) - Authenticating with API Key.
-02-05-20 00:00:02.770 (_ws) - Connected to WS.
-02-05-20 00:00:03.074 (_ws) - Got all market data. Starting.
-02-05-20 01:22:29.102 (_ws) - Websocket closing...
-02-05-20 03:55:30.649 (_ws) - Initializing WebSocket...
-02-05-20 03:55:30.649 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
-02-05-20 03:55:30.650 (_ws) - Authenticating with API Key.
-02-05-20 03:55:31.651 (_ws) - Connected to WS.
-02-05-20 03:55:32.855 (_ws) - Got all market data. Starting.
-02-05-20 05:49:33.898 (_ws) - Websocket closing...
+02-05-20 06:19:46.479 (_ws) - Files empty, writing headers.
+02-05-20 06:19:46.480 (_ws) - Initializing WebSocket...
+02-05-20 06:19:46.480 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 06:19:46.481 (_ws) - Authenticating with API Key.
+02-05-20 06:19:46.729 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 480, in __on_message
+    self.dump_status()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 345, in dump_status
+    status = self.get_status_data(message)
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 298, in get_status_data
+    instrument = self.get_instrument_data()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 200, in get_instrument_data
+    instrument = self.data['instrument'][0]
+KeyError: 'instrument'
+
+02-05-20 06:19:47.483 (_ws) - Connected to WS.
+02-05-20 06:19:47.684 (_ws) - Got all market data. Starting.
+02-05-20 06:41:11.810 (_ws) - Initializing WebSocket...
+02-05-20 06:41:11.810 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 06:41:11.811 (_ws) - Authenticating with API Key.
+02-05-20 06:41:12.812 (_ws) - Connected to WS.
+02-05-20 06:41:12.813 (_ws) - Got all market data. Starting.
+02-05-20 07:11:32.473 (_ws) - Initializing WebSocket...
+02-05-20 07:11:32.473 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 07:11:32.474 (_ws) - Authenticating with API Key.
+02-05-20 07:11:33.475 (_ws) - Connected to WS.
+02-05-20 07:11:33.476 (_ws) - Got all market data. Starting.
+02-05-20 08:06:50.911 (_ws) - Initializing WebSocket...
+02-05-20 08:06:50.911 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 08:06:50.911 (_ws) - Authenticating with API Key.
+02-05-20 08:06:51.913 (_ws) - Connected to WS.
+02-05-20 08:06:52.016 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 480, in __on_message
+    self.dump_status()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 345, in dump_status
+    status = self.get_status_data(message)
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 298, in get_status_data
+    instrument = self.get_instrument_data()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 200, in get_instrument_data
+    instrument = self.data['instrument'][0]
+KeyError: 'instrument'
+
+02-05-20 08:06:52.615 (_ws) - Got all market data. Starting.
+02-05-20 08:44:21.582 (_ws) - Initializing WebSocket...
+02-05-20 08:44:21.583 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 08:44:21.583 (_ws) - Authenticating with API Key.
+02-05-20 08:44:22.369 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 480, in __on_message
+    self.dump_status()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 345, in dump_status
+    status = self.get_status_data(message)
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 298, in get_status_data
+    instrument = self.get_instrument_data()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 200, in get_instrument_data
+    instrument = self.data['instrument'][0]
+KeyError: 'instrument'
+
+02-05-20 08:44:22.585 (_ws) - Connected to WS.
+02-05-20 08:44:22.685 (_ws) - Got all market data. Starting.
+02-05-20 12:20:54.040 (_ws) - Initializing WebSocket...
+02-05-20 12:20:54.040 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 12:20:54.040 (_ws) - Authenticating with API Key.
+02-05-20 12:20:54.943 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 480, in __on_message
+    self.dump_status()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 345, in dump_status
+    status = self.get_status_data(message)
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 298, in get_status_data
+    instrument = self.get_instrument_data()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 200, in get_instrument_data
+    instrument = self.data['instrument'][0]
+KeyError: 'instrument'
+
+02-05-20 12:20:55.042 (_ws) - Connected to WS.
+02-05-20 12:20:55.142 (_ws) - Got all market data. Starting.
+02-05-20 12:30:29.626 (_ws) - Initializing WebSocket...
+02-05-20 12:30:29.626 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 12:30:29.626 (_ws) - Authenticating with API Key.
+02-05-20 12:30:29.736 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 480, in __on_message
+    self.dump_status()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 345, in dump_status
+    status = self.get_status_data(message)
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 298, in get_status_data
+    instrument = self.get_instrument_data()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 200, in get_instrument_data
+    instrument = self.data['instrument'][0]
+KeyError: 'instrument'
+
+02-05-20 12:30:30.628 (_ws) - Connected to WS.
+02-05-20 12:30:30.629 (_ws) - Got all market data. Starting.
+02-05-20 12:36:43.748 (_ws) - Initializing WebSocket...
+02-05-20 12:36:43.748 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 12:36:43.748 (_ws) - Authenticating with API Key.
+02-05-20 12:36:44.750 (_ws) - Connected to WS.
+02-05-20 12:36:45.151 (_ws) - Got all market data. Starting.
+02-05-20 15:24:48.061 (_ws) - Initializing WebSocket...
+02-05-20 15:24:48.061 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 15:24:48.061 (_ws) - Authenticating with API Key.
+02-05-20 15:24:49.063 (_ws) - Connected to WS.
+02-05-20 15:24:49.075 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 480, in __on_message
+    self.dump_status()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 345, in dump_status
+    status = self.get_status_data(message)
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 298, in get_status_data
+    instrument = self.get_instrument_data()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 200, in get_instrument_data
+    instrument = self.data['instrument'][0]
+KeyError: 'instrument'
+
+02-05-20 15:24:49.469 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 480, in __on_message
+    self.dump_status()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 345, in dump_status
+    status = self.get_status_data(message)
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 298, in get_status_data
+    instrument = self.get_instrument_data()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 200, in get_instrument_data
+    instrument = self.data['instrument'][0]
+KeyError: 'instrument'
+
+02-05-20 15:24:50.167 (_ws) - Got all market data. Starting.
