@@ -6,7 +6,7 @@ PID=`cat kollector.pid`
 if ! ps -p $PID > /dev/null
 then
   rm kollector.pid
-  python3 util/mail.py
+  python3 mail.py
   python3 main.py & echo $! >>kollector.pid
 fi
 sleep 3; 
