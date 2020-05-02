@@ -5,6 +5,7 @@
 
 from datetime import datetime
 import logging
+import json
 import sys
 from logging.handlers import RotatingFileHandler
 
@@ -78,6 +79,7 @@ def close_error_logger():
 
 def log_exception(exc_type, exc_value, exc_traceback):
     '''Log unhandled exceptions'''
+    update_status('Exception')
     if issubclass(exc_type, KeyboardInterrupt):
         sys.__excepthook__(exc_type, exc_value, exc_traceback)
         return
@@ -96,4 +98,13 @@ def log_error(message):
     error_logger.error(message)
     error_logger.info('-----------------------------------------------------------------')
     error_logger.info('')
+    update_status()
+    return
+
+def update_status(message = 'Error'):
+    with open(settings.DATA_DIR + 'status.json', 'r') as handler:
+        status = json.load(handler)
+    status['status'] = message
+    with open(settings.DATA_DIR + 'status.json', 'w') as handler:
+        json.dump(status,handler)
     return

@@ -14,6 +14,7 @@ import time
 import logging
 import datetime as dt
 import os
+import json
 
 from util.logger import setup_logger, setup_db
 from util.ws_thread import BitMEXWebsocket
@@ -25,6 +26,7 @@ class Kollector:
 
     def __init__(self, storeInstrument = True, storeMargin = True, storePosition = True):
         '''Create dirs, initialize Websocket and setup required csv loggers'''
+        self.update_status('Starting')
         self.storeInstrument = storeInstrument
         self.storeMargin = storeMargin
         self.storePosition = storePosition
@@ -74,6 +76,8 @@ class Kollector:
                     logger.log_error('Restarting...')
                     self.restart()
 
+                if not(self.check_connection()):
+                    raise AttributeError()
                 time.sleep(settings.LOOP_INTERVAL)
 
         except AttributeError:
@@ -83,6 +87,7 @@ class Kollector:
     def restart(self):
         '''Close Websocket, loggers, wait and restart'''
         self.logger.info('Restarting...')
+        self.update_status()
         self.ws.exit()
         # Close loggers
         self.logger.removeHandler(self.logger.handlers[0])
@@ -91,16 +96,19 @@ class Kollector:
         self.position_logger.removeHandler(self.position_logger.handlers[0])
         #logging.shutdown()
         time.sleep(1)
+        self.__init__()
         self.run_loop()
 
     def reset(self):
         '''Close loggers and reset'''
+        self.update_status()
         self.logger.info('Resetting...')
         self.logger.removeHandler(self.logger.handlers[0])
         self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
         #logging.shutdown()
+        self.__init__()
         self.run_loop()
 
     def log_instrument(self):
@@ -218,3 +226,22 @@ class Kollector:
             'isOpen','markPrice','markValue','homeNotional','foreignNotional','posState','realisedPnl','unrealisedPnl',
             'avgCostPrice','avgEntryPrice','breakEvenPrice','liquidationPrice','bankruptPrice'))
         return
+
+    def update_status(self, message = 'Restarting'):
+        with open(settings.DATA_DIR + 'status.json', 'r') as handler:
+            status = json.load(handler)
+        status['status'] = message
+        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
+            json.dump(status,handler)
+        return
+
+    def check_connection(self):
+        with open(settings.DATA_DIR + 'status.json', 'r') as handler:
+            status = json.load(handler)
+        now = dt.datetime.now()
+        elapsed = now - dt.datetime.strptime(status['timestamp'], '%Y-%m-%d %H:%M:%S.%f')
+        print(elapsed.total_seconds())
+        if elapsed.total_seconds() > settings.LOOP_INTERVAL:
+            return False
+        else:
+            return True

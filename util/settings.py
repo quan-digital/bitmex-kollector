@@ -20,7 +20,9 @@ MAX_FILE_SIZE = 100000000 # 100MB
 
 # Time in seconds to wait after each kollector loop
 # LOOP_INTERVAL = 1
-LOOP_INTERVAL = 60 # for bot
+LOOP_INTERVAL = 30 # for bot
+# note: this is linked to how quickly Kollector will be able to notice an idle
+# connection on downtimes
 
 # Mail to warn on errors
 MAIL_TO = "kauecano@gmail.com"

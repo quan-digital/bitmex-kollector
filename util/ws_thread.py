@@ -30,6 +30,7 @@ import sys
 from time import sleep
 import math
 import json
+import datetime as dt
 
 from util.api_auth import generate_nonce, generate_signature
 import util.tools as tools
@@ -150,6 +151,7 @@ class BitMEXWebsocket:
 
     def error(self, err):
         self._error = err
+        self.update_status('Error')
         logger.log_error(err)
 
     def __del__(self):
@@ -160,6 +162,7 @@ class BitMEXWebsocket:
         self.exited = True
         self.logger.info('Websocket closing...')
         self.ws.close()
+        self.update_status('Exited')
         # Close logging files
         self.logger.removeHandler(self.logger.handlers[0])
         if 'execution' in self.total_subs:
@@ -181,6 +184,7 @@ class BitMEXWebsocket:
     def reset(self):
         self.logger.warning('Websocket resetting...')
         self.ws.close()
+        self.update_status()
         self.init()
 
     #
@@ -224,7 +228,8 @@ class BitMEXWebsocket:
                     openInterest = instrument['openInterest'],
                     openValue = instrument['openValue'],
                     markPrice = instrument['markPrice'],
-                    indicativeSettlePrice = instrument['indicativeSettlePrice'])
+                    indicativeSettlePrice = instrument['indicativeSettlePrice'],
+                    timestamp = instrument['timestamp'])
 
     #
     # Private data functions
@@ -245,7 +250,8 @@ class BitMEXWebsocket:
         marginLeverage = margin['marginLeverage'],
         marginUsedPcnt = margin['marginUsedPcnt'],
         availableMargin = margin['availableMargin'],
-        withdrawableMargin = margin['withdrawableMargin'])
+        withdrawableMargin = margin['withdrawableMargin'],
+        timestamp = margin['timestamp'])
 
     def get_position_data(self):
         '''Return all relevant position data'''
@@ -278,7 +284,8 @@ class BitMEXWebsocket:
         avgEntryPrice = position['avgEntryPrice'],
         breakEvenPrice = position['breakEvenPrice'],
         liquidationPrice = position['liquidationPrice'],
-        bankruptPrice = position['bankruptPrice'])
+        bankruptPrice = position['bankruptPrice'],
+        timestamp = position['timestamp'])
 
 
     #
@@ -304,6 +311,37 @@ class BitMEXWebsocket:
         margin = self.get_margin_data()
         with open(settings.DATA_DIR + 'margin.json', 'w') as handler:
             json.dump(margin,handler)
+        return
+
+    def dump_status(self, status = 'Running'):
+        '''Save status to json'''
+        instrument = self.get_instrument_data()
+        margin = self.get_margin_data()
+        position = self.get_position_data()
+        status = dict(
+            status = status,
+            connected = self.ws.sock.connected,
+            market = instrument['state'],
+            lastPrice = instrument['lastPrice'],
+            markPrice = instrument['markPrice'],
+            balance = margin['amount'],
+            realisedPnl = margin['realisedPnl'],
+            unrealisedPnl = margin['unrealisedPnl'],
+            position = position['isOpen'],
+            contractNum = position['currentQty'],
+            contractCost = position['currentCost'],
+            openOrders = position['openOrderBuyQty'] + position['openOrderSellQty'],
+            timestamp = str(dt.datetime.now()))
+        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
+            json.dump(status,handler)
+        return
+
+    def update_status(self, message = 'Restarting'):
+        with open(settings.DATA_DIR + 'status.json', 'r') as handler:
+            status = json.load(handler)
+        status['status'] = message
+        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
+            json.dump(status,handler)
         return
 
     #
@@ -424,6 +462,11 @@ class BitMEXWebsocket:
                 # 'insert'  - new row
                 # 'update'  - update row
                 # 'delete'  - delete row
+
+                # Update status every message received, except for partial
+                if action != 'partial':
+                    self.dump_status()
+
                 if action == 'partial':
                     self.logger.debug("%s: partial" % table)
                     self.data[table] = message['data']
@@ -525,6 +568,7 @@ class BitMEXWebsocket:
         '''Called on fatal websocket errors. We exit on these.'''
         if '502' in error:
             self.logger.error("Bad Gateway, retrying.")
+            self.update_status('502 Error')
             sleep(1)
             self.reset()
 
@@ -533,6 +577,7 @@ class BitMEXWebsocket:
             raise websocket.WebSocketException(error)
 
     def __reset(self):
+        self.update_status('Resetting')
         self.data = {}
         self.keys = {}
         self.exited = False
@@ -544,4 +589,5 @@ class BitMEXWebsocket:
 
     def __on_close(self):
         '''Called on websocket close.'''
+        self.update_status('Closed')
         self.logger.info('Websocket Closed')
