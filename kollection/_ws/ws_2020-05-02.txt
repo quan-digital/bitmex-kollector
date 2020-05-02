@@ -121,3 +121,57 @@ KeyError: 'instrument'
 KeyError: 'instrument'
 
 02-05-20 15:24:50.167 (_ws) - Got all market data. Starting.
+02-05-20 16:37:11.667 (_ws) - Initializing WebSocket...
+02-05-20 16:37:11.667 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 16:37:11.667 (_ws) - Authenticating with API Key.
+02-05-20 16:37:12.669 (_ws) - Connected to WS.
+02-05-20 16:37:12.669 (_ws) - Got all market data. Starting.
+02-05-20 17:31:20.616 (_ws) - Initializing WebSocket...
+02-05-20 17:31:20.616 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 17:31:20.616 (_ws) - Authenticating with API Key.
+02-05-20 17:31:20.935 (_ws) - Traceback (most recent call last):
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 480, in __on_message
+    self.dump_status()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 345, in dump_status
+    status = self.get_status_data(message)
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 298, in get_status_data
+    instrument = self.get_instrument_data()
+  File "/home/ubuntu/bitmex-kollector/util/ws_thread.py", line 200, in get_instrument_data
+    instrument = self.data['instrument'][0]
+KeyError: 'instrument'
+
+02-05-20 17:31:21.618 (_ws) - Connected to WS.
+02-05-20 17:31:22.620 (_ws) - Got all market data. Starting.
+02-05-20 17:51:57.756 (_ws) - Initializing WebSocket...
+02-05-20 17:51:57.757 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 17:51:57.757 (_ws) - Authenticating with API Key.
+02-05-20 17:51:58.759 (_ws) - Connected to WS.
+02-05-20 17:52:00.162 (_ws) - Got all market data. Starting.
+02-05-20 18:35:56.075 (_ws) - Initializing WebSocket...
+02-05-20 18:35:56.076 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 18:35:56.076 (_ws) - Authenticating with API Key.
+02-05-20 18:35:57.077 (_ws) - Connected to WS.
+02-05-20 18:35:57.679 (_ws) - Got all market data. Starting.
+02-05-20 20:17:36.183 (_ws) - Initializing WebSocket...
+02-05-20 20:17:36.184 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 20:17:36.184 (_ws) - Authenticating with API Key.
+02-05-20 20:17:37.186 (_ws) - Connected to WS.
+02-05-20 20:17:37.587 (_ws) - Got all market data. Starting.
+02-05-20 20:21:04.464 (_ws) - Websocket Closed
+02-05-20 20:21:05.064 (_ws) - Initializing WebSocket...
+02-05-20 20:21:05.064 (_ws) - Initializing WebSocket...
+02-05-20 20:21:05.064 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 20:21:05.064 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 20:21:05.065 (_ws) - Authenticating with API Key.
+02-05-20 20:21:05.065 (_ws) - Authenticating with API Key.
+02-05-20 20:21:06.066 (_ws) - Connected to WS.
+02-05-20 20:21:06.066 (_ws) - Connected to WS.
+02-05-20 20:21:07.671 (_ws) - Got all market data. Starting.
+02-05-20 20:21:07.671 (_ws) - Got all market data. Starting.
+02-05-20 20:30:34.400 (_ws) - Websocket closing...
+02-05-20 20:30:34.400 (_ws) - Websocket closing...
+02-05-20 20:45:59.670 (_ws) - Initializing WebSocket...
+02-05-20 20:45:59.670 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 20:45:59.671 (_ws) - Authenticating with API Key.
+02-05-20 20:46:00.672 (_ws) - Connected to WS.
+02-05-20 20:46:00.673 (_ws) - Got all market data. Starting.
