@@ -89,7 +89,9 @@ class BitMEXWebsocket:
 
         self.data = {}
         self.keys = {}
+        self.got_partial = False
         self.exited = False
+        self.status_dict = dict(timestamp = str(dt.datetime.now()))
 
         self._UPDATE_MARGIN = False
         self._UPDATE_POSITION = False
@@ -104,6 +106,7 @@ class BitMEXWebsocket:
         self.__wait_for_symbol(symbol)
         if api_key:
             self.__wait_for_account()
+        self.got_partial = True
         self.logger.info('Got all market data. Starting.')
 
     def init(self):
@@ -125,6 +128,7 @@ class BitMEXWebsocket:
         if self.api_key:
             self.__wait_for_account()
         self.logger.info('Got all market data. Starting.')
+        self.dump_status()
 
     def write_headers(self):
         '''Log csv headers to subbed topics'''
@@ -153,6 +157,7 @@ class BitMEXWebsocket:
         self._error = err
         self.update_status('Error')
         logger.log_error(err)
+        self.dump_status()
 
     def __del__(self):
         self.exit()
@@ -162,7 +167,8 @@ class BitMEXWebsocket:
         self.exited = True
         self.logger.info('Websocket closing...')
         self.ws.close()
-        # self.update_status('Exited')
+        self.update_status('Exited')
+        self.dump_status()
         # Close logging files
         self.logger.removeHandler(self.logger.handlers[0])
         if 'execution' in self.total_subs:
@@ -185,6 +191,7 @@ class BitMEXWebsocket:
         self.logger.warning('Websocket resetting...')
         self.ws.close()
         self.update_status()
+        self.dump_status()
         self.init()
 
     #
@@ -340,19 +347,15 @@ class BitMEXWebsocket:
             json.dump(margin,handler)
         return
 
-    def dump_status(self, message = 'Running'):
+    def dump_status(self):
         '''Save status to json'''
-        status = self.get_status_data(message)
+        status = self.status_dict
         with open(settings.DATA_DIR + 'status.json', 'w') as handler:
             json.dump(status,handler)
         return
 
     def update_status(self, message = 'Restarting'):
-        with open(settings.DATA_DIR + 'status.json', 'r') as handler:
-            status = json.load(handler)
-        status['status'] = message
-        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
-            json.dump(status,handler)
+        self.status_dict['status'] = message
         return
 
     #
@@ -476,8 +479,8 @@ class BitMEXWebsocket:
                 # 'delete'  - delete row
 
                 # Update status every message received, except for partial
-                if action != 'partial':
-                    self.dump_status()
+                if action != 'partial' and self.got_partial:
+                    self.status_dict = self.get_status_data('Running')
 
                 if action == 'partial':
                     self.logger.debug("%s: partial" % table)
@@ -570,6 +573,9 @@ class BitMEXWebsocket:
                         self.data[table].remove(item)
                 else:
                     raise Exception("Unknown received action: %s" % action)
+
+                self.dump_status()
+
         except:
             self.logger.error(traceback.format_exc())
             if(len(self.data)):
@@ -589,18 +595,23 @@ class BitMEXWebsocket:
             # raise websocket.WebSocketException(error)
             self.reset()
 
+        self.dump_status()
+
     def __reset(self):
         self.update_status('Resetting')
         self.data = {}
         self.keys = {}
         self.exited = False
         self._error = None
+        self.dump_status()
 
     def __on_open(self):
         '''Called when the WS opens.'''
         self.logger.debug("Websocket Opened.")
+        self.dump_status()
 
     def __on_close(self):
         '''Called on websocket close.'''
         self.update_status('Closed')
         self.logger.info('Websocket Closed')
+        self.dump_status()

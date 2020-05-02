@@ -5,7 +5,7 @@
 
 # author: canokaue
 # date: 12/04/2020
-# kaue@engineer.com
+# kaue.cano@quan.digital
 
 # The ultimate data collector for Bitmex
 
@@ -27,7 +27,6 @@ class Kollector:
     def __init__(self, storeInstrument = True, storeMargin = True, storePosition = True):
         '''Create dirs, initialize Websocket and setup required csv loggers'''
         tools.create_dirs()
-        self.update_status('Starting')
         self.storeInstrument = storeInstrument
         self.storeMargin = storeMargin
         self.storePosition = storePosition
@@ -47,6 +46,8 @@ class Kollector:
             self.write_headers()
 
         self.ws = BitMEXWebsocket()
+        self.update_status('Starting')
+        while not(self.ws.got_partial) : time.sleep(0.1)
 
     def run_loop(self):
         '''Setup loggers and store to .csv'''
@@ -54,7 +55,8 @@ class Kollector:
         self.first_status()
         try:
             while(self.ws.ws.sock.connected):
-                
+                self.dump_status()
+
                 if self.storeInstrument:
                     # Log instrument data every loop
                     self.log_instrument()
@@ -83,6 +85,7 @@ class Kollector:
 
                 if not(self.check_connection()) and not(first_run):
                     raise AttributeError()
+
                 time.sleep(settings.LOOP_INTERVAL)
                 first_run = False
 
@@ -108,8 +111,8 @@ class Kollector:
 
     def reset(self):
         '''Close loggers and reset'''
-        self.update_status()
         self.logger.info('Resetting...')
+        self.update_status()
         self.logger.removeHandler(self.logger.handlers[0])
         self.status_logger.removeHandler(self.status_logger.handlers[0])
         self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
@@ -121,8 +124,7 @@ class Kollector:
 
     def log_status(self):
         '''Log status data directly from json'''
-        with open(settings.DATA_DIR + 'status.json', 'r') as handler:
-            status = json.load(handler)
+        status = self.ws.status_dict
         self.status_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % (
         status['status'],
         status['connected'],
@@ -238,11 +240,6 @@ class Kollector:
         self.status_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % ('status','connected',
             'market','lastPrice','markPrice','balance','realisedPnl','unrealisedPnl','position',
             'contractNum','contractCost','openOrders'))
-        # Status json
-        status = dict(status = 'Starting', connected = 0, market = 0, lastPrice = 0, markPrice = 0, balance = 0, realisedPnl = 0,
-        unrealisedPnl = 0, position = 0, contractNum = 0, contractCost = 0, openOrders = 0, timestamp = str(dt.datetime.now()))
-        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
-            json.dump(status,handler)
         # Instrument csv
         if self.storeInstrument:
             self.instrument_logger.info("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
@@ -268,30 +265,27 @@ class Kollector:
         return
 
     def update_status(self, message = 'Restarting'):
-        try:
-            with open(settings.DATA_DIR + 'status.json', 'r') as handler:
-                status = json.load(handler)
-        except:
-            status = dict(timestamp = str(dt.datetime.now()))
-        status['status'] = message
-        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
-            json.dump(status,handler)
+        self.ws.status_dict['status'] = message
         return
 
     def first_status(self):
         status = dict(status = 'Starting', connected = 0, market = 0, lastPrice = 0, markPrice = 0, balance = 0, realisedPnl = 0,
         unrealisedPnl = 0, position = 0, contractNum = 0, contractCost = 0, openOrders = 0, timestamp = str(dt.datetime.now()))
-        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
-            json.dump(status,handler)
+        self.ws.status_dict = status
         return
 
     def check_connection(self):
-        with open(settings.DATA_DIR + 'status.json', 'r') as handler:
-            status = json.load(handler)
+        status = self.ws.status_dict
         now = dt.datetime.now()
         elapsed = now - dt.datetime.strptime(status['timestamp'], '%Y-%m-%d %H:%M:%S.%f')
-        # if elapsed.total_seconds() > settings.LOOP_INTERVAL:
         if elapsed.total_seconds() > settings.LOOP_TIMEOUT:
             return False
         else:
             return True
+
+    def dump_status(self):
+        '''Save status to json'''
+        status = self.ws.status_dict
+        with open(settings.DATA_DIR + 'status.json', 'w') as handler:
+            json.dump(status,handler)
+        return
