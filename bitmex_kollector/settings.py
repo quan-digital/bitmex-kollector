@@ -3,8 +3,6 @@
 # - Settings -
 # * Quan.digital *
 
-#import util.secret as secret
-
 #####################################################
 # Kollector Parameters
 #####################################################
@@ -54,9 +52,6 @@ API_KEY = "JP7uC-IALzH453flus79MKHG" # Mainet Kraudin
 API_SECRET = "4Dw_7hwiDLpTuqMQ5PuCIyd8oJVHcfzlI83ipRQLRlVGeBjd"
 # API_KEY = "rolMDEfUQwwASTckmugBkeM5" # Testnet Kaka
 # API_SECRET = "anR6vCI74u10ggGAxAlCVN05ITrtC8bwiK4_s86vtXRARddP"
-# Uncomment below to use API from secret.py for more privacy
-# API_KEY = secret.BITMEX_KEY
-# API_SECRET secret.BITMEX_SECRET
 
 # Don't grow a table larger than 200, helps cap memory usage
 MAX_TABLE_LEN = 200

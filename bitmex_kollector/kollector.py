@@ -4,7 +4,7 @@
 #   * Quan.digital *
 
 # author: canokaue
-# date: 12/04/2020
+# date: 03/05/2020
 # kaue.cano@quan.digital
 
 # The ultimate data collector for Bitmex
@@ -16,11 +16,11 @@ import datetime as dt
 import os
 import json
 
-from util.logger import setup_logger, setup_db
-from util.ws_thread import BitMEXWebsocket
-import util.tools as tools
-import util.settings as settings
-import util.logger as logger
+from bitmex_kollector.util.logger import setup_logger, setup_db
+from bitmex_kollector.util.ws_thread import BitMEXWebsocket
+import bitmex_kollector.util.tools as tools
+import bitmex_kollector.settings as settings
+import bitmex_kollector.util.logger as logger
 
 class Kollector:
 

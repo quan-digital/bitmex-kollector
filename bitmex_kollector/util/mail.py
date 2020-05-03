@@ -1,7 +1,7 @@
 import smtplib
 import datetime as dt
 from email.message import EmailMessage
-import util.settings as settings
+import bitmex_kollector.settings as settings
 
 
 if __name__ == '__main__':

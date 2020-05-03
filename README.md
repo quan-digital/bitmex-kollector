@@ -5,19 +5,19 @@ The ultimate data aggregator using Bitmex's Websocket - FATALITY 💉💀🗡
 
 ## Setup & usage
 
-- Setup your API key and secret on settings.py (or copy secret.py.sample to secret.py for extra privacy).
+- clone repo
 
-- pip3 install -U websocket-client (or source kollector.env/bin/activate).
+- pip3 install -e .
 
-- Run main.py :)
+- edit settings on main.py
 
-- Data will be stored in settings.DATA_DIR ('data/' by default, change for deploy).
+- run main.py :)
 
-- Since AWS EC2 us-east-2 has an empirical uptime guarantee of 99.8922% ([source](https://cloudharmony.com/status)) and there are 2.628e+6 seconds in a month, we could deal with 2838 seconds of downtime in a month, with an average of 95 seconds of downtime a day, or four seconds of downtime per minute.
+- data will be stored in settings.DATA_DIR ('data/' by default, change for deploy).
 
-- With that in mind, from 23:59:5X to 23:50:59 (range defined in settings.TRANSITION_SECS), kollection restarts so files are renamed correctly and websocket runs smoothly.
+- run on EC2 eu-west-1 (Ireland) because that's where Bitmex' Websocket is hosted.
 
-- Kollector will generate about 40MB of data a day, with more than half going towards 'instrument'. So estimate around 1.5GB of data a month, or 20GB a year.
+- Kollector will generate about 140MB of data a day, with more than half going towards 'instrument'. So estimate around 3GB of data a month, or 50GB a year.
 
 #### Public topics subscribed
 

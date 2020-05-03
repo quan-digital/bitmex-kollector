@@ -6,7 +6,7 @@
 import os 
 import math
 from decimal import Decimal
-import util.settings as settings
+import bitmex_kollector.settings as settings
 
 def XBt_to_XBT(XBt):
     """Satoshi to XBT converter"""

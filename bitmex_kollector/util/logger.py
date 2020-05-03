@@ -9,8 +9,8 @@ import json
 import sys
 from logging.handlers import RotatingFileHandler
 
-import util.settings as settings
-import util.tools as tools
+import bitmex_kollector.settings as settings
+import bitmex_kollector.util.tools as tools
 
 def setup_logger():
     '''Prints logger info to terminal'''

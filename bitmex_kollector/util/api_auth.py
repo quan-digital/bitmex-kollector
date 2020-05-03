@@ -5,7 +5,7 @@
 
 import time, urllib, hmac, hashlib
 
-import util.settings as settings
+import bitmex_kollector.settings as settings
 
 def generate_nonce():
     """Generate nonce."""

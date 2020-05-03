@@ -32,10 +32,10 @@ import math
 import json
 import datetime as dt
 
-from util.api_auth import generate_nonce, generate_signature
-import util.tools as tools
-import util.logger as logger
-import util.settings as settings
+from bitmex_kollector.util.api_auth import generate_nonce, generate_signature
+import bitmex_kollector.util.tools as tools
+import bitmex_kollector.util.logger as logger
+import bitmex_kollector.settings as settings
 
 class BitMEXWebsocket:
 
