@@ -39,8 +39,7 @@ import bitmex_kollector.settings as settings
 
 class BitMEXWebsocket:
 
-    def __init__(self, endpoint = settings.BASE_URL, symbol = settings.SYMBOL, \
-                 api_key=settings.API_KEY, api_secret=settings.API_SECRET):
+    def __init__(self, api_key, api_secret, endpoint = settings.BASE_URL, symbol = settings.SYMBOL):
         '''Connect to the websocket and initialize data.'''
 
         # Setup core loggers

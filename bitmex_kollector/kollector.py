@@ -24,7 +24,7 @@ import bitmex_kollector.util.logger as logger
 
 class Kollector:
 
-    def __init__(self, storeInstrument = True, storeMargin = True, storePosition = True):
+    def __init__(self, apiKey, apiSecret, storeInstrument = True, storeMargin = True, storePosition = True):
         '''Create dirs, initialize Websocket and setup required csv loggers'''
         tools.create_dirs()
         self.storeInstrument = storeInstrument
@@ -45,7 +45,7 @@ class Kollector:
             self.logger.info('Files empty, writing headers.')
             self.write_headers()
 
-        self.ws = BitMEXWebsocket()
+        self.ws = BitMEXWebsocket(apiKey, apiSecret)
         self.update_status('Starting')
         while not(self.ws.got_partial) : time.sleep(0.1)
 

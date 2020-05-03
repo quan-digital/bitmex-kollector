@@ -5,8 +5,6 @@
 
 import time, urllib, hmac, hashlib
 
-import bitmex_kollector.settings as settings
-
 def generate_nonce():
     """Generate nonce."""
     return int(round(time.time() + 3600))

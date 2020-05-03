@@ -5,19 +5,15 @@ The ultimate data aggregator using Bitmex's Websocket - FATALITY 💉💀🗡
 
 ## Setup & usage
 
-- clone repo
+- pip3 install git+github.com/quan-digital/bitmex-kollector#egg=bitmex_kollector
 
-- pip3 install -e .
-
-- edit settings on main.py
-
-- run main.py :)
+- copy, config and run main.py :)
 
 - data will be stored in settings.DATA_DIR ('data/' by default, change for deploy).
 
 - run on EC2 eu-west-1 (Ireland) because that's where Bitmex' Websocket is hosted.
 
-- Kollector will generate about 140MB of data a day, with more than half going towards 'instrument'. So estimate around 3GB of data a month, or 50GB a year.
+- base Kollector will generate about 140MB of data a day, with more than half going towards 'instrument'. So estimate around 3GB of data a month, or 50GB a year. For bot operation, you can divide that by 60 at least.
 
 #### Public topics subscribed
 

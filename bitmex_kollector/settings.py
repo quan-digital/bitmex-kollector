@@ -47,12 +47,6 @@ PRIV_SYM_SUBS = ["execution", "position"]
 # available: ["transact", "margin"]
 PRIV_GEN_SUBS = ["transact", "margin"]
 
-# API pair
-API_KEY = "JP7uC-IALzH453flus79MKHG" # Mainet Kraudin
-API_SECRET = "4Dw_7hwiDLpTuqMQ5PuCIyd8oJVHcfzlI83ipRQLRlVGeBjd"
-# API_KEY = "rolMDEfUQwwASTckmugBkeM5" # Testnet Kaka
-# API_SECRET = "anR6vCI74u10ggGAxAlCVN05ITrtC8bwiK4_s86vtXRARddP"
-
 # Don't grow a table larger than 200, helps cap memory usage
 MAX_TABLE_LEN = 200
 
