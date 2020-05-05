@@ -13,6 +13,10 @@
 DATA_DIR = 'kollection/' # for kollector
 # DATA_DIR = 'testnet_kaka/' # make bot name for bots
 
+STORE_INSTRUMENT = True
+STORE_MARGIN = True
+STORE_POSITION = True
+
 # Max file size in bytes
 MAX_FILE_SIZE = 100000000 # 100MB
 

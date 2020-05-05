@@ -18,15 +18,18 @@ import json
 
 from bitmex_kollector.util.logger import setup_logger, setup_db
 from bitmex_kollector.util.ws_thread import BitMEXWebsocket
-import bitmex_kollector.util.tools as tools
-import bitmex_kollector.settings as settings
-import bitmex_kollector.util.logger as logger
+from bitmex_kollector.util import tools
+from bitmex_kollector.util import logger
+from bitmex_kollector import settings
 
 class Kollector:
 
-    def __init__(self, apiKey, apiSecret, storeInstrument = True, storeMargin = True, storePosition = True):
+    def __init__(self, apiKey, apiSecret, storeInstrument = settings.STORE_INSTRUMENT,
+    storeMargin = settings.STORE_MARGIN, storePosition = settings.STORE_POSITION):
         '''Create dirs, initialize Websocket and setup required csv loggers'''
         tools.create_dirs()
+        self.apiKey = apiKey
+        self.apiSecret = apiSecret
         self.storeInstrument = storeInstrument
         self.storeMargin = storeMargin
         self.storePosition = storePosition
@@ -106,7 +109,7 @@ class Kollector:
         self.position_logger.removeHandler(self.position_logger.handlers[0])
         #logging.shutdown()
         time.sleep(1)
-        self.__init__()
+        self.__init__(self.apiKey, self.apiSecret)
         self.run_loop()
 
     def reset(self):
@@ -119,7 +122,7 @@ class Kollector:
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
         #logging.shutdown()
-        self.__init__()
+        self.__init__(self.apiKey, self.apiSecret)
         self.run_loop()
 
     def log_status(self):
