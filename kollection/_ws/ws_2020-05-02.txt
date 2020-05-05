@@ -201,3 +201,9 @@ KeyError: 'instrument'
 
 02-05-20 19:25:15.316 (_ws) - Got all market data. Starting.
 >>>>>>> 01f26a345424aaccb86a75e9c3432075bff1d856
+02-05-20 22:58:17.573 (_ws) - Initializing WebSocket...
+02-05-20 22:58:17.574 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+02-05-20 22:58:17.574 (_ws) - Authenticating with API Key.
+02-05-20 22:58:18.576 (_ws) - Connected to WS.
+02-05-20 22:58:20.180 (_ws) - Got all market data. Starting.
+03-05-20 00:00:00.921 (_ws) - Websocket closing...
