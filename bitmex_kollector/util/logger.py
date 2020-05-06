@@ -53,7 +53,7 @@ def setup_db(name, extension='.csv', getPath = False):
     handler.setFormatter(formatter)
 
     logger = logging.getLogger(name)
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
     logger.addHandler(handler)
 
     if getPath:

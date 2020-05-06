@@ -25,7 +25,7 @@ LOOP_INTERVAL = 1
 # LOOP_INTERVAL = 30 # for bot
 
 # Timeout in seconds on the main kollector loop for lack of status updates
-LOOP_TIMEOUT = 20
+LOOP_TIMEOUT = KHAN_TIMEOUT = 20
 
 # Mail to warn on errors
 MAIL_TO = "kauecano@gmail.com"
