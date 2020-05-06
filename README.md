@@ -5,7 +5,7 @@ The ultimate data aggregator using Bitmex's Websocket - FATALITY 💉💀🗡
 
 ## Setup & usage
 
-- pip3 install git+github.com/quan-digital/bitmex-kollector#egg=bitmex_kollector
+- pip3 install git+https://github.com/quan-digital/bitmex-kollector#egg=bitmex_kollector
 
 - copy, config and run main.py :)
 
