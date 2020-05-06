@@ -33,6 +33,7 @@ def create_dirs():
 
     try:
         os.mkdir(settings.DATA_DIR.replace('/', ''))
+        os.mkdir(settings.DATA_DIR + '_kollector')
         os.mkdir(settings.DATA_DIR + '_ws')
         os.mkdir(settings.DATA_DIR + '_error')
         os.mkdir(settings.DATA_DIR + 'status')

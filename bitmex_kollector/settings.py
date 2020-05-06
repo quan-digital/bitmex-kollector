@@ -34,6 +34,9 @@ MAIL_TO = "kauecano@gmail.com"
 # Websocket
 #####################################################
 
+# Debug level websocket logger
+DEBUG_WS = False
+
 # Write instrument, position and margin data to json in DATA_DIR root
 JSON_OUT = True
 

@@ -39,14 +39,15 @@ import bitmex_kollector.settings as settings
 
 class BitMEXWebsocket:
 
-    def __init__(self, api_key, api_secret, endpoint = settings.BASE_URL, symbol = settings.SYMBOL):
+    def __init__(self, api_key, api_secret, log_level = logging.INFO,
+         endpoint = settings.BASE_URL, symbol = settings.SYMBOL):
         '''Connect to the websocket and initialize data.'''
-
+        if settings.DEBUG_WS == True:
+            log_level = logging.DEBUG
         # Setup core loggers
         logger.setup_error_logger()
         sys.excepthook = logger.log_exception
-        self.logger = logger.setup_logbook('_ws')
-        #self.logger = logger.setup_logbook('_ws', level = logging.DEBUG)
+        self.logger = logger.setup_logbook('_ws', level= log_level)
 
         # Get subscriptions
         self.symbol_subs = settings.PUB_SYM_SUBS + settings.PRIV_SYM_SUBS
@@ -70,7 +71,7 @@ class BitMEXWebsocket:
         # If this is our first time initializing files, write headers
         if log_path:
             if tools.is_file_empty(log_path):
-                self.logger.info('Files empty, writing headers.')
+                self.logger.debug('Files empty, writing headers.')
                 self.write_headers()
 
         self.logger.info("Initializing WebSocket...")
@@ -97,7 +98,7 @@ class BitMEXWebsocket:
 
         # Subscribe to all pertinent endpoints
         wsURL = self.__get_url()
-        self.logger.info("Connecting to URL -- %s" % wsURL)
+        self.logger.debug("Connecting to URL -- %s" % wsURL)
         self.__connect(wsURL, symbol)
         self.logger.info('Connected to WS.')
 
@@ -106,6 +107,10 @@ class BitMEXWebsocket:
         if api_key:
             self.__wait_for_account()
         self.got_partial = True
+        self.dump_instrument()
+        self.dump_margin()
+        self.dump_position()
+
         self.logger.info('Got all market data. Starting.')
 
     def init(self):
@@ -118,7 +123,7 @@ class BitMEXWebsocket:
 
         # Subscribe to all pertinent endpoints
         wsURL = self.__get_url()
-        self.logger.info("Connecting to URL -- %s" % wsURL)
+        self.logger.debug("Connecting to URL -- %s" % wsURL)
         self.__connect(wsURL, self.symbol)
         self.logger.info('Connected to WS.')
 
@@ -132,19 +137,19 @@ class BitMEXWebsocket:
     def write_headers(self):
         '''Log csv headers to subbed topics'''
         if 'execution' in self.total_subs:
-            self.execution_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('execID','orderID',
+            self.execution_logger.debug('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('execID','orderID',
             'clOrdID','account','symbol','side','orderQty','price','execType','ordType','commission','text'))
         if 'transact' in self.total_subs:
-            self.transact_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s' % ('transactID','account','currency',
+            self.transact_logger.debug('%s, %s, %s, %s, %s, %s, %s, %s, %s' % ('transactID','account','currency',
             'transactType','amount','fee','transactStatus','address','text'))
         if 'liquidation' in self.total_subs:
-            self.liquidation_logger.info('%s, %s, %s, %s, %s' % ('orderID', 'symbol','side','price','leavesQty'))
+            self.liquidation_logger.debug('%s, %s, %s, %s, %s' % ('orderID', 'symbol','side','price','leavesQty'))
         if 'chat' in self.total_subs:
-            self.chat_logger.info('%s, %s, %s, %s, %s' % ('channelID','fromBot','id','message','user'))
+            self.chat_logger.debug('%s, %s, %s, %s, %s' % ('channelID','fromBot','id','message','user'))
         if 'quoteBin1m' in self.total_subs:
-            self.quote_logger.info('%s, %s, %s, %s, %s' % ('symbol','bidSize','bidPrice','askPrice','askSize'))
+            self.quote_logger.debug('%s, %s, %s, %s, %s' % ('symbol','bidSize','bidPrice','askPrice','askSize'))
         if 'tradeBin1m' in self.total_subs:
-            self.trade_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('symbol','open',
+            self.trade_logger.debug('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % ('symbol','open',
             'high','low','close','trades','volume','vwap','lastSize','turnover','homeNotional','foreignNotional'))
         return
 
@@ -494,26 +499,26 @@ class BitMEXWebsocket:
                     # Store chat
                     if table == 'chat':
                         data = message['data'][0]
-                        self.chat_logger.info('%s, %s, %s, %s, %s' % (data['channelID'], data['fromBot'], 
+                        self.chat_logger.debug('%s, %s, %s, %s, %s' % (data['channelID'], data['fromBot'], 
                         data['id'], str(data['message']).replace('\n', '').replace(',', '.'), data['user']))
 
                     # Store liquidations
                     elif table == 'liquidation':
                         data = message['data'][0]
-                        self.liquidation_logger.info('%s, %s, %s, %s, %s' % (data['orderID'], data['symbol'], 
+                        self.liquidation_logger.debug('%s, %s, %s, %s, %s' % (data['orderID'], data['symbol'], 
                         data['side'], data['price'], data['leavesQty']))
 
                     # Store transactions
                     elif table == 'transact':
                         data = message['data'][0]
-                        self.transact_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s' % (data['transactID'], 
+                        self.transact_logger.debug('%s, %s, %s, %s, %s, %s, %s, %s, %s' % (data['transactID'], 
                         data['account'], data['currency'], data['transactType'], data['amount'], data['fee'], 
                         data['transactStatus'], data['address'], data['text']))
 
                     # Store executions
                     elif table == 'execution':
                         data = message['data'][0]
-                        self.execution_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % 
+                        self.execution_logger.debug('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % 
                         (data['execID'], data['orderID'], data['clOrdID'], data['account'], data['symbol'], 
                         data['side'], data['orderQty'], data['price'], data['execType'], data['ordType'],
                         data['commission'], data['text']))
@@ -521,13 +526,13 @@ class BitMEXWebsocket:
                     # Store quote bins
                     elif table == 'quoteBin1m':
                         data = message['data'][0]
-                        self.quote_logger.info('%s, %s, %s, %s, %s' % (data['symbol'], data['bidSize'], 
+                        self.quote_logger.debug('%s, %s, %s, %s, %s' % (data['symbol'], data['bidSize'], 
                         data['bidPrice'], data['askPrice'], data['askSize']))
 
                     # Store trade bins
                     elif table == 'tradeBin1m':
                         data = message['data'][0]
-                        self.trade_logger.info('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
+                        self.trade_logger.debug('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
                         (data['symbol'], data['open'], data['high'], data['low'], data['close'], data['trades'],
                         data['volume'], data['vwap'], data['lastSize'], data['turnover'], data['homeNotional'], 
                         data['foreignNotional']))

@@ -12,10 +12,10 @@ from logging.handlers import RotatingFileHandler
 import bitmex_kollector.settings as settings
 import bitmex_kollector.util.tools as tools
 
-def setup_logger():
+def setup_logger(level = logging.INFO):
     '''Prints logger info to terminal'''
     logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
+    logger.setLevel(level)
     ch = logging.StreamHandler()
     # create formatter
     formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
@@ -23,6 +23,7 @@ def setup_logger():
     ch.setFormatter(formatter)
     logger.addHandler(ch)
     return logger
+
 
 def setup_logbook(name, extension='.txt', level=logging.INFO, soloDir = True):
     """Setup logger that writes to file, supports multiple instances with no overlap.
@@ -52,7 +53,7 @@ def setup_db(name, extension='.csv', getPath = False):
     handler.setFormatter(formatter)
 
     logger = logging.getLogger(name)
-    logger.setLevel(logging.INFO)
+    logger.setLevel(logging.DEBUG)
     logger.addHandler(handler)
 
     if getPath:
