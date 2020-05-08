@@ -519,9 +519,10 @@ class BitMEXWebsocket:
                     elif table == 'execution':
                         data = message['data'][0]
                         self.execution_logger.debug('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' % 
-                        (data['execID'], data['orderID'], data['clOrdID'], data['account'], data['symbol'], 
-                        data['side'], data['orderQty'], data['price'], data['execType'], data['ordType'],
-                        data['commission'], data['text']))
+                        (data['execID'], data['orderID'], data['clOrdID'], data['account'], data['symbol'],
+                        data['side'], data['orderQty'], 
+                        data['stopPx'] if data['stopPx'] else (data['price'] or 0),
+                        data['execType'], data['ordType'], data['commission'], data['text']))
 
                     # Store quote bins
                     elif table == 'quoteBin1m':
