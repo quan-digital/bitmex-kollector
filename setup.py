@@ -1,11 +1,14 @@
 #!/usr/bin/env python
+
+# python3 setup.py sdist bdist_wheel
+
 from setuptools import setup, find_packages
 from os.path import join, dirname
 
 here = dirname(__file__)
 
 setup(name='bitmex_kollector',
-      version='0.1.3',
+      version='0.1.4',
       description="The ultimate data aggregator using Bitmex' Websocket API.",
       long_description=open(join(here, 'README.md')).read(),
       author='canokaue',

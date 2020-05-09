@@ -21,8 +21,8 @@ from bitmex_kollector import settings
 
 class Khan:
 
-    def __init__(self, data_path = settings.DATA_DIR):
-        self.base_path = data_path
+    def __init__(self, data_path = None):
+        self.base_path = data_path if data_path else settings.DATA_DIR 
 
         self.status = {}
         self.instrument = {}

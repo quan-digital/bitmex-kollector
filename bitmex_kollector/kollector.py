@@ -25,16 +25,16 @@ from bitmex_kollector import settings
 class Kollector:
 
     def __init__(self, apiKey, apiSecret, log_level = logging.INFO,
-        storeInstrument = settings.STORE_INSTRUMENT,
-        storeMargin = settings.STORE_MARGIN, 
-        storePosition = settings.STORE_POSITION):
+        storeInstrument = None,
+        storeMargin = None,
+        storePosition = None):
         '''Create dirs, initialize Websocket and setup required csv loggers'''
         tools.create_dirs()
         self.apiKey = apiKey
         self.apiSecret = apiSecret
-        self.storeInstrument = storeInstrument
-        self.storeMargin = storeMargin
-        self.storePosition = storePosition
+        self.storeInstrument = storeInstrument if storeInstrument else settings.STORE_INSTRUMENT
+        self.storeMargin = storeMargin if storeMargin else settings.STORE_MARGIN
+        self.storePosition = storePosition if storePosition else settings.STORE_POSITION
 
         self.logger = setup_logbook('_kollector', level = log_level)
         self.logger.info('Kollector is starting.')

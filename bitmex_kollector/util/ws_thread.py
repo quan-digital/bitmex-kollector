@@ -40,7 +40,7 @@ import bitmex_kollector.settings as settings
 class BitMEXWebsocket:
 
     def __init__(self, api_key, api_secret, log_level = logging.INFO,
-         endpoint = settings.BASE_URL, symbol = settings.SYMBOL):
+         endpoint = None, symbol = None):
         '''Connect to the websocket and initialize data.'''
         if settings.DEBUG_WS == True:
             log_level = logging.DEBUG
@@ -75,8 +75,8 @@ class BitMEXWebsocket:
                 self.write_headers()
 
         self.logger.info("Initializing WebSocket...")
-        self.endpoint = endpoint
-        self.symbol = symbol
+        self.endpoint = endpoint if endpoint else settings.BASE_URL
+        self.symbol = symbol if symbol else settings.SYMBOL
 
         if api_key is not None and api_secret is None:
             raise ValueError('api_secret is required if api_key is provided')
