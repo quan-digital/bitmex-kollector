@@ -1,0 +1,41 @@
+11-05-20 00:00:03.214 (_ws) - Files empty, writing headers.
+11-05-20 00:00:03.215 (_ws) - Initializing WebSocket...
+11-05-20 00:00:03.215 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+11-05-20 00:00:03.215 (_ws) - Authenticating with API Key.
+11-05-20 00:00:04.218 (_ws) - Connected to WS.
+11-05-20 00:00:05.431 (_ws) - Got all market data. Starting.
+11-05-20 14:42:45.398 (_ws) - Websocket Closed
+11-05-20 14:42:45.973 (_ws) - Initializing WebSocket...
+11-05-20 14:42:45.973 (_ws) - Initializing WebSocket...
+11-05-20 14:42:45.974 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+11-05-20 14:42:45.974 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+11-05-20 14:42:45.974 (_ws) - Authenticating with API Key.
+11-05-20 14:42:45.974 (_ws) - Authenticating with API Key.
+11-05-20 14:42:46.975 (_ws) - Connected to WS.
+11-05-20 14:42:46.975 (_ws) - Connected to WS.
+11-05-20 14:42:47.677 (_ws) - Got all market data. Starting.
+11-05-20 14:42:47.677 (_ws) - Got all market data. Starting.
+11-05-20 14:42:54.463 (_ws) - Websocket Closed
+11-05-20 14:42:54.463 (_ws) - Websocket Closed
+11-05-20 14:42:54.694 (_ws) - Initializing WebSocket...
+11-05-20 14:42:54.694 (_ws) - Initializing WebSocket...
+11-05-20 14:42:54.694 (_ws) - Initializing WebSocket...
+11-05-20 14:42:54.694 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+11-05-20 14:42:54.694 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+11-05-20 14:42:54.694 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+11-05-20 14:42:54.694 (_ws) - Authenticating with API Key.
+11-05-20 14:42:54.694 (_ws) - Authenticating with API Key.
+11-05-20 14:42:54.694 (_ws) - Authenticating with API Key.
+11-05-20 14:42:55.696 (_ws) - Connected to WS.
+11-05-20 14:42:55.696 (_ws) - Connected to WS.
+11-05-20 14:42:55.696 (_ws) - Connected to WS.
+11-05-20 14:42:55.696 (_ws) - Got all market data. Starting.
+11-05-20 14:42:55.696 (_ws) - Got all market data. Starting.
+11-05-20 14:42:55.696 (_ws) - Got all market data. Starting.
+11-05-20 14:43:33.548 (_ws) - Websocket closing...
+11-05-20 14:43:33.548 (_ws) - Websocket closing...
+11-05-20 14:43:33.548 (_ws) - Websocket closing...
+11-05-20 14:43:38.022 (_ws) - Websocket closing...
+11-05-20 14:43:38.022 (_ws) - Websocket closing...
+12-05-20 00:00:00.340 (_ws) - Websocket closing...
+12-05-20 00:00:00.342 (_ws) - Websocket Closed

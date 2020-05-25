@@ -1,0 +1,6 @@
+09-05-20,00:00:03,execID, orderID, clOrdID, account, symbol, side, orderQty, price, execType, ordType, commission, text
+09-05-20,01:03:06,59c5f26b-d141-3085-84ed-94dd5363d56c, f1f71e41-d59c-bd1b-a984-41d5e3d54e17, pyno_010_Buy0FKmLK+XQRz+6+8iYDv3iCg, 1350858, XBTUSD, Buy, 93, 9838.5, New, Limit, None, Buy0
+09-05-20,01:03:06,fa44a651-ee18-5ef5-52f1-9cb178dc6523, 4736e1ea-3f9c-3d33-981c-84d86aaa0b2b, pyno_010_StmSIEMi4yQHQjiBxKMzgqYGuA, 1350858, XBTUSD, Buy, 5115, None, New, Stop, None, StmS
+09-05-20,01:03:06,98ff3764-5086-7357-331f-b3c6d4d6bf60, c7f79eb8-bd14-c5ac-1e6d-f11412534f88, pyno_010_StmBLqF7XZ5iQ6KdrF8ntjA0vg, 1350858, XBTUSD, Sell, 5115, None, New, Stop, None, StmB
+09-05-20,01:05:23,8edb2651-cba6-feae-bddd-f4d3df26ca91, f1f71e41-d59c-bd1b-a984-41d5e3d54e17, pyno_010_Buy0FKmLK+XQRz+6+8iYDv3iCg, 1350858, XBTUSD, Buy, 93, 9838.5, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0

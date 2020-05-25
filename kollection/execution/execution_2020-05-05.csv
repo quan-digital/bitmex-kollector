@@ -1,1 +1,7 @@
 05-05-20,00:00:05,execID, orderID, clOrdID, account, symbol, side, orderQty, price, execType, ordType, commission, text
+05-05-20,19:45:06,4764ca69-5ef6-6614-eacc-83f9ca483c12, f27b78d6-2ded-9405-1a8e-b00244c5561d, , 1350858, XBTUSD, Sell, 1, 9000, New, Limit, None, Submission from www.bitmex.com
+05-05-20,19:50:17,030a9120-cafd-8019-df8d-df876495d938, f27b78d6-2ded-9405-1a8e-b00244c5561d, , 1350858, XBTUSD, Sell, 1, 9000, Canceled, Limit, None, Canceled: Cancel from www.bitmex.com
+Submission from www.bitmex.com
+05-05-20,21:31:10,51cdaa9f-548b-4242-a4ba-23a78451bb62, 07940ceb-894c-e96f-7889-287b85da8942, , 1350858, XBTUSD, Sell, 1, 9001, New, Limit, None, Submission from www.bitmex.com
+05-05-20,22:00:36,8c2155d9-44e8-1238-7636-fb99ab889477, 8ba00763-e53b-feee-a881-0a1ef384eb78, , 1350858, XBTUSD, Buy, 1, 8981.5, New, Market, None, Submission from www.bitmex.com
+05-05-20,23:56:09,e03c5852-8462-1198-f8f1-6c1d8e881427, 07940ceb-894c-e96f-7889-287b85da8942, , 1350858, XBTUSD, Sell, 1, 9001, Trade, Limit, -0.00025, Submission from www.bitmex.com

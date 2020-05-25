@@ -1,0 +1,4 @@
+12-05-20,00:00:01,account, currency, amount, realisedPnl, unrealisedPnl, indicativeTax, unrealisedProfit, walletBalance, marginBalance, marginLeverage, marginUsedPcnt, availableMargin, withdrawableMargin
+12-05-20,13:12:26,1350858, XBt, 2758156, 0, 0, 0, 0, 2758156, 2758156, 0, 0, 2758156, 2758156
+12-05-20,19:09:46,1350858, XBt, 2758156, 0, 0, 0, 0, 2758156, 2758156, 0, 0.1404, 2370957, 2370957
+12-05-20,19:10:45,1350858, XBt, 2758156, 0, 0, 0, 0, 2758156, 2758156, 0, 0, 2758156, 2758156

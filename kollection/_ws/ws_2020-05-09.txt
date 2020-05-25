@@ -1,0 +1,53 @@
+09-05-20 00:00:03.130 (_ws) - Files empty, writing headers.
+09-05-20 00:00:03.131 (_ws) - Initializing WebSocket...
+09-05-20 00:00:03.131 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+09-05-20 00:00:03.131 (_ws) - Authenticating with API Key.
+09-05-20 00:00:04.133 (_ws) - Connected to WS.
+09-05-20 00:00:05.244 (_ws) - Got all market data. Starting.
+09-05-20 10:58:48.268 (_ws) - Websocket Closed
+09-05-20 10:58:48.486 (_ws) - Initializing WebSocket...
+09-05-20 10:58:48.486 (_ws) - Initializing WebSocket...
+09-05-20 10:58:48.486 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+09-05-20 10:58:48.486 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+09-05-20 10:58:48.486 (_ws) - Authenticating with API Key.
+09-05-20 10:58:48.486 (_ws) - Authenticating with API Key.
+09-05-20 10:58:49.488 (_ws) - Connected to WS.
+09-05-20 10:58:49.488 (_ws) - Connected to WS.
+09-05-20 10:58:50.190 (_ws) - Got all market data. Starting.
+09-05-20 10:58:50.190 (_ws) - Got all market data. Starting.
+09-05-20 10:58:56.529 (_ws) - Websocket Closed
+09-05-20 10:58:56.529 (_ws) - Websocket Closed
+09-05-20 10:58:57.206 (_ws) - Initializing WebSocket...
+09-05-20 10:58:57.206 (_ws) - Initializing WebSocket...
+09-05-20 10:58:57.206 (_ws) - Initializing WebSocket...
+09-05-20 10:58:57.206 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+09-05-20 10:58:57.206 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+09-05-20 10:58:57.206 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+09-05-20 10:58:57.207 (_ws) - Authenticating with API Key.
+09-05-20 10:58:57.207 (_ws) - Authenticating with API Key.
+09-05-20 10:58:57.207 (_ws) - Authenticating with API Key.
+09-05-20 10:58:58.208 (_ws) - Connected to WS.
+09-05-20 10:58:58.208 (_ws) - Connected to WS.
+09-05-20 10:58:58.208 (_ws) - Connected to WS.
+09-05-20 10:58:58.209 (_ws) - Got all market data. Starting.
+09-05-20 10:58:58.209 (_ws) - Got all market data. Starting.
+09-05-20 10:58:58.209 (_ws) - Got all market data. Starting.
+09-05-20 10:59:01.139 (_ws) - Websocket closing...
+09-05-20 10:59:01.139 (_ws) - Websocket closing...
+09-05-20 10:59:01.139 (_ws) - Websocket closing...
+09-05-20 11:33:24.223 (_ws) - Websocket closing...
+09-05-20 11:33:24.223 (_ws) - Websocket closing...
+09-05-20 18:58:03.738 (_ws) - Websocket Closed
+09-05-20 18:58:04.496 (_ws) - Initializing WebSocket...
+09-05-20 18:58:04.496 (_ws) - Initializing WebSocket...
+09-05-20 18:58:04.496 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+09-05-20 18:58:04.496 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+09-05-20 18:58:04.496 (_ws) - Authenticating with API Key.
+09-05-20 18:58:04.496 (_ws) - Authenticating with API Key.
+09-05-20 18:58:05.498 (_ws) - Connected to WS.
+09-05-20 18:58:05.498 (_ws) - Connected to WS.
+09-05-20 18:58:05.498 (_ws) - Got all market data. Starting.
+09-05-20 18:58:05.498 (_ws) - Got all market data. Starting.
+09-05-20 19:05:32.638 (_ws) - Websocket closing...
+09-05-20 19:05:32.638 (_ws) - Websocket closing...
+10-05-20 00:00:00.638 (_ws) - Websocket closing...

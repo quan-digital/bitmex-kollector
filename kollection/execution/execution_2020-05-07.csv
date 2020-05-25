@@ -1,0 +1,72 @@
+07-05-20,00:00:03,execID, orderID, clOrdID, account, symbol, side, orderQty, price, execType, ordType, commission, text
+07-05-20,00:40:03,395a87db-88ff-4130-4723-7fd65fb64f85, ad8443d1-99d4-1ebc-406a-597e64ee9f4c, pyno_001_Buy0RHemr043RtOtawZpvhFknA, 1350858, XBTUSD, Buy, 86, 9181, New, Limit, None, Buy0
+07-05-20,00:40:03,dff8cff0-38d0-4c3f-daa5-033e50a9f042, f93a51fa-39ad-947c-02c8-e8e5333c6e12, pyno_001_StmSyKHbPho9QqCaKL7E3K3zlg, 1350858, XBTUSD, Buy, 9353, None, New, Stop, None, StmS
+07-05-20,00:40:04,e538372c-548a-e19e-e041-3ad3fefb699c, 063c7b2f-88ab-2bf6-fcda-6b42dc85c0f8, pyno_001_StmB5pPWxBiAQ1ahYresKUWEmw, 1350858, XBTUSD, Sell, 9353, None, New, Stop, None, StmB
+07-05-20,00:42:02,16f340e0-2602-e7fd-a452-3e92d7aba86a, ad8443d1-99d4-1ebc-406a-597e64ee9f4c, pyno_001_Buy0RHemr043RtOtawZpvhFknA, 1350858, XBTUSD, Buy, 86, 9181, Trade, Limit, -0.00025, Buy0
+07-05-20,00:42:09,de675afe-004e-c517-877c-481f9ce9f161, 6ef47d24-d9b7-7e72-f20c-43ea1f6a1006, pyno_001_Sel065hgi73BSpOlqjVqdoWmXw, 1350858, XBTUSD, Sell, 86, 9211, Canceled, Limit, None, Canceled: Canceled via API.
+Sel0
+07-05-20,00:42:09,b0a2dc5f-10f9-c15e-ae61-3ca3c85e0fe9, 7e4e4feb-5b32-cb3e-ffb3-007684076c89, pyno_001_TgtSQEEcAqPmShulPQR+LmsYBw, 1350858, XBTUSD, Sell, 86, 9182, New, Limit, None, TargetS
+07-05-20,00:45:56,ae84a711-8817-ba3e-f1ae-3f64c69739b1, 7e4e4feb-5b32-cb3e-ffb3-007684076c89, pyno_001_TgtSQEEcAqPmShulPQR+LmsYBw, 1350858, XBTUSD, Sell, 86, 9182, Trade, Limit, -0.00025, TargetS
+07-05-20,00:45:58,2bfab135-0608-d1c7-966a-02a31455896c, 3ea7b600-8554-12ae-7ff5-c885e68839c1, pyno_001_Buy1Go14L6a2TH+XJtpOhO4MfA, 1350858, XBTUSD, Buy, 172, 9166, Canceled, Limit, None, Canceled: Canceled via API.
+Buy1
+07-05-20,00:45:58,d605ab5e-0d5f-716c-aa43-c03f3bbbec62, 85fb8f04-2d39-caba-2571-6c3f4489aa2c, pyno_001_Buy0J6PA/JLfTFSzcza+XaOZtA, 1350858, XBTUSD, Buy, 62, 9168, New, Limit, None, Buy0
+07-05-20,00:45:58,54e80aa0-b29e-0cbe-6f83-330d46982085, f72510f9-4f8b-7aaf-1d2d-8925532d2ed8, pyno_001_StmS99ItaGRMSCy1g2HBksp1Og, 1350858, XBTUSD, Buy, 6743, None, New, Stop, None, StmS
+07-05-20,00:45:59,d3d07545-c4f9-3987-9ade-8fadb9f0eeeb, e8d97afb-848f-b33a-192d-47513b153c67, pyno_001_StmB/XFWGGqUT7euvSBmgBdzEA, 1350858, XBTUSD, Sell, 6743, None, New, Stop, None, StmB
+07-05-20,00:49:01,17172670-d0af-a2cc-57d7-b54d7945ac22, 85fb8f04-2d39-caba-2571-6c3f4489aa2c, pyno_001_Buy0J6PA/JLfTFSzcza+XaOZtA, 1350858, XBTUSD, Buy, 62, 9168, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0
+07-05-20,01:43:13,49cdb776-671d-a2ce-9292-6923b3c1a10a, 92d68190-8f17-e6d7-9fb1-d93e2802cb50, , 1350858, XBTUSD, Sell, 1, 11096.5, New, Limit, None, Submission from www.bitmex.com
+07-05-20,01:44:38,8426200b-fd50-9414-a487-fbb67e518e48, 92d68190-8f17-e6d7-9fb1-d93e2802cb50, , 1350858, XBTUSD, Sell, 1, 11096.5, Canceled, Limit, None, Canceled: Cancel from www.bitmex.com
+Submission from www.bitmex.com
+07-05-20,18:33:00,bd137c06-edfe-8d8c-7b7d-7df9741e8df3, e30d4302-d896-26a2-5037-dce26e52b327, pyno_001_Buy0fda85ZwkSJ+YKZmLdXq7Bg, 1350858, XBTUSD, Buy, 92, 9798, New, Limit, None, Buy0
+07-05-20,18:33:01,cf1f3851-0895-5a0a-3ccb-bb0cae138a6e, df4d908b-f164-5940-b386-3bc3a9257f67, pyno_001_StmS3no+16ttQFaYiL8t3e72KA, 1350858, XBTUSD, Buy, 5060, None, New, Stop, None, StmS
+07-05-20,18:33:01,40c58d7f-6461-facc-6dfd-7dfacf1ae580, 24ab65f3-3680-dde1-e103-f17c87df424e, pyno_001_StmBalW2FwUdRLqSsC+HQhWs7g, 1350858, XBTUSD, Sell, 5060, None, New, Stop, None, StmB
+07-05-20,18:40:16,17c4ea1c-9cd0-1e97-9b0e-9debbc2ba348, e30d4302-d896-26a2-5037-dce26e52b327, pyno_001_Buy0fda85ZwkSJ+YKZmLdXq7Bg, 1350858, XBTUSD, Buy, 92, 9798, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0
+07-05-20,22:40:35,458369c4-4bee-ac09-7d1d-582683a68d3f, 33672b47-0b32-a1a0-c8c1-2e9a3e4c7a77, pyno_001_Buy02z2lC3XbTsOF7YJ8qJ40ig, 1350858, XBTUSD, Buy, 93, 9834, New, Limit, None, Buy0
+07-05-20,22:40:35,8569d7ca-6779-3539-2b37-29b9c8201622, e2e968cc-57ee-cec6-6c85-ccdd367bd128, pyno_001_StmStxhyurZBRnapkjruUxztow, 1350858, XBTUSD, Buy, 5115, None, New, Stop, None, StmS
+07-05-20,22:40:36,bd8de9ef-31fb-77de-3d0c-24b60ec64272, 732b0a9a-631d-af2b-df4c-acb1c20730b8, pyno_001_StmBgrU13fHmRuO7fLsxgP3k9Q, 1350858, XBTUSD, Sell, 5115, None, New, Stop, None, StmB
+07-05-20,22:41:11,42b59436-94ba-13cf-08f8-94bdbee58376, 33672b47-0b32-a1a0-c8c1-2e9a3e4c7a77, pyno_001_Buy02z2lC3XbTsOF7YJ8qJ40ig, 1350858, XBTUSD, Buy, 93, 9834, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0
+07-05-20,22:42:27,ad26b205-d66b-bedf-7f41-24a84e4ffab4, 77234e15-acd3-64d6-7d37-083b33bf382f, pyno_001_Buy0bbAPeWxgQ5WtzQNvZIyejg, 1350858, XBTUSD, Buy, 93, 9842, New, Limit, None, Buy0
+07-05-20,22:42:27,e2dc8292-4d13-2e7f-bb52-835cbd0179e9, 2d63dfb9-587d-97fa-bd56-c8207deb647f, pyno_001_StmS7wfqUnTJTOWo7Onh6Nc4wQ, 1350858, XBTUSD, Buy, 5115, None, New, Stop, None, StmS
+07-05-20,22:42:27,d8219660-d3c9-f717-3bcd-cbfade7bc71a, 05e2da4b-9342-6610-043e-a044898be02e, pyno_001_StmBRXZuh3MsT7KCNCCHS4vD/A, 1350858, XBTUSD, Sell, 5115, None, New, Stop, None, StmB
+07-05-20,22:43:28,a8ac21dc-90ef-4951-6b6c-1ee33c652835, 77234e15-acd3-64d6-7d37-083b33bf382f, pyno_001_Buy0bbAPeWxgQ5WtzQNvZIyejg, 1350858, XBTUSD, Buy, 93, 9842, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0
+07-05-20,22:44:06,3d3e4eaa-c560-b50e-a82c-4f3814ffb390, 0b4f8b34-9cf8-81d8-756e-8c7ad8c68d7d, pyno_001_Buy0/UNv4J3+R9uyCKk26L8+0g, 1350858, XBTUSD, Buy, 92, 9803.5, New, Limit, None, Buy0
+07-05-20,22:44:07,4e2f27aa-9923-91bf-ce02-7482273ea42d, adc93d16-2c8e-a46f-24ad-cf164c1ae109, pyno_001_StmStQ2YZne6RQKrJes8lTj47Q, 1350858, XBTUSD, Buy, 5060, None, New, Stop, None, StmS
+07-05-20,22:44:07,0ef40743-db5c-4fb0-7829-36e601df9a2f, f20b0936-1203-0d74-e8e4-d00757f9c775, pyno_001_StmBAw4YQ9kgTqutFuwmQabfdA, 1350858, XBTUSD, Sell, 5060, None, New, Stop, None, StmB
+07-05-20,22:45:48,60d298a8-1d3a-6db3-d850-cf4676631ee0, d651f613-7d4d-b9d6-8a7b-232d686c7bac, pyno_001_Sel0HEHrwc9FTA28UPPDUQUiFw, 1350858, XBTUSD, Sell, 92, 9863.5, Trade, Limit, -0.00025, Sel0
+07-05-20,22:45:52,bc44e675-6727-a7c3-118d-007222c65e30, 0b4f8b34-9cf8-81d8-756e-8c7ad8c68d7d, pyno_001_Buy0/UNv4J3+R9uyCKk26L8+0g, 1350858, XBTUSD, Buy, 92, 9803.5, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0
+07-05-20,22:45:53,765671da-b95e-a14f-8f47-42b4b490fd3b, b947a553-a326-a370-a3b8-0a128c4fa445, pyno_001_TgtBDjC9DnvyRyuqRpOg8JaDfg, 1350858, XBTUSD, Buy, 92, 9862, New, Limit, None, TargetB
+07-05-20,22:58:35,2db05377-a877-992e-e384-1170cdb942a1, 5046bff3-e6df-c06b-2fef-3fbb2ed69f79, pyno_001_Sel1tOwQS+2tQz+0PlOvB7MDpA, 1350858, XBTUSD, Sell, 184, 9893.5, Trade, Limit, -0.00025, Sel1
+07-05-20,22:58:47,2ee46719-78ff-9ace-2be4-7e6b9a55396b, b947a553-a326-a370-a3b8-0a128c4fa445, pyno_001_TgtBDjC9DnvyRyuqRpOg8JaDfg, 1350858, XBTUSD, Buy, 92, 9862, Canceled, Limit, None, Canceled: Canceled via API.
+TargetB
+07-05-20,22:58:48,231d8902-e5cd-af48-90fd-35418cd5bdb7, 6a8440a7-1f73-1d1e-0e98-3e08fe776b52, pyno_001_TgtBtC5ddPkCQ0eTYrywOJZc/Q, 1350858, XBTUSD, Buy, 276, 9881.5, New, Limit, None, TargetB
+07-05-20,23:00:32,4471d05a-3a30-fd86-3c0d-ffe0ff97bc04, ebc66600-c375-6ac2-9255-b35df8c9168c, pyno_001_Sel20UJyYBS4SoSPnDiaYUHLjw, 1350858, XBTUSD, Sell, 276, 9923.5, Trade, Limit, -0.00025, Sel2
+07-05-20,23:00:34,c6a04964-f289-aaa8-c873-4c06630451b4, 6a8440a7-1f73-1d1e-0e98-3e08fe776b52, pyno_001_TgtBtC5ddPkCQ0eTYrywOJZc/Q, 1350858, XBTUSD, Buy, 276, 9881.5, Canceled, Limit, None, Canceled: Canceled via API.
+TargetB
+07-05-20,23:00:34,56127b5c-3f61-b1a2-b9a2-c47e858a2a9a, f28b3ba4-3cf9-300f-2f71-5597247d6eea, pyno_001_TgtB6LPT4uRLQvikdkDYvPafXw, 1350858, XBTUSD, Buy, 552, 9901, New, Limit, None, TargetB
+07-05-20,23:01:33,86ec0aa0-4c98-d465-b6a0-3b5eb426a40f, f28b3ba4-3cf9-300f-2f71-5597247d6eea, pyno_001_TgtB6LPT4uRLQvikdkDYvPafXw, 1350858, XBTUSD, Buy, 552, 9901, Trade, Limit, -0.00025, TargetB
+07-05-20,23:01:56,13f2c16b-9d01-6312-8db1-6477810a6342, cd0962a8-1a2b-009f-d196-fc9526530d9e, pyno_001_Sel3WyljU9/rT+6leyE6mvyh8Q, 1350858, XBTUSD, Sell, 368, 9953.5, Canceled, Limit, None, Canceled: Canceled via API.
+Sel3
+07-05-20,23:01:56,799d57d7-c263-d67a-e063-3f3b66912202, 718ec495-3f72-8ebc-cf14-b98a113a3e60, pyno_001_Buy0wGmmeV7ZS32U7sj2H3UHcQ, 1350858, XBTUSD, Buy, 82, 9870, New, Limit, None, Buy0
+07-05-20,23:01:57,c932928b-4aee-e6ba-12c1-1157128367af, 6c450bc7-db6e-b619-8199-ee5bc25c1fa3, pyno_001_StmSL+2PuB+8SzyqskU9liz2oA, 1350858, XBTUSD, Buy, 4510, None, New, Stop, None, StmS
+07-05-20,23:01:57,959d0b0e-bd04-080d-5854-34e0cd6cad3c, b92b1630-4a54-d33d-229f-ab26c61d032f, pyno_001_StmBOTaAHOwHStSkfk4vE54Syw, 1350858, XBTUSD, Sell, 4510, None, New, Stop, None, StmB
+07-05-20,23:03:42,f7a5d44a-8592-d76a-2555-65eccee1b101, 718ec495-3f72-8ebc-cf14-b98a113a3e60, pyno_001_Buy0wGmmeV7ZS32U7sj2H3UHcQ, 1350858, XBTUSD, Buy, 82, 9870, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0
+07-05-20,23:04:04,d919fffe-ad78-3210-290b-5a54f5d30d42, 3154f215-b8e4-4829-9fe0-e97a81eada90, pyno_001_Buy0awzkaWEoSvS6A2m0IpjRMQ, 1350858, XBTUSD, Buy, 93, 9854, New, Limit, None, Buy0
+07-05-20,23:04:04,53f5c593-dd88-a4f5-7176-9f53e70ec846, 6adcce35-d2eb-f628-295a-404b95a35bf4, pyno_001_StmS/hTxkAicS1mywDi38C7mGQ, 1350858, XBTUSD, Buy, 5115, None, New, Stop, None, StmS
+07-05-20,23:04:05,bf1a8052-c2c0-724e-f84f-4c7b71026c7e, 2b52fc2d-9f7d-4204-41d2-03f9d09ca1d4, pyno_001_StmB0zwgpHfYSIuD7gK8xWeE+g, 1350858, XBTUSD, Sell, 5115, None, New, Stop, None, StmB
+07-05-20,23:05:31,14017e5a-38e2-3a5e-cb01-d678924fed24, 3154f215-b8e4-4829-9fe0-e97a81eada90, pyno_001_Buy0awzkaWEoSvS6A2m0IpjRMQ, 1350858, XBTUSD, Buy, 93, 9854, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0
+07-05-20,23:06:10,a1c7e592-08a1-7a4f-54b9-e78b7a0e947e, 43543472-27b7-9920-54fd-2daf8d54d83b, pyno_001_Buy0pBp2hjkqQAuOBroSMILzCQ, 1350858, XBTUSD, Buy, 93, 9864.5, New, Limit, None, Buy0
+07-05-20,23:06:10,9191d47e-9248-aab0-9bc1-455d5ef6f574, 0d87beb3-04f2-f3c7-57de-0f18a887f2be, pyno_001_StmSYV4vPV8BQoq9/PqU4nKDpQ, 1350858, XBTUSD, Buy, 5115, None, New, Stop, None, StmS
+07-05-20,23:06:10,4830a5be-f0e6-d17c-42d8-442d0de04d17, 2acfee62-a649-a2c6-c6a0-40d01a764cda, pyno_001_StmB/J8c4R67R5iKgCBsl+QCOQ, 1350858, XBTUSD, Sell, 5115, None, New, Stop, None, StmB
+07-05-20,23:15:03,2579a427-9e30-4cc0-a686-88b53a854161, 43543472-27b7-9920-54fd-2daf8d54d83b, pyno_001_Buy0pBp2hjkqQAuOBroSMILzCQ, 1350858, XBTUSD, Buy, 93, 9864.5, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0
+07-05-20,23:15:43,22a545ab-0c2c-c14f-1b39-c6a6894633f4, 49c16a70-4273-95eb-b645-86af88acdae2, pyno_001_Buy0zuGVepXxS0uJnCd+HMzKgg, 1350858, XBTUSD, Buy, 93, 9900, New, Limit, None, Buy0
+07-05-20,23:15:43,da42567f-1695-9aa0-3cad-fec6b2b3c6d8, 51a52ffd-e80d-e061-e8f5-b2b3514c380b, pyno_001_StmSatuAdSAlSSGibX/NKkUizg, 1350858, XBTUSD, Buy, 5115, None, New, Stop, None, StmS
+07-05-20,23:15:44,117df9fc-9eed-d414-b997-a8591341a851, e8803f83-33f0-67bb-5725-481729b73f76, pyno_001_StmB2MCNrnNHTp+FMWCOz19Yig, 1350858, XBTUSD, Sell, 5115, None, New, Stop, None, StmB
+07-05-20,23:20:13,007d9fc4-b326-aa78-452c-a48c31be5533, 49c16a70-4273-95eb-b645-86af88acdae2, pyno_001_Buy0zuGVepXxS0uJnCd+HMzKgg, 1350858, XBTUSD, Buy, 93, 9900, Canceled, Limit, None, Canceled: Canceled via API.
+Buy0

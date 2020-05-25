@@ -1,0 +1,13 @@
+14-05-20 00:00:01.025 (_ws) - Files empty, writing headers.
+14-05-20 00:00:01.026 (_ws) - Initializing WebSocket...
+14-05-20 00:00:01.026 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+14-05-20 00:00:01.026 (_ws) - Authenticating with API Key.
+14-05-20 00:00:02.028 (_ws) - Connected to WS.
+14-05-20 00:00:02.633 (_ws) - Got all market data. Starting.
+14-05-20 10:16:23.393 (_ws) - Traceback (most recent call last):
+  File "/var/www/html/bitmex-kollector/bitmex_kollector/util/ws_thread.py", line 572, in __on_message
+    self.data[table].remove(item)
+ValueError: list.remove(x): x not in list
+
+15-05-20 00:00:00.141 (_ws) - Websocket closing...
+15-05-20 00:00:00.143 (_ws) - Websocket Closed

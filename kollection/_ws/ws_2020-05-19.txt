@@ -1,0 +1,1193 @@
+19-05-20 00:00:01.764 (_ws) - Files empty, writing headers.
+19-05-20 00:00:01.765 (_ws) - Initializing WebSocket...
+19-05-20 00:00:01.765 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 00:00:01.766 (_ws) - Authenticating with API Key.
+19-05-20 00:00:02.767 (_ws) - Connected to WS.
+19-05-20 00:00:02.768 (_ws) - Got all market data. Starting.
+19-05-20 00:14:53.225 (_ws) - Websocket closing...
+19-05-20 12:00:27.730 (_ws) - Initializing WebSocket...
+19-05-20 12:00:27.730 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:00:27.731 (_ws) - Authenticating with API Key.
+19-05-20 12:00:32.737 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:00:32.737 (_ws) - Websocket resetting...
+19-05-20 12:00:32.737 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:00:32.738 (_ws) - Authenticating with API Key.
+19-05-20 12:00:37.744 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:00:37.744 (_ws) - Websocket resetting...
+19-05-20 12:00:37.745 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:00:37.745 (_ws) - Authenticating with API Key.
+19-05-20 12:00:42.751 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:00:42.751 (_ws) - Websocket resetting...
+19-05-20 12:00:42.752 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:00:42.752 (_ws) - Authenticating with API Key.
+19-05-20 12:00:47.758 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:00:47.758 (_ws) - Websocket resetting...
+19-05-20 12:00:47.759 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:00:47.759 (_ws) - Authenticating with API Key.
+19-05-20 12:00:52.765 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:00:52.765 (_ws) - Websocket resetting...
+19-05-20 12:00:52.766 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:00:52.766 (_ws) - Authenticating with API Key.
+19-05-20 12:00:57.772 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:00:57.774 (_ws) - Websocket resetting...
+19-05-20 12:00:57.774 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:00:57.774 (_ws) - Authenticating with API Key.
+19-05-20 12:01:02.780 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:02.781 (_ws) - Websocket resetting...
+19-05-20 12:01:02.781 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:02.781 (_ws) - Authenticating with API Key.
+19-05-20 12:01:07.788 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:07.788 (_ws) - Websocket resetting...
+19-05-20 12:01:07.788 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:07.788 (_ws) - Authenticating with API Key.
+19-05-20 12:01:12.795 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:12.795 (_ws) - Websocket resetting...
+19-05-20 12:01:12.795 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:12.796 (_ws) - Authenticating with API Key.
+19-05-20 12:01:17.802 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:17.802 (_ws) - Websocket resetting...
+19-05-20 12:01:17.802 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:17.803 (_ws) - Authenticating with API Key.
+19-05-20 12:01:22.808 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:22.808 (_ws) - Websocket resetting...
+19-05-20 12:01:22.809 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:22.809 (_ws) - Authenticating with API Key.
+19-05-20 12:01:27.815 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:27.816 (_ws) - Websocket resetting...
+19-05-20 12:01:27.817 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:27.817 (_ws) - Authenticating with API Key.
+19-05-20 12:01:32.823 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:32.823 (_ws) - Websocket resetting...
+19-05-20 12:01:32.824 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:32.824 (_ws) - Authenticating with API Key.
+19-05-20 12:01:35.231 (_ws) - Websocket Closed
+19-05-20 12:01:37.830 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:37.831 (_ws) - Websocket resetting...
+19-05-20 12:01:37.831 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:37.831 (_ws) - Authenticating with API Key.
+19-05-20 12:01:38.056 (_ws) - Websocket Closed
+19-05-20 12:01:38.185 (_ws) - Websocket Closed
+19-05-20 12:01:39.008 (_ws) - Websocket Closed
+19-05-20 12:01:39.050 (_ws) - Websocket Closed
+19-05-20 12:01:40.055 (_ws) - Websocket Closed
+19-05-20 12:01:40.087 (_ws) - Websocket Closed
+19-05-20 12:01:40.272 (_ws) - Websocket Closed
+19-05-20 12:01:41.091 (_ws) - Websocket Closed
+19-05-20 12:01:42.837 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:42.838 (_ws) - Websocket resetting...
+19-05-20 12:01:42.838 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:42.838 (_ws) - Authenticating with API Key.
+19-05-20 12:01:42.964 (_ws) - Websocket Closed
+19-05-20 12:01:44.868 (_ws) - Websocket Closed
+19-05-20 12:01:45.768 (_ws) - Websocket Closed
+19-05-20 12:01:45.768 (_ws) - Websocket Closed
+19-05-20 12:01:45.853 (_ws) - Websocket Closed
+19-05-20 12:01:45.920 (_ws) - Websocket Closed
+19-05-20 12:01:45.956 (_ws) - Websocket Closed
+19-05-20 12:01:45.962 (_ws) - Websocket Closed
+19-05-20 12:01:47.844 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:47.845 (_ws) - Websocket resetting...
+19-05-20 12:01:47.845 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:47.845 (_ws) - Authenticating with API Key.
+19-05-20 12:01:50.395 (_ws) - Websocket Closed
+19-05-20 12:01:52.851 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:52.852 (_ws) - Websocket resetting...
+19-05-20 12:01:52.852 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:52.852 (_ws) - Authenticating with API Key.
+19-05-20 12:01:57.858 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:01:57.859 (_ws) - Websocket resetting...
+19-05-20 12:01:57.860 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:01:57.860 (_ws) - Authenticating with API Key.
+19-05-20 12:02:02.866 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:02.867 (_ws) - Websocket resetting...
+19-05-20 12:02:02.867 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:02.867 (_ws) - Authenticating with API Key.
+19-05-20 12:02:06.627 (_ws) - Websocket Closed
+19-05-20 12:02:07.874 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:07.874 (_ws) - Websocket resetting...
+19-05-20 12:02:07.874 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:07.874 (_ws) - Authenticating with API Key.
+19-05-20 12:02:08.968 (_ws) - Websocket Closed
+19-05-20 12:02:10.064 (_ws) - Websocket Closed
+19-05-20 12:02:11.512 (_ws) - Websocket Closed
+19-05-20 12:02:12.881 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:12.881 (_ws) - Websocket resetting...
+19-05-20 12:02:12.881 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:12.882 (_ws) - Authenticating with API Key.
+19-05-20 12:02:16.086 (_ws) - Websocket Closed
+19-05-20 12:02:17.888 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:17.888 (_ws) - Websocket resetting...
+19-05-20 12:02:17.888 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:17.889 (_ws) - Authenticating with API Key.
+19-05-20 12:02:22.895 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:22.895 (_ws) - Websocket resetting...
+19-05-20 12:02:22.895 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:22.896 (_ws) - Authenticating with API Key.
+19-05-20 12:02:27.902 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:27.903 (_ws) - Websocket resetting...
+19-05-20 12:02:27.903 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:27.904 (_ws) - Authenticating with API Key.
+19-05-20 12:02:29.347 (_ws) - Websocket Closed
+19-05-20 12:02:29.528 (_ws) - Websocket Closed
+19-05-20 12:02:32.910 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:32.910 (_ws) - Websocket resetting...
+19-05-20 12:02:32.910 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:32.911 (_ws) - Authenticating with API Key.
+19-05-20 12:02:37.025 (_ws) - Websocket Closed
+19-05-20 12:02:37.071 (_ws) - Websocket Closed
+19-05-20 12:02:37.917 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:37.917 (_ws) - Websocket resetting...
+19-05-20 12:02:37.917 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:37.918 (_ws) - Authenticating with API Key.
+19-05-20 12:02:42.924 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:42.924 (_ws) - Websocket resetting...
+19-05-20 12:02:42.924 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:42.925 (_ws) - Authenticating with API Key.
+19-05-20 12:02:47.931 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:47.931 (_ws) - Websocket resetting...
+19-05-20 12:02:47.931 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:47.932 (_ws) - Authenticating with API Key.
+19-05-20 12:02:52.938 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:52.938 (_ws) - Websocket resetting...
+19-05-20 12:02:52.939 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:52.939 (_ws) - Authenticating with API Key.
+19-05-20 12:02:52.952 (_ws) - Websocket Closed
+19-05-20 12:02:55.184 (_ws) - Websocket Closed
+19-05-20 12:02:57.938 (_ws) - Websocket Closed
+19-05-20 12:02:57.945 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:02:57.945 (_ws) - Websocket resetting...
+19-05-20 12:02:57.945 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:02:57.946 (_ws) - Authenticating with API Key.
+19-05-20 12:02:57.958 (_ws) - Websocket Closed
+19-05-20 12:02:57.996 (_ws) - Websocket Closed
+19-05-20 12:03:02.952 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:02.952 (_ws) - Websocket resetting...
+19-05-20 12:03:02.952 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:02.953 (_ws) - Authenticating with API Key.
+19-05-20 12:03:07.959 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:07.959 (_ws) - Websocket resetting...
+19-05-20 12:03:07.959 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:07.960 (_ws) - Authenticating with API Key.
+19-05-20 12:03:12.966 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:12.966 (_ws) - Websocket resetting...
+19-05-20 12:03:12.966 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:12.967 (_ws) - Authenticating with API Key.
+19-05-20 12:03:17.973 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:17.973 (_ws) - Websocket resetting...
+19-05-20 12:03:17.974 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:17.974 (_ws) - Authenticating with API Key.
+19-05-20 12:03:17.986 (_ws) - Websocket Closed
+19-05-20 12:03:20.680 (_ws) - Websocket Closed
+19-05-20 12:03:20.999 (_ws) - Websocket Closed
+19-05-20 12:03:22.980 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:22.980 (_ws) - Websocket resetting...
+19-05-20 12:03:22.981 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:22.981 (_ws) - Authenticating with API Key.
+19-05-20 12:03:22.992 (_ws) - Websocket Closed
+19-05-20 12:03:27.499 (_ws) - Websocket Closed
+19-05-20 12:03:27.987 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:27.988 (_ws) - Websocket resetting...
+19-05-20 12:03:27.989 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:27.989 (_ws) - Authenticating with API Key.
+19-05-20 12:03:32.995 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:32.995 (_ws) - Websocket resetting...
+19-05-20 12:03:32.996 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:32.996 (_ws) - Authenticating with API Key.
+19-05-20 12:03:35.762 (_ws) - Websocket Closed
+19-05-20 12:03:38.002 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:38.002 (_ws) - Websocket resetting...
+19-05-20 12:03:38.003 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:38.003 (_ws) - Authenticating with API Key.
+19-05-20 12:03:40.316 (_ws) - Websocket Closed
+19-05-20 12:03:43.009 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:43.009 (_ws) - Websocket resetting...
+19-05-20 12:03:43.010 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:43.010 (_ws) - Authenticating with API Key.
+19-05-20 12:03:48.016 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:48.017 (_ws) - Websocket resetting...
+19-05-20 12:03:48.017 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:48.017 (_ws) - Authenticating with API Key.
+19-05-20 12:03:53.023 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:53.024 (_ws) - Websocket resetting...
+19-05-20 12:03:53.024 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:53.024 (_ws) - Authenticating with API Key.
+19-05-20 12:03:53.156 (_ws) - Websocket Closed
+19-05-20 12:03:53.311 (_ws) - Websocket Closed
+19-05-20 12:03:54.178 (_ws) - Websocket Closed
+19-05-20 12:03:55.742 (_ws) - Websocket Closed
+19-05-20 12:03:58.030 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:03:58.032 (_ws) - Websocket resetting...
+19-05-20 12:03:58.032 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:03:58.032 (_ws) - Authenticating with API Key.
+19-05-20 12:03:58.115 (_ws) - Websocket Closed
+19-05-20 12:04:03.038 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:03.039 (_ws) - Websocket resetting...
+19-05-20 12:04:03.039 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:03.039 (_ws) - Authenticating with API Key.
+19-05-20 12:04:08.045 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:08.046 (_ws) - Websocket resetting...
+19-05-20 12:04:08.046 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:08.046 (_ws) - Authenticating with API Key.
+19-05-20 12:04:13.052 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:13.053 (_ws) - Websocket resetting...
+19-05-20 12:04:13.053 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:13.053 (_ws) - Authenticating with API Key.
+19-05-20 12:04:17.858 (_ws) - Websocket Closed
+19-05-20 12:04:17.858 (_ws) - Websocket Closed
+19-05-20 12:04:18.060 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:18.060 (_ws) - Websocket resetting...
+19-05-20 12:04:18.060 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:18.060 (_ws) - Authenticating with API Key.
+19-05-20 12:04:19.316 (_ws) - Websocket Closed
+19-05-20 12:04:21.411 (_ws) - Websocket Closed
+19-05-20 12:04:23.067 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:23.067 (_ws) - Websocket resetting...
+19-05-20 12:04:23.067 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:23.067 (_ws) - Authenticating with API Key.
+19-05-20 12:04:28.074 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:28.074 (_ws) - Websocket resetting...
+19-05-20 12:04:28.074 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:28.075 (_ws) - Authenticating with API Key.
+19-05-20 12:04:33.081 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:33.081 (_ws) - Websocket resetting...
+19-05-20 12:04:33.081 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:33.082 (_ws) - Authenticating with API Key.
+19-05-20 12:04:33.095 (_ws) - Websocket Closed
+19-05-20 12:04:37.697 (_ws) - Websocket Closed
+19-05-20 12:04:37.818 (_ws) - Websocket Closed
+19-05-20 12:04:38.088 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:38.088 (_ws) - Websocket resetting...
+19-05-20 12:04:38.089 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:38.089 (_ws) - Authenticating with API Key.
+19-05-20 12:04:43.095 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:43.095 (_ws) - Websocket resetting...
+19-05-20 12:04:43.096 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:43.096 (_ws) - Authenticating with API Key.
+19-05-20 12:04:44.482 (_ws) - Websocket Closed
+19-05-20 12:04:48.102 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:48.102 (_ws) - Websocket resetting...
+19-05-20 12:04:48.103 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:48.103 (_ws) - Authenticating with API Key.
+19-05-20 12:04:48.116 (_ws) - Websocket Closed
+19-05-20 12:04:50.454 (_ws) - Websocket Closed
+19-05-20 12:04:53.109 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:53.110 (_ws) - Websocket resetting...
+19-05-20 12:04:53.111 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:53.111 (_ws) - Authenticating with API Key.
+19-05-20 12:04:58.117 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:04:58.117 (_ws) - Websocket resetting...
+19-05-20 12:04:58.118 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:04:58.118 (_ws) - Authenticating with API Key.
+19-05-20 12:05:03.124 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:03.124 (_ws) - Websocket resetting...
+19-05-20 12:05:03.125 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:03.125 (_ws) - Authenticating with API Key.
+19-05-20 12:05:03.531 (_ws) - Websocket Closed
+19-05-20 12:05:07.856 (_ws) - Websocket Closed
+19-05-20 12:05:08.131 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:08.131 (_ws) - Websocket resetting...
+19-05-20 12:05:08.132 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:08.132 (_ws) - Authenticating with API Key.
+19-05-20 12:05:08.152 (_ws) - Websocket Closed
+19-05-20 12:05:11.147 (_ws) - Websocket Closed
+19-05-20 12:05:13.138 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:13.138 (_ws) - Websocket resetting...
+19-05-20 12:05:13.139 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:13.139 (_ws) - Authenticating with API Key.
+19-05-20 12:05:16.860 (_ws) - Websocket Closed
+19-05-20 12:05:18.145 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:18.146 (_ws) - Websocket resetting...
+19-05-20 12:05:18.146 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:18.146 (_ws) - Authenticating with API Key.
+19-05-20 12:05:23.152 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:23.153 (_ws) - Websocket resetting...
+19-05-20 12:05:23.154 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:23.154 (_ws) - Authenticating with API Key.
+19-05-20 12:05:23.340 (_ws) - Websocket Closed
+19-05-20 12:05:28.160 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:28.160 (_ws) - Websocket resetting...
+19-05-20 12:05:28.161 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:28.161 (_ws) - Authenticating with API Key.
+19-05-20 12:05:28.175 (_ws) - Websocket Closed
+19-05-20 12:05:31.068 (_ws) - Websocket Closed
+19-05-20 12:05:33.166 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:33.166 (_ws) - Websocket resetting...
+19-05-20 12:05:33.167 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:33.167 (_ws) - Authenticating with API Key.
+19-05-20 12:05:33.179 (_ws) - Websocket Closed
+19-05-20 12:05:38.173 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:38.173 (_ws) - Websocket resetting...
+19-05-20 12:05:38.174 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:38.174 (_ws) - Authenticating with API Key.
+19-05-20 12:05:41.500 (_ws) - Websocket Closed
+19-05-20 12:05:43.180 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:43.180 (_ws) - Websocket resetting...
+19-05-20 12:05:43.180 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:43.181 (_ws) - Authenticating with API Key.
+19-05-20 12:05:48.187 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:48.187 (_ws) - Websocket resetting...
+19-05-20 12:05:48.188 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:48.188 (_ws) - Authenticating with API Key.
+19-05-20 12:05:53.194 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:53.195 (_ws) - Websocket resetting...
+19-05-20 12:05:53.195 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:53.196 (_ws) - Authenticating with API Key.
+19-05-20 12:05:54.677 (_ws) - Websocket Closed
+19-05-20 12:05:56.686 (_ws) - Websocket Closed
+19-05-20 12:05:58.202 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:05:58.202 (_ws) - Websocket resetting...
+19-05-20 12:05:58.203 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:05:58.203 (_ws) - Authenticating with API Key.
+19-05-20 12:05:58.216 (_ws) - Websocket Closed
+19-05-20 12:06:03.209 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:03.209 (_ws) - Websocket resetting...
+19-05-20 12:06:03.210 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:03.210 (_ws) - Authenticating with API Key.
+19-05-20 12:06:08.216 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:08.216 (_ws) - Websocket resetting...
+19-05-20 12:06:08.217 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:08.217 (_ws) - Authenticating with API Key.
+19-05-20 12:06:09.745 (_ws) - Websocket Closed
+19-05-20 12:06:13.223 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:13.223 (_ws) - Websocket resetting...
+19-05-20 12:06:13.224 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:13.224 (_ws) - Authenticating with API Key.
+19-05-20 12:06:18.230 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:18.230 (_ws) - Websocket resetting...
+19-05-20 12:06:18.231 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:18.231 (_ws) - Authenticating with API Key.
+19-05-20 12:06:18.244 (_ws) - Websocket Closed
+19-05-20 12:06:20.361 (_ws) - Websocket Closed
+19-05-20 12:06:20.649 (_ws) - Websocket Closed
+19-05-20 12:06:21.279 (_ws) - Websocket Closed
+19-05-20 12:06:23.237 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:23.239 (_ws) - Websocket resetting...
+19-05-20 12:06:23.239 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:23.239 (_ws) - Authenticating with API Key.
+19-05-20 12:06:23.253 (_ws) - Websocket Closed
+19-05-20 12:06:28.245 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:28.246 (_ws) - Websocket resetting...
+19-05-20 12:06:28.246 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:28.247 (_ws) - Authenticating with API Key.
+19-05-20 12:06:32.188 (_ws) - Websocket Closed
+19-05-20 12:06:33.253 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:33.253 (_ws) - Websocket resetting...
+19-05-20 12:06:33.253 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:33.254 (_ws) - Authenticating with API Key.
+19-05-20 12:06:38.260 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:38.260 (_ws) - Websocket resetting...
+19-05-20 12:06:38.261 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:38.261 (_ws) - Authenticating with API Key.
+19-05-20 12:06:43.267 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:43.267 (_ws) - Websocket resetting...
+19-05-20 12:06:43.268 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:43.268 (_ws) - Authenticating with API Key.
+19-05-20 12:06:45.984 (_ws) - Websocket Closed
+19-05-20 12:06:48.274 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:48.274 (_ws) - Websocket resetting...
+19-05-20 12:06:48.275 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:48.275 (_ws) - Authenticating with API Key.
+19-05-20 12:06:48.288 (_ws) - Websocket Closed
+19-05-20 12:06:48.883 (_ws) - Websocket Closed
+19-05-20 12:06:48.887 (_ws) - Websocket Closed
+19-05-20 12:06:53.281 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:53.282 (_ws) - Websocket resetting...
+19-05-20 12:06:53.283 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:53.283 (_ws) - Authenticating with API Key.
+19-05-20 12:06:58.289 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:06:58.289 (_ws) - Websocket resetting...
+19-05-20 12:06:58.290 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:06:58.290 (_ws) - Authenticating with API Key.
+19-05-20 12:07:03.296 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:03.296 (_ws) - Websocket resetting...
+19-05-20 12:07:03.297 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:03.297 (_ws) - Authenticating with API Key.
+19-05-20 12:07:08.303 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:08.304 (_ws) - Websocket resetting...
+19-05-20 12:07:08.304 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:08.304 (_ws) - Authenticating with API Key.
+19-05-20 12:07:11.733 (_ws) - Websocket Closed
+19-05-20 12:07:13.310 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:13.311 (_ws) - Websocket resetting...
+19-05-20 12:07:13.311 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:13.311 (_ws) - Authenticating with API Key.
+19-05-20 12:07:13.679 (_ws) - Websocket Closed
+19-05-20 12:07:18.318 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:18.318 (_ws) - Websocket resetting...
+19-05-20 12:07:18.318 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:18.318 (_ws) - Authenticating with API Key.
+19-05-20 12:07:18.492 (_ws) - Websocket Closed
+19-05-20 12:07:19.108 (_ws) - Websocket Closed
+19-05-20 12:07:19.477 (_ws) - Websocket Closed
+19-05-20 12:07:23.325 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:23.326 (_ws) - Websocket resetting...
+19-05-20 12:07:23.326 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:23.327 (_ws) - Authenticating with API Key.
+19-05-20 12:07:24.519 (_ws) - Websocket Closed
+19-05-20 12:07:28.333 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:28.333 (_ws) - Websocket resetting...
+19-05-20 12:07:28.333 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:28.334 (_ws) - Authenticating with API Key.
+19-05-20 12:07:33.340 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:33.340 (_ws) - Websocket resetting...
+19-05-20 12:07:33.340 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:33.341 (_ws) - Authenticating with API Key.
+19-05-20 12:07:37.343 (_ws) - Websocket Closed
+19-05-20 12:07:38.347 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:38.347 (_ws) - Websocket resetting...
+19-05-20 12:07:38.347 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:38.348 (_ws) - Authenticating with API Key.
+19-05-20 12:07:39.350 (_ws) - Websocket Closed
+19-05-20 12:07:42.059 (_ws) - Websocket Closed
+19-05-20 12:07:43.354 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:43.354 (_ws) - Websocket resetting...
+19-05-20 12:07:43.354 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:43.355 (_ws) - Authenticating with API Key.
+19-05-20 12:07:46.742 (_ws) - Websocket Closed
+19-05-20 12:07:48.361 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:48.361 (_ws) - Websocket resetting...
+19-05-20 12:07:48.361 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:48.362 (_ws) - Authenticating with API Key.
+19-05-20 12:07:49.233 (_ws) - Websocket Closed
+19-05-20 12:07:53.368 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:53.369 (_ws) - Websocket resetting...
+19-05-20 12:07:53.370 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:53.370 (_ws) - Authenticating with API Key.
+19-05-20 12:07:56.376 (_ws) - Websocket Closed
+19-05-20 12:07:58.378 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:07:58.379 (_ws) - Websocket resetting...
+19-05-20 12:07:58.379 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:07:58.379 (_ws) - Authenticating with API Key.
+19-05-20 12:08:03.385 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:03.386 (_ws) - Websocket resetting...
+19-05-20 12:08:03.386 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:03.386 (_ws) - Authenticating with API Key.
+19-05-20 12:08:05.870 (_ws) - Websocket Closed
+19-05-20 12:08:05.873 (_ws) - Websocket Closed
+19-05-20 12:08:08.392 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:08.392 (_ws) - Websocket resetting...
+19-05-20 12:08:08.392 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:08.393 (_ws) - Authenticating with API Key.
+19-05-20 12:08:08.491 (_ws) - Websocket Closed
+19-05-20 12:08:08.875 (_ws) - Websocket Closed
+19-05-20 12:08:13.399 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:13.399 (_ws) - Websocket resetting...
+19-05-20 12:08:13.400 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:13.400 (_ws) - Authenticating with API Key.
+19-05-20 12:08:13.411 (_ws) - Websocket Closed
+19-05-20 12:08:18.406 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:18.406 (_ws) - Websocket resetting...
+19-05-20 12:08:18.407 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:18.407 (_ws) - Authenticating with API Key.
+19-05-20 12:08:23.413 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:23.414 (_ws) - Websocket resetting...
+19-05-20 12:08:23.415 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:23.415 (_ws) - Authenticating with API Key.
+19-05-20 12:08:28.421 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:28.421 (_ws) - Websocket resetting...
+19-05-20 12:08:28.422 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:28.422 (_ws) - Authenticating with API Key.
+19-05-20 12:08:28.668 (_ws) - Websocket Closed
+19-05-20 12:08:28.717 (_ws) - Websocket Closed
+19-05-20 12:08:33.428 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:33.428 (_ws) - Websocket resetting...
+19-05-20 12:08:33.429 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:33.429 (_ws) - Authenticating with API Key.
+19-05-20 12:08:33.880 (_ws) - Websocket Closed
+19-05-20 12:08:38.435 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:38.435 (_ws) - Websocket resetting...
+19-05-20 12:08:38.436 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:38.436 (_ws) - Authenticating with API Key.
+19-05-20 12:08:39.781 (_ws) - Websocket Closed
+19-05-20 12:08:43.442 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:43.443 (_ws) - Websocket resetting...
+19-05-20 12:08:43.443 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:43.443 (_ws) - Authenticating with API Key.
+19-05-20 12:08:43.758 (_ws) - Websocket Closed
+19-05-20 12:08:48.410 (_ws) - Websocket Closed
+19-05-20 12:08:48.449 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:48.450 (_ws) - Websocket resetting...
+19-05-20 12:08:48.450 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:48.450 (_ws) - Authenticating with API Key.
+19-05-20 12:08:53.456 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:53.457 (_ws) - Websocket resetting...
+19-05-20 12:08:53.458 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:53.458 (_ws) - Authenticating with API Key.
+19-05-20 12:08:57.287 (_ws) - Websocket Closed
+19-05-20 12:08:58.464 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:08:58.464 (_ws) - Websocket resetting...
+19-05-20 12:08:58.465 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:08:58.465 (_ws) - Authenticating with API Key.
+19-05-20 12:09:03.471 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:03.471 (_ws) - Websocket resetting...
+19-05-20 12:09:03.472 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:03.472 (_ws) - Authenticating with API Key.
+19-05-20 12:09:08.478 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:08.479 (_ws) - Websocket resetting...
+19-05-20 12:09:08.479 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:08.479 (_ws) - Authenticating with API Key.
+19-05-20 12:09:08.908 (_ws) - Websocket Closed
+19-05-20 12:09:09.421 (_ws) - Websocket Closed
+19-05-20 12:09:09.452 (_ws) - Websocket Closed
+19-05-20 12:09:13.485 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:13.486 (_ws) - Websocket resetting...
+19-05-20 12:09:13.486 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:13.486 (_ws) - Authenticating with API Key.
+19-05-20 12:09:18.492 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:18.493 (_ws) - Websocket resetting...
+19-05-20 12:09:18.493 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:18.493 (_ws) - Authenticating with API Key.
+19-05-20 12:09:18.506 (_ws) - Websocket Closed
+19-05-20 12:09:20.077 (_ws) - Websocket Closed
+19-05-20 12:09:22.980 (_ws) - Websocket Closed
+19-05-20 12:09:23.500 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:23.500 (_ws) - Websocket resetting...
+19-05-20 12:09:23.500 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:23.500 (_ws) - Authenticating with API Key.
+19-05-20 12:09:23.514 (_ws) - Websocket Closed
+19-05-20 12:09:28.507 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:28.507 (_ws) - Websocket resetting...
+19-05-20 12:09:28.507 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:28.508 (_ws) - Authenticating with API Key.
+19-05-20 12:09:33.257 (_ws) - Websocket Closed
+19-05-20 12:09:33.514 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:33.514 (_ws) - Websocket resetting...
+19-05-20 12:09:33.514 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:33.515 (_ws) - Authenticating with API Key.
+19-05-20 12:09:38.521 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:38.521 (_ws) - Websocket resetting...
+19-05-20 12:09:38.522 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:38.522 (_ws) - Authenticating with API Key.
+19-05-20 12:09:43.528 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:43.528 (_ws) - Websocket resetting...
+19-05-20 12:09:43.529 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:43.529 (_ws) - Authenticating with API Key.
+19-05-20 12:09:43.542 (_ws) - Websocket Closed
+19-05-20 12:09:48.535 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:48.535 (_ws) - Websocket resetting...
+19-05-20 12:09:48.536 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:48.536 (_ws) - Authenticating with API Key.
+19-05-20 12:09:48.549 (_ws) - Websocket Closed
+19-05-20 12:09:53.470 (_ws) - Websocket Closed
+19-05-20 12:09:53.486 (_ws) - Websocket Closed
+19-05-20 12:09:53.542 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:53.542 (_ws) - Websocket resetting...
+19-05-20 12:09:53.543 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:53.543 (_ws) - Authenticating with API Key.
+19-05-20 12:09:58.549 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:09:58.550 (_ws) - Websocket resetting...
+19-05-20 12:09:58.550 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:09:58.550 (_ws) - Authenticating with API Key.
+19-05-20 12:10:03.556 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:03.557 (_ws) - Websocket resetting...
+19-05-20 12:10:03.557 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:03.557 (_ws) - Authenticating with API Key.
+19-05-20 12:10:08.563 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:08.564 (_ws) - Websocket resetting...
+19-05-20 12:10:08.564 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:08.564 (_ws) - Authenticating with API Key.
+19-05-20 12:10:11.377 (_ws) - Websocket Closed
+19-05-20 12:10:11.612 (_ws) - Websocket Closed
+19-05-20 12:10:13.570 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:13.571 (_ws) - Websocket resetting...
+19-05-20 12:10:13.571 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:13.571 (_ws) - Authenticating with API Key.
+19-05-20 12:10:13.583 (_ws) - Websocket Closed
+19-05-20 12:10:14.304 (_ws) - Websocket Closed
+19-05-20 12:10:18.578 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:18.578 (_ws) - Websocket resetting...
+19-05-20 12:10:18.578 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:18.579 (_ws) - Authenticating with API Key.
+19-05-20 12:10:18.999 (_ws) - Websocket Closed
+19-05-20 12:10:19.442 (_ws) - Websocket Closed
+19-05-20 12:10:23.585 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:23.585 (_ws) - Websocket resetting...
+19-05-20 12:10:23.585 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:23.586 (_ws) - Authenticating with API Key.
+19-05-20 12:10:28.592 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:28.592 (_ws) - Websocket resetting...
+19-05-20 12:10:28.593 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:28.593 (_ws) - Authenticating with API Key.
+19-05-20 12:10:30.428 (_ws) - Websocket Closed
+19-05-20 12:10:33.599 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:33.600 (_ws) - Websocket resetting...
+19-05-20 12:10:33.601 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:33.601 (_ws) - Authenticating with API Key.
+19-05-20 12:10:37.933 (_ws) - Websocket Closed
+19-05-20 12:10:38.607 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:38.607 (_ws) - Websocket resetting...
+19-05-20 12:10:38.608 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:38.608 (_ws) - Authenticating with API Key.
+19-05-20 12:10:43.614 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:43.615 (_ws) - Websocket resetting...
+19-05-20 12:10:43.615 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:43.615 (_ws) - Authenticating with API Key.
+19-05-20 12:10:44.661 (_ws) - Websocket Closed
+19-05-20 12:10:48.621 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:48.622 (_ws) - Websocket resetting...
+19-05-20 12:10:48.622 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:48.622 (_ws) - Authenticating with API Key.
+19-05-20 12:10:51.915 (_ws) - Websocket Closed
+19-05-20 12:10:51.921 (_ws) - Websocket Closed
+19-05-20 12:10:52.119 (_ws) - Websocket Closed
+19-05-20 12:10:53.629 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:53.629 (_ws) - Websocket resetting...
+19-05-20 12:10:53.629 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:53.630 (_ws) - Authenticating with API Key.
+19-05-20 12:10:58.636 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:10:58.636 (_ws) - Websocket resetting...
+19-05-20 12:10:58.636 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:10:58.637 (_ws) - Authenticating with API Key.
+19-05-20 12:11:03.643 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:03.644 (_ws) - Websocket resetting...
+19-05-20 12:11:03.644 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:03.644 (_ws) - Authenticating with API Key.
+19-05-20 12:11:05.525 (_ws) - Websocket Closed
+19-05-20 12:11:07.102 (_ws) - Websocket Closed
+19-05-20 12:11:08.651 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:08.651 (_ws) - Websocket resetting...
+19-05-20 12:11:08.651 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:08.652 (_ws) - Authenticating with API Key.
+19-05-20 12:11:12.052 (_ws) - Websocket Closed
+19-05-20 12:11:13.658 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:13.658 (_ws) - Websocket resetting...
+19-05-20 12:11:13.658 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:13.659 (_ws) - Authenticating with API Key.
+19-05-20 12:11:17.751 (_ws) - Websocket Closed
+19-05-20 12:11:18.665 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:18.665 (_ws) - Websocket resetting...
+19-05-20 12:11:18.666 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:18.666 (_ws) - Authenticating with API Key.
+19-05-20 12:11:23.672 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:23.672 (_ws) - Websocket resetting...
+19-05-20 12:11:23.673 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:23.673 (_ws) - Authenticating with API Key.
+19-05-20 12:11:28.489 (_ws) - Websocket Closed
+19-05-20 12:11:28.679 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:28.679 (_ws) - Websocket resetting...
+19-05-20 12:11:28.680 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:28.680 (_ws) - Authenticating with API Key.
+19-05-20 12:11:29.219 (_ws) - Websocket Closed
+19-05-20 12:11:33.584 (_ws) - Websocket Closed
+19-05-20 12:11:33.686 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:33.687 (_ws) - Websocket resetting...
+19-05-20 12:11:33.687 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:33.687 (_ws) - Authenticating with API Key.
+19-05-20 12:11:35.145 (_ws) - Websocket Closed
+19-05-20 12:11:35.990 (_ws) - Websocket Closed
+19-05-20 12:11:38.694 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:38.694 (_ws) - Websocket resetting...
+19-05-20 12:11:38.694 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:38.695 (_ws) - Authenticating with API Key.
+19-05-20 12:11:43.701 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:43.701 (_ws) - Websocket resetting...
+19-05-20 12:11:43.701 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:43.702 (_ws) - Authenticating with API Key.
+19-05-20 12:11:48.708 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:48.708 (_ws) - Websocket resetting...
+19-05-20 12:11:48.708 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:48.709 (_ws) - Authenticating with API Key.
+19-05-20 12:11:53.715 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:53.715 (_ws) - Websocket resetting...
+19-05-20 12:11:53.715 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:53.716 (_ws) - Authenticating with API Key.
+19-05-20 12:11:54.290 (_ws) - Websocket Closed
+19-05-20 12:11:56.943 (_ws) - Websocket Closed
+19-05-20 12:11:58.722 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:11:58.722 (_ws) - Websocket resetting...
+19-05-20 12:11:58.722 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:11:58.723 (_ws) - Authenticating with API Key.
+19-05-20 12:12:00.148 (_ws) - Websocket Closed
+19-05-20 12:12:01.435 (_ws) - Websocket Closed
+19-05-20 12:12:01.792 (_ws) - Websocket Closed
+19-05-20 12:12:03.729 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:03.730 (_ws) - Websocket resetting...
+19-05-20 12:12:03.731 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:03.731 (_ws) - Authenticating with API Key.
+19-05-20 12:12:07.952 (_ws) - Websocket Closed
+19-05-20 12:12:08.737 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:08.738 (_ws) - Websocket resetting...
+19-05-20 12:12:08.738 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:08.738 (_ws) - Authenticating with API Key.
+19-05-20 12:12:13.744 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:13.745 (_ws) - Websocket resetting...
+19-05-20 12:12:13.745 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:13.745 (_ws) - Authenticating with API Key.
+19-05-20 12:12:18.752 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:18.752 (_ws) - Websocket resetting...
+19-05-20 12:12:18.752 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:18.753 (_ws) - Authenticating with API Key.
+19-05-20 12:12:20.543 (_ws) - Websocket Closed
+19-05-20 12:12:23.759 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:23.759 (_ws) - Websocket resetting...
+19-05-20 12:12:23.759 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:23.760 (_ws) - Authenticating with API Key.
+19-05-20 12:12:24.109 (_ws) - Websocket Closed
+19-05-20 12:12:25.066 (_ws) - Websocket Closed
+19-05-20 12:12:27.326 (_ws) - Websocket Closed
+19-05-20 12:12:28.766 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:28.766 (_ws) - Websocket resetting...
+19-05-20 12:12:28.767 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:28.767 (_ws) - Authenticating with API Key.
+19-05-20 12:12:30.820 (_ws) - Websocket Closed
+19-05-20 12:12:33.773 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:33.774 (_ws) - Websocket resetting...
+19-05-20 12:12:33.775 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:33.775 (_ws) - Authenticating with API Key.
+19-05-20 12:12:38.781 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:38.781 (_ws) - Websocket resetting...
+19-05-20 12:12:38.782 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:38.782 (_ws) - Authenticating with API Key.
+19-05-20 12:12:43.788 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:43.789 (_ws) - Websocket resetting...
+19-05-20 12:12:43.789 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:43.789 (_ws) - Authenticating with API Key.
+19-05-20 12:12:48.182 (_ws) - Websocket Closed
+19-05-20 12:12:48.185 (_ws) - Websocket Closed
+19-05-20 12:12:48.795 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:48.796 (_ws) - Websocket resetting...
+19-05-20 12:12:48.796 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:48.796 (_ws) - Authenticating with API Key.
+19-05-20 12:12:48.808 (_ws) - Websocket Closed
+19-05-20 12:12:53.802 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:53.803 (_ws) - Websocket resetting...
+19-05-20 12:12:53.803 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:53.803 (_ws) - Authenticating with API Key.
+19-05-20 12:12:58.809 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:12:58.810 (_ws) - Websocket resetting...
+19-05-20 12:12:58.810 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:12:58.810 (_ws) - Authenticating with API Key.
+19-05-20 12:13:00.443 (_ws) - Websocket Closed
+19-05-20 12:13:03.817 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:03.818 (_ws) - Websocket resetting...
+19-05-20 12:13:03.818 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:03.818 (_ws) - Authenticating with API Key.
+19-05-20 12:13:08.824 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:08.825 (_ws) - Websocket resetting...
+19-05-20 12:13:08.825 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:08.825 (_ws) - Authenticating with API Key.
+19-05-20 12:13:11.018 (_ws) - Websocket Closed
+19-05-20 12:13:11.277 (_ws) - Websocket Closed
+19-05-20 12:13:13.831 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:13.831 (_ws) - Websocket resetting...
+19-05-20 12:13:13.832 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:13.832 (_ws) - Authenticating with API Key.
+19-05-20 12:13:13.844 (_ws) - Websocket Closed
+19-05-20 12:13:13.922 (_ws) - Websocket Closed
+19-05-20 12:13:18.785 (_ws) - Websocket Closed
+19-05-20 12:13:18.838 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:18.838 (_ws) - Websocket resetting...
+19-05-20 12:13:18.839 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:18.839 (_ws) - Authenticating with API Key.
+19-05-20 12:13:22.571 (_ws) - Websocket Closed
+19-05-20 12:13:23.845 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:23.845 (_ws) - Websocket resetting...
+19-05-20 12:13:23.846 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:23.846 (_ws) - Authenticating with API Key.
+19-05-20 12:13:28.852 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:28.852 (_ws) - Websocket resetting...
+19-05-20 12:13:28.853 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:28.853 (_ws) - Authenticating with API Key.
+19-05-20 12:13:33.859 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:33.861 (_ws) - Websocket resetting...
+19-05-20 12:13:33.861 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:33.861 (_ws) - Authenticating with API Key.
+19-05-20 12:13:36.682 (_ws) - Websocket Closed
+19-05-20 12:13:37.564 (_ws) - Websocket Closed
+19-05-20 12:13:38.868 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:38.868 (_ws) - Websocket resetting...
+19-05-20 12:13:38.868 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:38.868 (_ws) - Authenticating with API Key.
+19-05-20 12:13:38.880 (_ws) - Websocket Closed
+19-05-20 12:13:43.875 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:43.875 (_ws) - Websocket resetting...
+19-05-20 12:13:43.875 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:43.875 (_ws) - Authenticating with API Key.
+19-05-20 12:13:48.882 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:48.882 (_ws) - Websocket resetting...
+19-05-20 12:13:48.882 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:48.882 (_ws) - Authenticating with API Key.
+19-05-20 12:13:51.759 (_ws) - Websocket Closed
+19-05-20 12:13:53.889 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:53.889 (_ws) - Websocket resetting...
+19-05-20 12:13:53.889 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:53.889 (_ws) - Authenticating with API Key.
+19-05-20 12:13:58.896 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:13:58.896 (_ws) - Websocket resetting...
+19-05-20 12:13:58.896 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:13:58.897 (_ws) - Authenticating with API Key.
+19-05-20 12:14:02.492 (_ws) - Websocket Closed
+19-05-20 12:14:02.493 (_ws) - Websocket Closed
+19-05-20 12:14:03.903 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:03.904 (_ws) - Websocket resetting...
+19-05-20 12:14:03.904 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:03.905 (_ws) - Authenticating with API Key.
+19-05-20 12:14:08.911 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:08.911 (_ws) - Websocket resetting...
+19-05-20 12:14:08.912 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:08.912 (_ws) - Authenticating with API Key.
+19-05-20 12:14:09.152 (_ws) - Websocket Closed
+19-05-20 12:14:10.101 (_ws) - Websocket Closed
+19-05-20 12:14:11.722 (_ws) - Websocket Closed
+19-05-20 12:14:13.918 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:13.918 (_ws) - Websocket resetting...
+19-05-20 12:14:13.919 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:13.919 (_ws) - Authenticating with API Key.
+19-05-20 12:14:17.435 (_ws) - Websocket Closed
+19-05-20 12:14:18.925 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:18.925 (_ws) - Websocket resetting...
+19-05-20 12:14:18.926 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:18.926 (_ws) - Authenticating with API Key.
+19-05-20 12:14:23.932 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:23.932 (_ws) - Websocket resetting...
+19-05-20 12:14:23.933 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:23.933 (_ws) - Authenticating with API Key.
+19-05-20 12:14:23.945 (_ws) - Websocket Closed
+19-05-20 12:14:27.996 (_ws) - Websocket Closed
+19-05-20 12:14:28.011 (_ws) - Websocket Closed
+19-05-20 12:14:28.939 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:28.939 (_ws) - Websocket resetting...
+19-05-20 12:14:28.940 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:28.940 (_ws) - Authenticating with API Key.
+19-05-20 12:14:32.535 (_ws) - Websocket Closed
+19-05-20 12:14:33.946 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:33.946 (_ws) - Websocket resetting...
+19-05-20 12:14:33.947 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:33.947 (_ws) - Authenticating with API Key.
+19-05-20 12:14:38.953 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:38.953 (_ws) - Websocket resetting...
+19-05-20 12:14:38.954 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:38.954 (_ws) - Authenticating with API Key.
+19-05-20 12:14:43.072 (_ws) - Websocket Closed
+19-05-20 12:14:43.960 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:43.960 (_ws) - Websocket resetting...
+19-05-20 12:14:43.961 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:43.961 (_ws) - Authenticating with API Key.
+19-05-20 12:14:48.967 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:48.967 (_ws) - Websocket resetting...
+19-05-20 12:14:48.968 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:48.968 (_ws) - Authenticating with API Key.
+19-05-20 12:14:53.658 (_ws) - Websocket Closed
+19-05-20 12:14:53.974 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:53.974 (_ws) - Websocket resetting...
+19-05-20 12:14:53.975 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:53.975 (_ws) - Authenticating with API Key.
+19-05-20 12:14:56.521 (_ws) - Websocket Closed
+19-05-20 12:14:58.981 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:14:58.982 (_ws) - Websocket resetting...
+19-05-20 12:14:58.982 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:14:58.982 (_ws) - Authenticating with API Key.
+19-05-20 12:14:59.568 (_ws) - Websocket Closed
+19-05-20 12:15:00.466 (_ws) - Websocket Closed
+19-05-20 12:15:00.830 (_ws) - Websocket Closed
+19-05-20 12:15:03.988 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:03.989 (_ws) - Websocket resetting...
+19-05-20 12:15:03.990 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:03.990 (_ws) - Authenticating with API Key.
+19-05-20 12:15:04.855 (_ws) - Websocket Closed
+19-05-20 12:15:08.996 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:08.996 (_ws) - Websocket resetting...
+19-05-20 12:15:08.997 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:08.997 (_ws) - Authenticating with API Key.
+19-05-20 12:15:14.003 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:14.004 (_ws) - Websocket resetting...
+19-05-20 12:15:14.004 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:14.004 (_ws) - Authenticating with API Key.
+19-05-20 12:15:19.010 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:19.011 (_ws) - Websocket resetting...
+19-05-20 12:15:19.011 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:19.011 (_ws) - Authenticating with API Key.
+19-05-20 12:15:19.401 (_ws) - Websocket Closed
+19-05-20 12:15:19.477 (_ws) - Websocket Closed
+19-05-20 12:15:24.017 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:24.018 (_ws) - Websocket resetting...
+19-05-20 12:15:24.018 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:24.018 (_ws) - Authenticating with API Key.
+19-05-20 12:15:24.031 (_ws) - Websocket Closed
+19-05-20 12:15:25.368 (_ws) - Websocket Closed
+19-05-20 12:15:29.024 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:29.025 (_ws) - Websocket resetting...
+19-05-20 12:15:29.025 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:29.025 (_ws) - Authenticating with API Key.
+19-05-20 12:15:34.031 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:34.033 (_ws) - Websocket resetting...
+19-05-20 12:15:34.033 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:34.033 (_ws) - Authenticating with API Key.
+19-05-20 12:15:39.039 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:39.040 (_ws) - Websocket resetting...
+19-05-20 12:15:39.040 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:39.040 (_ws) - Authenticating with API Key.
+19-05-20 12:15:44.046 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:44.047 (_ws) - Websocket resetting...
+19-05-20 12:15:44.047 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:44.047 (_ws) - Authenticating with API Key.
+19-05-20 12:15:44.061 (_ws) - Websocket Closed
+19-05-20 12:15:45.005 (_ws) - Websocket Closed
+19-05-20 12:15:45.888 (_ws) - Websocket Closed
+19-05-20 12:15:49.054 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:49.054 (_ws) - Websocket resetting...
+19-05-20 12:15:49.054 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:49.054 (_ws) - Authenticating with API Key.
+19-05-20 12:15:51.823 (_ws) - Websocket Closed
+19-05-20 12:15:54.061 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:54.061 (_ws) - Websocket resetting...
+19-05-20 12:15:54.061 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:54.061 (_ws) - Authenticating with API Key.
+19-05-20 12:15:54.363 (_ws) - Websocket Closed
+19-05-20 12:15:59.068 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:15:59.068 (_ws) - Websocket resetting...
+19-05-20 12:15:59.068 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:15:59.069 (_ws) - Authenticating with API Key.
+19-05-20 12:16:04.074 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:04.074 (_ws) - Websocket resetting...
+19-05-20 12:16:04.075 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:04.075 (_ws) - Authenticating with API Key.
+19-05-20 12:16:09.081 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:09.081 (_ws) - Websocket resetting...
+19-05-20 12:16:09.082 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:09.082 (_ws) - Authenticating with API Key.
+19-05-20 12:16:10.650 (_ws) - Websocket Closed
+19-05-20 12:16:13.503 (_ws) - Websocket Closed
+19-05-20 12:16:13.612 (_ws) - Websocket Closed
+19-05-20 12:16:14.088 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:14.088 (_ws) - Websocket resetting...
+19-05-20 12:16:14.089 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:14.089 (_ws) - Authenticating with API Key.
+19-05-20 12:16:14.104 (_ws) - Websocket Closed
+19-05-20 12:16:18.428 (_ws) - Websocket Closed
+19-05-20 12:16:19.095 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:19.096 (_ws) - Websocket resetting...
+19-05-20 12:16:19.096 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:19.096 (_ws) - Authenticating with API Key.
+19-05-20 12:16:24.102 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:24.103 (_ws) - Websocket resetting...
+19-05-20 12:16:24.103 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:24.103 (_ws) - Authenticating with API Key.
+19-05-20 12:16:29.110 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:29.110 (_ws) - Websocket resetting...
+19-05-20 12:16:29.110 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:29.110 (_ws) - Authenticating with API Key.
+19-05-20 12:16:34.117 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:34.117 (_ws) - Websocket resetting...
+19-05-20 12:16:34.117 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:34.118 (_ws) - Authenticating with API Key.
+19-05-20 12:16:34.131 (_ws) - Websocket Closed
+19-05-20 12:16:36.599 (_ws) - Websocket Closed
+19-05-20 12:16:38.355 (_ws) - Websocket Closed
+19-05-20 12:16:39.124 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:39.124 (_ws) - Websocket resetting...
+19-05-20 12:16:39.124 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:39.125 (_ws) - Authenticating with API Key.
+19-05-20 12:16:39.138 (_ws) - Websocket Closed
+19-05-20 12:16:39.252 (_ws) - Websocket Closed
+19-05-20 12:16:44.131 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:44.131 (_ws) - Websocket resetting...
+19-05-20 12:16:44.131 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:44.132 (_ws) - Authenticating with API Key.
+19-05-20 12:16:49.138 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:49.138 (_ws) - Websocket resetting...
+19-05-20 12:16:49.138 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:49.139 (_ws) - Authenticating with API Key.
+19-05-20 12:16:54.145 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:54.145 (_ws) - Websocket resetting...
+19-05-20 12:16:54.146 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:54.146 (_ws) - Authenticating with API Key.
+19-05-20 12:16:59.152 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:16:59.152 (_ws) - Websocket resetting...
+19-05-20 12:16:59.153 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:16:59.153 (_ws) - Authenticating with API Key.
+19-05-20 12:17:02.050 (_ws) - Websocket Closed
+19-05-20 12:17:02.092 (_ws) - Websocket Closed
+19-05-20 12:17:04.159 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:04.159 (_ws) - Websocket resetting...
+19-05-20 12:17:04.160 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:04.160 (_ws) - Authenticating with API Key.
+19-05-20 12:17:09.166 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:09.166 (_ws) - Websocket resetting...
+19-05-20 12:17:09.167 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:09.167 (_ws) - Authenticating with API Key.
+19-05-20 12:17:09.539 (_ws) - Websocket Closed
+19-05-20 12:17:09.760 (_ws) - Websocket Closed
+19-05-20 12:17:09.771 (_ws) - Websocket Closed
+19-05-20 12:17:09.783 (_ws) - Websocket Closed
+19-05-20 12:17:14.173 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:14.174 (_ws) - Websocket resetting...
+19-05-20 12:17:14.175 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:14.175 (_ws) - Authenticating with API Key.
+19-05-20 12:17:19.181 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:19.182 (_ws) - Websocket resetting...
+19-05-20 12:17:19.182 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:19.182 (_ws) - Authenticating with API Key.
+19-05-20 12:17:21.553 (_ws) - Websocket Closed
+19-05-20 12:17:24.188 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:24.189 (_ws) - Websocket resetting...
+19-05-20 12:17:24.189 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:24.189 (_ws) - Authenticating with API Key.
+19-05-20 12:17:29.195 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:29.196 (_ws) - Websocket resetting...
+19-05-20 12:17:29.196 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:29.197 (_ws) - Authenticating with API Key.
+19-05-20 12:17:30.611 (_ws) - Websocket Closed
+19-05-20 12:17:30.830 (_ws) - Websocket Closed
+19-05-20 12:17:34.203 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:34.203 (_ws) - Websocket resetting...
+19-05-20 12:17:34.203 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:34.204 (_ws) - Authenticating with API Key.
+19-05-20 12:17:35.170 (_ws) - Websocket Closed
+19-05-20 12:17:35.316 (_ws) - Websocket Closed
+19-05-20 12:17:39.210 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:39.210 (_ws) - Websocket resetting...
+19-05-20 12:17:39.210 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:39.211 (_ws) - Authenticating with API Key.
+19-05-20 12:17:44.217 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:44.218 (_ws) - Websocket resetting...
+19-05-20 12:17:44.219 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:44.219 (_ws) - Authenticating with API Key.
+19-05-20 12:17:49.225 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:49.225 (_ws) - Websocket resetting...
+19-05-20 12:17:49.226 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:49.226 (_ws) - Authenticating with API Key.
+19-05-20 12:17:54.232 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:54.232 (_ws) - Websocket resetting...
+19-05-20 12:17:54.233 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:54.233 (_ws) - Authenticating with API Key.
+19-05-20 12:17:55.373 (_ws) - Websocket Closed
+19-05-20 12:17:55.374 (_ws) - Websocket Closed
+19-05-20 12:17:56.270 (_ws) - Websocket Closed
+19-05-20 12:17:59.239 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:17:59.239 (_ws) - Websocket resetting...
+19-05-20 12:17:59.240 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:17:59.240 (_ws) - Authenticating with API Key.
+19-05-20 12:18:00.156 (_ws) - Websocket Closed
+19-05-20 12:18:04.246 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:04.246 (_ws) - Websocket resetting...
+19-05-20 12:18:04.247 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:04.247 (_ws) - Authenticating with API Key.
+19-05-20 12:18:04.259 (_ws) - Websocket Closed
+19-05-20 12:18:08.410 (_ws) - Websocket Closed
+19-05-20 12:18:09.253 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:09.253 (_ws) - Websocket resetting...
+19-05-20 12:18:09.254 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:09.254 (_ws) - Authenticating with API Key.
+19-05-20 12:18:14.260 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:14.261 (_ws) - Websocket resetting...
+19-05-20 12:18:14.262 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:14.262 (_ws) - Authenticating with API Key.
+19-05-20 12:18:19.268 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:19.269 (_ws) - Websocket resetting...
+19-05-20 12:18:19.269 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:19.269 (_ws) - Authenticating with API Key.
+19-05-20 12:18:21.019 (_ws) - Websocket Closed
+19-05-20 12:18:21.059 (_ws) - Websocket Closed
+19-05-20 12:18:24.276 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:24.276 (_ws) - Websocket resetting...
+19-05-20 12:18:24.277 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:24.277 (_ws) - Authenticating with API Key.
+19-05-20 12:18:25.835 (_ws) - Websocket Closed
+19-05-20 12:18:29.283 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:29.283 (_ws) - Websocket resetting...
+19-05-20 12:18:29.284 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:29.284 (_ws) - Authenticating with API Key.
+19-05-20 12:18:30.630 (_ws) - Websocket Closed
+19-05-20 12:18:34.088 (_ws) - Websocket Closed
+19-05-20 12:18:34.290 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:34.290 (_ws) - Websocket resetting...
+19-05-20 12:18:34.291 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:34.291 (_ws) - Authenticating with API Key.
+19-05-20 12:18:39.297 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:39.298 (_ws) - Websocket resetting...
+19-05-20 12:18:39.298 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:39.298 (_ws) - Authenticating with API Key.
+19-05-20 12:18:44.304 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:44.306 (_ws) - Websocket resetting...
+19-05-20 12:18:44.306 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:44.306 (_ws) - Authenticating with API Key.
+19-05-20 12:18:46.703 (_ws) - Websocket Closed
+19-05-20 12:18:46.708 (_ws) - Websocket Closed
+19-05-20 12:18:49.312 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:49.313 (_ws) - Websocket resetting...
+19-05-20 12:18:49.313 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:49.313 (_ws) - Authenticating with API Key.
+19-05-20 12:18:51.596 (_ws) - Websocket Closed
+19-05-20 12:18:53.002 (_ws) - Websocket Closed
+19-05-20 12:18:54.319 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:54.320 (_ws) - Websocket resetting...
+19-05-20 12:18:54.320 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:54.320 (_ws) - Authenticating with API Key.
+19-05-20 12:18:59.327 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:18:59.327 (_ws) - Websocket resetting...
+19-05-20 12:18:59.327 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:18:59.327 (_ws) - Authenticating with API Key.
+19-05-20 12:19:04.334 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:04.334 (_ws) - Websocket resetting...
+19-05-20 12:19:04.334 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:04.335 (_ws) - Authenticating with API Key.
+19-05-20 12:19:09.341 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:09.341 (_ws) - Websocket resetting...
+19-05-20 12:19:09.341 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:09.342 (_ws) - Authenticating with API Key.
+19-05-20 12:19:12.352 (_ws) - Websocket Closed
+19-05-20 12:19:13.267 (_ws) - Websocket Closed
+19-05-20 12:19:13.482 (_ws) - Websocket Closed
+19-05-20 12:19:14.348 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:14.349 (_ws) - Websocket resetting...
+19-05-20 12:19:14.350 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:14.350 (_ws) - Authenticating with API Key.
+19-05-20 12:19:17.953 (_ws) - Websocket Closed
+19-05-20 12:19:19.022 (_ws) - Websocket Closed
+19-05-20 12:19:19.356 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:19.356 (_ws) - Websocket resetting...
+19-05-20 12:19:19.357 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:19.357 (_ws) - Authenticating with API Key.
+19-05-20 12:19:24.363 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:24.363 (_ws) - Websocket resetting...
+19-05-20 12:19:24.364 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:24.364 (_ws) - Authenticating with API Key.
+19-05-20 12:19:29.370 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:29.370 (_ws) - Websocket resetting...
+19-05-20 12:19:29.371 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:29.371 (_ws) - Authenticating with API Key.
+19-05-20 12:19:34.377 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:34.377 (_ws) - Websocket resetting...
+19-05-20 12:19:34.378 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:34.378 (_ws) - Authenticating with API Key.
+19-05-20 12:19:34.395 (_ws) - Websocket Closed
+19-05-20 12:19:38.811 (_ws) - Websocket Closed
+19-05-20 12:19:39.343 (_ws) - Websocket Closed
+19-05-20 12:19:39.384 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:39.384 (_ws) - Websocket resetting...
+19-05-20 12:19:39.385 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:39.385 (_ws) - Authenticating with API Key.
+19-05-20 12:19:39.397 (_ws) - Websocket Closed
+19-05-20 12:19:43.766 (_ws) - Websocket Closed
+19-05-20 12:19:44.391 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:44.393 (_ws) - Websocket resetting...
+19-05-20 12:19:44.393 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:44.393 (_ws) - Authenticating with API Key.
+19-05-20 12:19:48.456 (_ws) - Websocket Closed
+19-05-20 12:19:49.400 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:49.400 (_ws) - Websocket resetting...
+19-05-20 12:19:49.400 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:49.401 (_ws) - Authenticating with API Key.
+19-05-20 12:19:54.407 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:54.407 (_ws) - Websocket resetting...
+19-05-20 12:19:54.407 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:54.408 (_ws) - Authenticating with API Key.
+19-05-20 12:19:59.414 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:19:59.414 (_ws) - Websocket resetting...
+19-05-20 12:19:59.415 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:19:59.415 (_ws) - Authenticating with API Key.
+19-05-20 12:19:59.427 (_ws) - Websocket Closed
+19-05-20 12:20:04.421 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:20:04.421 (_ws) - Websocket resetting...
+19-05-20 12:20:04.422 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:20:04.422 (_ws) - Authenticating with API Key.
+19-05-20 12:20:04.434 (_ws) - Websocket Closed
+19-05-20 12:20:04.501 (_ws) - Websocket Closed
+19-05-20 12:20:08.188 (_ws) - Websocket Closed
+19-05-20 12:20:09.428 (_ws) - Couldn't connect to WS! Exiting.
+19-05-20 12:20:09.428 (_ws) - Websocket resetting...
+19-05-20 12:20:09.429 (_ws) - Connecting to URL -- wss://www.bitmex.com/realtime?subscribe=instrument:XBTUSD,liquidation:XBTUSD,quoteBin1m:XBTUSD,tradeBin1m:XBTUSD,execution:XBTUSD,position:XBTUSD,chat,transact,margin
+19-05-20 12:20:09.429 (_ws) - Authenticating with API Key.
+19-05-20 12:20:10.430 (_ws) - Connected to WS.
+19-05-20 12:20:10.511 (_ws) - Websocket Closed
