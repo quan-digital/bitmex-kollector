@@ -25,7 +25,7 @@ LOOP_INTERVAL = 1
 # LOOP_INTERVAL = 30 # for bot
 
 # Timeout in seconds on the main kollector loop for lack of status updates
-LOOP_TIMEOUT = 20
+LOOP_TIMEOUT = KHAN_TIMEOUT = 20
 
 # Mail to warn on errors
 MAIL_TO = "kauecano@gmail.com"
@@ -33,6 +33,9 @@ MAIL_TO = "kauecano@gmail.com"
 #####################################################
 # Websocket
 #####################################################
+
+# Debug level websocket logger
+DEBUG_WS = False
 
 # Write instrument, position and margin data to json in DATA_DIR root
 JSON_OUT = True
