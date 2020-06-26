@@ -15,7 +15,9 @@ import logging
 import datetime as dt
 import os
 import json
+import schedule
 
+from bitmex_kollector.database.mongo import KollectaDB
 from bitmex_kollector.util.logger import setup_logbook, setup_db
 from bitmex_kollector.util.ws_thread import BitMEXWebsocket
 from bitmex_kollector.util import tools
@@ -51,6 +53,16 @@ class Kollector:
         if tools.is_file_empty(log_path):
             self.logger.debug('Files empty, writing headers.')
             self.write_headers()
+
+        # Datbase
+        if settings.DATABASE:
+            self.mongo_client = KollectaDB()
+            self.logger.info('Connected to MongoDB.')
+            self.mongo_client.clean_collections()
+            self.logger.info('Collections cleaned.')
+            schedule.every().minute.at(":20").do(self.store_trades)
+            # schedule.every(1).minute.do(self.store_trades)
+
 
         self.ws = BitMEXWebsocket(apiKey, apiSecret)
         self.update_status('Starting')
@@ -97,6 +109,7 @@ class Kollector:
                 if not(self.check_connection()) and not(first_run):
                     raise AttributeError()
 
+                schedule.run_pending()
                 time.sleep(settings.LOOP_INTERVAL)
                 first_run = False
 
@@ -110,6 +123,8 @@ class Kollector:
         self.logger.info('Restarting...')
         self.update_status()
         self.ws.exit()
+        self.mongo_client.close()
+        schedule.clear()
         # Close loggers
         self.logger.removeHandler(self.logger.handlers[0])
         self.status_logger.removeHandler(self.status_logger.handlers[0])
@@ -134,9 +149,16 @@ class Kollector:
         self.__init__(self.apiKey, self.apiSecret)
         self.run_loop()
 
+    def store_trades(self):
+        trades = self.ws.get_trades_data()
+        trades.pop('_id', None)
+        self.mongo_client.insert_trades(trades)
+
     def log_status(self):
         '''Log status data directly from json'''
         status = self.ws.status_dict
+        if settings.DATABASE:
+            self.mongo_client.insert_status(status)
         self.status_logger.debug("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % (
         status['status'],
         status['connected'],
@@ -156,6 +178,8 @@ class Kollector:
     def log_instrument(self):
         '''Log instrument data'''
         instrument = self.ws.get_instrument_data()
+        if settings.DATABASE:
+            self.mongo_client.insert_instrument(instrument)
         self.instrument_logger.debug("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
 %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,\
 %s, %s, %s" % (instrument['symbol'],
@@ -295,6 +319,8 @@ class Kollector:
     def dump_status(self):
         '''Save status to json'''
         status = self.ws.status_dict
+        status.pop('_id', None)
         with open(settings.DATA_DIR + 'status.json', 'w') as handler:
+            status.pop('_id', None)
             json.dump(status,handler)
         return

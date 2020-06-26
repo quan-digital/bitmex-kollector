@@ -89,6 +89,7 @@ class BitMEXWebsocket:
 
         self.data = {}
         self.keys = {}
+        self.tradebin = {}
         self.got_partial = False
         self.exited = False
         self.status_dict = dict(timestamp = str(dt.datetime.now()))
@@ -325,6 +326,8 @@ class BitMEXWebsocket:
             timestamp = str(dt.datetime.now()))
         return status
 
+    def get_trades_data(self):
+        return self.tradebin
 
     #
     # Json functions
@@ -354,7 +357,9 @@ class BitMEXWebsocket:
     def dump_status(self):
         '''Save status to json'''
         status = self.status_dict
+        status.pop('_id', None)
         with open(settings.DATA_DIR + 'status.json', 'w') as handler:
+            status.pop('_id', None)
             json.dump(status,handler)
         return
 
@@ -492,6 +497,7 @@ class BitMEXWebsocket:
                     # Keys are communicated on partials to let you know how to uniquely identify
                     # an item. We use it for updates.
                     self.keys[table] = message['keys']
+                    self.tradebin = self.data.get('tradeBin1m')
                 elif action == 'insert':
                     self.logger.debug('%s: inserting %s' % (table, message['data']))
                     self.data[table] += message['data']
@@ -533,6 +539,7 @@ class BitMEXWebsocket:
                     # Store trade bins
                     elif table == 'tradeBin1m':
                         data = message['data'][0]
+                        self.tradebin = data
                         self.trade_logger.debug('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s' %
                         (data['symbol'], data['open'], data['high'], data['low'], data['close'], data['trades'],
                         data['volume'], data['vwap'], data['lastSize'], data['turnover'], data['homeNotional'], 

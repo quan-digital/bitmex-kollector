@@ -1,2 +1,5 @@
 requests==2.23.0
 websocket-client==0.57.0
+pymongo==3.10.1
+dnspython==1.16.0
+schedule==0.6.0

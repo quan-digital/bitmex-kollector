@@ -16,7 +16,10 @@ setup(name='bitmex_kollector',
       url='quan.digital',
       install_requires=[
         'websocket-client==0.57.0',
-        'requests==2.23.0'
+        'requests==2.23.0',
+        'pymongo==3.10.1',
+        'dnspython==1.16.0',
+        'schedule==0.6.0'
       ],
       packages=find_packages(),
       )
