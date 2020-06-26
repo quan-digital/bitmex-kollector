@@ -1,1 +1,1 @@
-{"timestamp": "2020-05-19 12:00:27.730806", "status": "Closed"}
+{"status": "Running", "connected": true, "market": "Open", "lastPrice": 9128, "markPrice": 9128.67, "balance": 1100258, "realisedPnl": 0, "unrealisedPnl": 0, "position": 0, "contractNum": 0, "contractCost": 0, "openOrders": 0, "timestamp": "2020-06-26 15:51:28.046851"}

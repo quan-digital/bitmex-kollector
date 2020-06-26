@@ -1,0 +1,9 @@
+02-06-20 00:00:04.145 (_kollector) - Kollector is starting.
+02-06-20 00:00:04.145 (_kollector) - Loggers created.
+02-06-20 00:00:04.145 (_kollector) - Files empty, writing headers.
+02-06-20 00:00:05.354 (_kollector) - First run, writing partials.
+02-06-20 23:22:26.310 (_kollector) - Connection to Websocket lost. Restarting...
+02-06-20 23:22:26.311 (_kollector) - Resetting...
+02-06-20 23:22:26.311 (_kollector) - Kollector is starting.
+03-06-20 00:00:00.241 (_kollector) - Day changed.
+03-06-20 00:00:00.242 (_kollector) - Restarting...

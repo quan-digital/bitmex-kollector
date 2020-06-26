@@ -1,0 +1,7 @@
+29-05-20 00:00:01.324 (_kollector) - Kollector is starting.
+29-05-20 15:46:07.300 (_kollector) - Kollector is starting.
+29-05-20 15:46:07.301 (_kollector) - Loggers created.
+29-05-20 15:46:07.301 (_kollector) - Files empty, writing headers.
+29-05-20 15:46:08.305 (_kollector) - First run, writing partials.
+30-05-20 00:00:00.820 (_kollector) - Day changed.
+30-05-20 00:00:00.821 (_kollector) - Restarting...

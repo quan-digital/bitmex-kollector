@@ -1,0 +1,20 @@
+25-05-20 02:25:43.952 (_ws) - Initializing WebSocket...
+25-05-20 02:25:43.954 (_ws) - Authenticating with API Key.
+25-05-20 02:25:43.997 (_ws) - Websocket Closed
+25-05-20 02:25:48.964 (_ws) - Couldn't connect to WS! Exiting.
+25-05-20 02:25:48.965 (_ws) - Websocket resetting...
+25-05-20 02:25:48.966 (_ws) - Authenticating with API Key.
+25-05-20 02:25:48.987 (_ws) - Websocket Closed
+25-05-20 02:25:53.977 (_ws) - Couldn't connect to WS! Exiting.
+25-05-20 02:25:53.978 (_ws) - Websocket resetting...
+25-05-20 02:25:53.979 (_ws) - Authenticating with API Key.
+25-05-20 02:25:54.006 (_ws) - Websocket Closed
+25-05-20 02:25:58.989 (_ws) - Couldn't connect to WS! Exiting.
+25-05-20 02:25:58.990 (_ws) - Websocket resetting...
+25-05-20 02:25:58.990 (_ws) - Authenticating with API Key.
+25-05-20 02:25:59.022 (_ws) - Websocket Closed
+25-05-20 02:29:23.802 (_ws) - Initializing WebSocket...
+25-05-20 02:29:23.803 (_ws) - Authenticating with API Key.
+25-05-20 02:29:24.806 (_ws) - Connected to WS.
+25-05-20 02:29:25.108 (_ws) - Got all market data. Starting.
+26-05-20 00:00:00.684 (_ws) - Websocket closing...

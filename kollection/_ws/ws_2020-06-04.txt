@@ -1,0 +1,6 @@
+04-06-20 00:00:04.570 (_ws) - Initializing WebSocket...
+04-06-20 00:00:04.570 (_ws) - Authenticating with API Key.
+04-06-20 00:00:05.573 (_ws) - Connected to WS.
+04-06-20 00:00:05.574 (_ws) - Got all market data. Starting.
+05-06-20 00:00:00.277 (_ws) - Websocket closing...
+05-06-20 00:00:00.279 (_ws) - Websocket Closed

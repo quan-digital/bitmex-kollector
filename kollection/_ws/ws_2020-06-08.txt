@@ -1,0 +1,22 @@
+08-06-20 00:00:04.053 (_ws) - Initializing WebSocket...
+08-06-20 00:00:04.053 (_ws) - Authenticating with API Key.
+08-06-20 00:00:05.056 (_ws) - Connected to WS.
+08-06-20 00:00:05.358 (_ws) - Got all market data. Starting.
+08-06-20 03:56:32.962 (_ws) - Traceback (most recent call last):
+  File "/var/www/html/bitmex-kollector/bitmex_kollector/util/ws_thread.py", line 578, in __on_message
+    self.data[table].remove(item)
+ValueError: list.remove(x): x not in list
+
+08-06-20 18:34:00.041 (_ws) - Websocket Closed
+08-06-20 18:34:00.498 (_ws) - Initializing WebSocket...
+08-06-20 18:34:00.498 (_ws) - Initializing WebSocket...
+08-06-20 18:34:00.498 (_ws) - Authenticating with API Key.
+08-06-20 18:34:00.498 (_ws) - Authenticating with API Key.
+08-06-20 18:34:01.500 (_ws) - Connected to WS.
+08-06-20 18:34:01.500 (_ws) - Connected to WS.
+08-06-20 18:34:02.704 (_ws) - Got all market data. Starting.
+08-06-20 18:34:02.704 (_ws) - Got all market data. Starting.
+08-06-20 18:49:47.228 (_ws) - Websocket closing...
+08-06-20 18:49:47.228 (_ws) - Websocket closing...
+09-06-20 00:00:00.317 (_ws) - Websocket closing...
+09-06-20 00:00:00.319 (_ws) - Websocket Closed

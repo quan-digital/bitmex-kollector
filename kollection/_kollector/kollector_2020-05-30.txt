@@ -1,0 +1,3 @@
+30-05-20 00:00:01.825 (_kollector) - Kollector is starting.
+31-05-20 00:00:00.387 (_kollector) - Day changed.
+31-05-20 00:00:00.388 (_kollector) - Restarting...
