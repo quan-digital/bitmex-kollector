@@ -8,9 +8,13 @@ import os
 
 class KollectaDB():
     def __init__(self):
-        self.kollecta_db = self.make_client().kollecta
-        self.clean_collections()
+        self.client = self.make_client()
+        self.kollecta_db = self.client.kollecta
+        # self.clean_collections()
         self.setup_collections()
+
+    def close(self):
+        self.client.close()
 
     def make_client(self, db = 'kollecta'):
         """Utility funciton to load MongoClient"""
@@ -29,7 +33,7 @@ class KollectaDB():
             self.capped_collection('indicators', 100000000)
             self.capped_collection('status')
             self.capped_collection('instrument')
-            self.capped_collection('trades')
+            self.capped_collection('candles')
         except pymongo.errors.CollectionInvalid:
             # print('Collections already created.')
             pass
@@ -38,7 +42,7 @@ class KollectaDB():
         self.drop_collection('indicators')
         self.drop_collection('status')
         self.drop_collection('instrument')
-        self.drop_collection('trades')
+        self.drop_collection('candles')
 
     def insert_status(self, status_dict):
         self.kollecta_db.status.insert_one(status_dict)
@@ -46,8 +50,8 @@ class KollectaDB():
     def insert_instrument(self, exec_dict):
         self.kollecta_db.instrument.insert_one(exec_dict)
 
-    def insert_trades(self, trades_dict):
-        self.kollecta_db.trades.insert_one(trades_dict)
+    def insert_candle(self, trades_dict):
+        self.kollecta_db.candles.insert_one(trades_dict)
 
     def insert_indicators(self, bill_dict):
         self.kollecta_db.indicators.insert_one(bill_dict)
@@ -58,8 +62,8 @@ class KollectaDB():
     def get_latest_status(self):
         self.kollecta_db.status.find_one(sort=[( '_id', pymongo.DESCENDING )])
 
-    def get_latest_trade(self):
-        self.kollecta_db.trades.find_one(sort=[( '_id', pymongo.DESCENDING )])
+    def get_latest_candle(self):
+        self.kollecta_db.candles.find_one(sort=[( '_id', pymongo.DESCENDING )])
 
     def get_latest_indicators(self):
         self.kollecta_db.indicators.find_one(sort=[( '_id', pymongo.DESCENDING )])
@@ -72,5 +76,5 @@ if __name__ == "__main__":
     # mongo_client.setup_collections()
     mongo_client.insert_status(sample)
     mongo_client.insert_instrument(sample)
-    mongo_client.insert_trades(sample)
+    mongo_client.insert_candles(sample)
     mongo_client.insert_indicators(sample)

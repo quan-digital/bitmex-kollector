@@ -11,6 +11,8 @@ The ultimate data aggregator using Bitmex's Websocket - FATALITY 💉💀🗡
 
 - data will be stored in settings.DATA_DIR ('data/' by default, change for deploy).
 
+- status, instrument, candles and indicators will be stored on MongoDB Atlas.
+
 - run on EC2 eu-west-1 (Ireland) because that's where Bitmex' Websocket is hosted.
 
 - base Kollector will generate about 140MB of data a day, with more than half going towards 'instrument'. So estimate around 3GB of data a month, or 50GB a year. For bot operation, you can divide that by 60 at least.

@@ -64,9 +64,9 @@ class BitMEXWebsocket:
         if 'chat' in self.total_subs:
             self.chat_logger, log_path = logger.setup_db('chat', getPath=True)
         if 'quoteBin1m' in self.total_subs:
-            self.quote_logger, log_path = logger.setup_db('quote', getPath=True)
+            self.quote_logger, log_path = logger.setup_db('quotebin', getPath=True)
         if 'tradeBin1m' in self.total_subs:
-            self.trade_logger, log_path = logger.setup_db('trade', getPath=True)
+            self.trade_logger, log_path = logger.setup_db('tradebin', getPath=True)
 
         # If this is our first time initializing files, write headers
         if log_path:
@@ -175,20 +175,23 @@ class BitMEXWebsocket:
         self.update_status('Exited')
         self.dump_status()
         # Close logging files
-        self.logger.removeHandler(self.logger.handlers[0])
-        if 'execution' in self.total_subs:
-            self.execution_logger.removeHandler(self.execution_logger.handlers[0])
-        if 'transact' in self.total_subs:
-            self.transact_logger.removeHandler(self.transact_logger.handlers[0])
-        if 'liquidation' in self.total_subs:
-            self.liquidation_logger.removeHandler(self.liquidation_logger.handlers[0])
-        if 'chat' in self.total_subs:
-            self.chat_logger.removeHandler(self.chat_logger.handlers[0])
-        if 'quoteBin1m' in self.total_subs:
-            self.quote_logger.removeHandler(self.quote_logger.handlers[0])
-        if 'tradeBin1m' in self.total_subs:
-            self.trade_logger.removeHandler(self.trade_logger.handlers[0])
-        logger.close_error_logger()
+        try:
+            self.logger.removeHandler(self.logger.handlers[0])
+            if 'execution' in self.total_subs:
+                self.execution_logger.removeHandler(self.execution_logger.handlers[0])
+            if 'transact' in self.total_subs:
+                self.transact_logger.removeHandler(self.transact_logger.handlers[0])
+            if 'liquidation' in self.total_subs:
+                self.liquidation_logger.removeHandler(self.liquidation_logger.handlers[0])
+            if 'chat' in self.total_subs:
+                self.chat_logger.removeHandler(self.chat_logger.handlers[0])
+            if 'quoteBin1m' in self.total_subs:
+                self.quote_logger.removeHandler(self.quote_logger.handlers[0])
+            if 'tradeBin1m' in self.total_subs:
+                self.trade_logger.removeHandler(self.trade_logger.handlers[0])
+            logger.close_error_logger()
+        except IndexError:
+            pass
         #logging.shutdown()
         print('Websocket closed.')
 
@@ -326,7 +329,7 @@ class BitMEXWebsocket:
             timestamp = str(dt.datetime.now()))
         return status
 
-    def get_trades_data(self):
+    def get_tradebin_data(self):
         return self.tradebin
 
     #

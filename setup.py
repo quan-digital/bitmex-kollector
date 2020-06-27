@@ -8,7 +8,7 @@ from os.path import join, dirname
 here = dirname(__file__)
 
 setup(name='bitmex_kollector',
-      version='0.1.4',
+      version='0.1.5',
       description="The ultimate data aggregator using Bitmex' Websocket API.",
       long_description=open(join(here, 'README.md')).read(),
       author='canokaue',

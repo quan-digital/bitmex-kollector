@@ -37,6 +37,7 @@ class Kollector:
         self.storeInstrument = storeInstrument if storeInstrument else settings.STORE_INSTRUMENT
         self.storeMargin = storeMargin if storeMargin else settings.STORE_MARGIN
         self.storePosition = storePosition if storePosition else settings.STORE_POSITION
+        self.first_run = True
 
         self.logger = setup_logbook('_kollector', level = log_level)
         self.logger.info('Kollector is starting.')
@@ -58,10 +59,9 @@ class Kollector:
         if settings.DATABASE:
             self.mongo_client = KollectaDB()
             self.logger.info('Connected to MongoDB.')
-            self.mongo_client.clean_collections()
-            self.logger.info('Collections cleaned.')
-            schedule.every().minute.at(":20").do(self.store_trades)
-            # schedule.every(1).minute.do(self.store_trades)
+            # self.mongo_client.clean_collections()
+            # self.logger.info('Collections cleaned.')
+            schedule.every().minute.at(":20").do(self.store_candles)
 
 
         self.ws = BitMEXWebsocket(apiKey, apiSecret)
@@ -71,7 +71,7 @@ class Kollector:
     def run_loop(self):
         '''Setup loggers and store to .csv'''
         self.logger.debug('First run, writing partials.')
-        first_run = True # fist run connection check must be ignored
+        self.first_run = True # fist run connection check must be ignored
         self.first_status()
         self.log_margin()
         self.log_position()
@@ -101,29 +101,31 @@ class Kollector:
                 # If day changes, restart
                 date = dt.datetime.today().strftime('%Y-%m-%d')
                 path = str(settings.DATA_DIR + '_ws/ws_' + date + '.txt')
-                if not(os.path.exists(path)):
+                if not(os.path.exists(path)) and not(self.first_run):
                     self.logger.warning('Day changed.')
                     logger.log_error('Restarting...')
                     self.restart()
 
-                if not(self.check_connection()) and not(first_run):
+                if not(self.check_connection()) and not(self.first_run):
                     raise AttributeError()
 
                 schedule.run_pending()
                 time.sleep(settings.LOOP_INTERVAL)
-                first_run = False
+                self.first_run = False
 
         except AttributeError:
             self.logger.warning('Connection to Websocket lost. Restarting...')
             logger.log_error('Connection to Websocket lost. Restarting...')
-            self.reset()
+            self.restart(connection=False)
 
-    def restart(self):
+    def close(self, connection=True):
         '''Close Websocket, loggers, wait and restart'''
-        self.logger.info('Restarting...')
+        self.logger.info('Closing...')
         self.update_status()
-        self.ws.exit()
+        if connection:
+            self.ws.exit()
         self.mongo_client.close()
+        schedule.cancel_job(self.store_candles)
         schedule.clear()
         # Close loggers
         self.logger.removeHandler(self.logger.handlers[0])
@@ -131,28 +133,24 @@ class Kollector:
         self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
         self.margin_logger.removeHandler(self.margin_logger.handlers[0])
         self.position_logger.removeHandler(self.position_logger.handlers[0])
+        self.first_run = True
         #logging.shutdown()
+    
+    def restart(self, connection=True):
+        '''Close Websocket, loggers, wait and restart'''
+        self.close(connection)
+        self.logger.info('Restarting...')
         time.sleep(1)
         self.__init__(self.apiKey, self.apiSecret)
+        time.sleep(1)
         self.run_loop()
 
-    def reset(self):
-        '''Close loggers and reset'''
-        self.logger.info('Resetting...')
-        self.update_status()
-        self.logger.removeHandler(self.logger.handlers[0])
-        self.status_logger.removeHandler(self.status_logger.handlers[0])
-        self.instrument_logger.removeHandler(self.instrument_logger.handlers[0])
-        self.margin_logger.removeHandler(self.margin_logger.handlers[0])
-        self.position_logger.removeHandler(self.position_logger.handlers[0])
-        #logging.shutdown()
-        self.__init__(self.apiKey, self.apiSecret)
-        self.run_loop()
-
-    def store_trades(self):
-        trades = self.ws.get_trades_data()
+    def store_candles(self):
+        trades = self.ws.get_tradebin_data()
+        if type(trades) is list:
+            return
         trades.pop('_id', None)
-        self.mongo_client.insert_trades(trades)
+        self.mongo_client.insert_candle(trades)
 
     def log_status(self):
         '''Log status data directly from json'''

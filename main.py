@@ -17,6 +17,9 @@ if __name__ == '__main__':
     # bitmex_kollector.settings.PUB_GEN_SUBS = []
 
     # Run
-    kollector = bitmex_kollector.Kollector("kEz41tV6Y4CdWpXeXqNM_nw0", 
-    "D_6jHl5vwjN5VWHcTlefzzEHOupduXhVyn0bZl4MpfY3rIHA", log_level = logging.INFO)
-    kollector.run_loop()
+    try:
+        kollector = bitmex_kollector.Kollector("kEz41tV6Y4CdWpXeXqNM_nw0", 
+        "D_6jHl5vwjN5VWHcTlefzzEHOupduXhVyn0bZl4MpfY3rIHA", log_level = logging.DEBUG)
+        kollector.run_loop()
+    except KeyboardInterrupt:
+        kollector.close(connection=False)

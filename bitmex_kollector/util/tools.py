@@ -47,9 +47,9 @@ def create_dirs():
         if 'chat' in total_subs:
             os.mkdir(settings.DATA_DIR + 'chat')
         if 'quoteBin1m' in total_subs:
-            os.mkdir(settings.DATA_DIR + 'quote')
+            os.mkdir(settings.DATA_DIR + 'quotebin')
         if 'tradeBin1m' in total_subs:
-            os.mkdir(settings.DATA_DIR + 'trade')
+            os.mkdir(settings.DATA_DIR + 'tradebin')
         if 'instrument' in total_subs:
             os.mkdir(settings.DATA_DIR + 'instrument')
         if 'margin' in total_subs:

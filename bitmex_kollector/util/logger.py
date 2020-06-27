@@ -43,7 +43,7 @@ def setup_logbook(name, extension='.txt', level=logging.INFO, soloDir = True):
 
     return logger
 
-def setup_db(name, extension='.csv', getPath = False):
+def setup_db(name, extension='.csv', level=logging.DEBUG, getPath = False):
     """Setup writer that formats data to csv, supports multiple instances with no overlap."""
     formatter = logging.Formatter(fmt='%(asctime)s,%(message)s', datefmt='%d-%m-%y,%H:%M:%S')
     date = datetime.today().strftime('%Y-%m-%d')
@@ -53,7 +53,7 @@ def setup_db(name, extension='.csv', getPath = False):
     handler.setFormatter(formatter)
 
     logger = logging.getLogger(name)
-    logger.setLevel(logging.INFO)
+    logger.setLevel(level)
     logger.addHandler(handler)
 
     if getPath:

@@ -10,8 +10,8 @@
 # Path to directory for daily data storage
 # 'data/' will be gitignored, so change directory on deploy
 #DATA_DIR = 'data/'
-# DATA_DIR = 'kollection/' # for kollector
-DATA_DIR = 'testnet_kaka/' # make bot name for bots
+DATA_DIR = 'kollection/' # for kollector
+# DATA_DIR = 'kollecta/' # make bot name for bots
 
 STORE_INSTRUMENT = True
 STORE_MARGIN = True
