@@ -7,10 +7,11 @@ import os
 
 
 class KollectaDB():
-    def __init__(self):
+    def __init__(self, clean_start=False):
         self.client = self.make_client()
         self.kollecta_db = self.client.kollecta
-        # self.clean_collections()
+        if clean_start:
+            self.clean_collections()
         self.setup_collections()
 
     def close(self):
@@ -21,8 +22,8 @@ class KollectaDB():
         client = pymongo.MongoClient(settings.MONGO_STR)
         return client
 
-    def capped_collection(self, coll_name, max_size = 50000000):
-        self.kollecta_db.create_collection(coll_name, capped=True, size=max_size)
+    def capped_collection(self, coll_name, max_size = 50000000, max_num=100000):
+        self.kollecta_db.create_collection(coll_name, capped=True, size=max_size, max=max_num)
 
     def drop_collection(self, coll_name):
         collection = getattr(self.kollecta_db, coll_name)
@@ -30,12 +31,12 @@ class KollectaDB():
 
     def setup_collections(self):
         try:
-            self.capped_collection('indicators', 100000000)
+            self.capped_collection('indicators')
             self.capped_collection('status')
             self.capped_collection('instrument')
-            self.capped_collection('candles')
+            self.capped_collection('candles', max_num=4000)
         except pymongo.errors.CollectionInvalid:
-            # print('Collections already created.')
+            print('Collections already created.')
             pass
 
     def clean_collections(self):
@@ -69,12 +70,12 @@ class KollectaDB():
         self.kollecta_db.indicators.find_one(sort=[( '_id', pymongo.DESCENDING )])
 
 
-if __name__ == "__main__":
-    mongo_client = KollectaDB()
-    sample = dict(test=True)
-    # mongo_client.capped_collection('test2', max_size=100000)
-    # mongo_client.setup_collections()
-    mongo_client.insert_status(sample)
-    mongo_client.insert_instrument(sample)
-    mongo_client.insert_candles(sample)
-    mongo_client.insert_indicators(sample)
+# if __name__ == "__main__":
+#     mongo_client = KollectaDB()
+#     sample = dict(test=True)
+#     mongo_client.capped_collection('test2', max_size=100000)
+#     mongo_client.setup_collections()
+#     mongo_client.insert_status(sample)
+#     mongo_client.insert_instrument(sample)
+#     mongo_client.insert_candles(sample)
+#     mongo_client.insert_indicators(sample)
